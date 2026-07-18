@@ -6,43 +6,7 @@
   var PHONE_DISPLAY = '(305) 922-9122';
   var EMAIL = 'vittozecca19@gmail.com';
 
-  /* Mobile nav toggle */
-  var toggle = document.querySelector('.nav-toggle');
-  var nav = document.querySelector('.site-nav');
-
-  function closeMenu() {
-    if (!toggle || !nav) return;
-    toggle.setAttribute('aria-expanded', 'false');
-    toggle.setAttribute('aria-label', 'Open menu');
-    nav.classList.remove('is-open');
-    document.body.classList.remove('menu-open');
-  }
-
-  if (toggle && nav) {
-    toggle.addEventListener('click', function () {
-      var isOpen = toggle.getAttribute('aria-expanded') === 'true';
-      if (isOpen) {
-        closeMenu();
-      } else {
-        toggle.setAttribute('aria-expanded', 'true');
-        toggle.setAttribute('aria-label', 'Close menu');
-        nav.classList.add('is-open');
-        document.body.classList.add('menu-open');
-      }
-    });
-
-    nav.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', closeMenu);
-    });
-
-    document.addEventListener('keydown', function (event) {
-      if (event.key === 'Escape') closeMenu();
-    });
-
-    window.addEventListener('resize', function () {
-      if (window.innerWidth >= 900) closeMenu();
-    });
-  }
+  /* Mobile navigation is initialized inline in each page for reliable mobile loading. */
 
   /* Mobile submenu toggles */
   document.querySelectorAll('.nav-submenu-toggle').forEach(function (btn) {

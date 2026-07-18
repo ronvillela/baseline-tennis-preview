@@ -331,6 +331,7 @@ p {
 
 .site-nav.is-open {
   display: block;
+  z-index: 1001;
   position: fixed;
   inset: var(--header-height) 0 var(--mobile-bar-height) 0;
   background: var(--white);
