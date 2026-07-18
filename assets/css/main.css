@@ -331,13 +331,19 @@ p {
 
 .site-nav.is-open {
   display: block;
-  z-index: 1001;
-  position: fixed;
-  inset: var(--header-height) 0 var(--mobile-bar-height) 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: calc(100vh - var(--header-height) - var(--mobile-bar-height));
+  height: calc(100dvh - var(--header-height) - var(--mobile-bar-height));
   background: var(--white);
   overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
   padding: 1.5rem;
   border-top: 1px solid var(--line);
+  box-shadow: 0 12px 30px rgba(26, 26, 26, 0.12);
   z-index: 1002;
 }
 
@@ -1065,7 +1071,7 @@ p {
 }
 
 
-@media (max-width: 899px) {
+@media (max-width: 1099px) {
   .site-logo img {
     height: 38px;
   }
@@ -1107,20 +1113,31 @@ p {
 
 /* Desktop */
 
-@media (min-width: 900px) {
+@media (min-width: 1100px) {
   .nav-toggle {
     display: none;
   }
 
-  .site-nav {
+  .site-header__inner {
+    flex-wrap: nowrap;
+  }
+
+  .site-nav,
+  .site-nav.is-open {
     display: flex;
     align-items: center;
     gap: 0.25rem;
     position: static;
+    inset: auto;
+    width: auto;
+    height: auto;
     background: none;
     overflow: visible;
+    overscroll-behavior: auto;
     padding: 0;
     border: none;
+    box-shadow: none;
+    z-index: auto;
   }
 
   .nav-list {
@@ -1190,7 +1207,7 @@ p {
   }
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1200px) {
   .nav-list > li > a,
   .nav-list > li > button {
     padding: 0.5rem 1rem;
