@@ -148,3 +148,9 @@ All 12 HTML pages now show a fixed mobile BOOK NOW button occupying half the act
 - Homepage clinic card now View Availability → group-clinics.html#clinic-availability, an explicitly pending schedule; original card order retained.
 - Ask a Question remains secondary. Informational links retain descriptive labels; final mailto form button remains Prepare Email Request to accurately describe behavior.
 - Real availability/payment integration remains pending. Local changes only.
+
+
+### Request 13 — remove five-lesson package
+- Removed $450 five-lesson offer from Private, homepage and policy FAQ.
+- Existing $95 single and $850 ten-lesson options retained; ten-lesson savings clarified as $100 versus ten singles.
+- Adjusted remaining card grids. Future package sales require coach terms and provider setup. No publishing.

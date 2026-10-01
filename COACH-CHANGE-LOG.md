@@ -327,3 +327,22 @@ Implementado localmente y revisado en móvil. No hay disponibilidad en tiempo re
 English summary: Booking CTAs now use Book Now throughout. The homepage clinic CTA uses View Availability and leads to the pending clinic schedule. Ask a Question remains the secondary contact action. Original session order retained.
 
 Para el PDF final: captura móvil de Choose Your Session y del botón de reserva de un programa.
+
+
+## Solicitud 13 Retirar el paquete de 5 clases
+
+### Lo que pediste
+
+Quitar por ahora Package of 5 de Private Lessons. Si se ofrecen paquetes después, presentarlos como productos claros con precio y ahorro definidos.
+
+### Lo que hicimos
+
+Retiramos el paquete de 5 clases de Private Lessons, del inicio y de la respuesta de preguntas frecuentes para mantener la información consistente. Conservamos Single Lesson a $95 y la oferta existente de 10 clases a $850. Esta última ahora muestra $85 por clase y $100 de ahorro frente a 10 clases individuales de $95. Ajustamos el diseño para no dejar un espacio vacío.
+
+### Estado
+
+Cambio local y reversible, sin publicar. No agregamos nuevos paquetes. Antes de vender paquetes online, el coach debe confirmar las condiciones y el proveedor debe permitir comprarlos y usar las clases. El paquete de 5 queda retirado hasta una decisión posterior.
+
+English summary: Removed the 5-lesson package throughout visible site content. Retained the existing $850 ten-lesson option and clarified its $100 savings against ten $95 single lessons.
+
+Para el PDF final: captura móvil de Lesson Options en Private Lessons.
