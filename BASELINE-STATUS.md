@@ -89,3 +89,8 @@ Prioritize mobile layout and usability for every subsequent change. After each c
 ## Coach instruction 2: clear homepage hero
 
 Updated the homepage headline to "Private Tennis Lessons in Miami", with beginner/intermediate/advanced coaching copy and Brickell, Coconut Grove, Coral Gables, Key Biscayne, South Miami directly beneath. Retained Ages 3+, Book a Lesson, View Rates, existing styling and mobile section navigation. Items 3 and 4 in the supplied message were blank. This change remains local and reversible.
+
+
+## Coach review deliverable
+
+Maintain COACH-CHANGE-LOG.md after every coach-request implementation. User requested a running document that will become an email-ready PDF or image report when all coach requirements are finished. Preserve original Spanish/English requests, explain changes in English, and include final mobile screenshot evidence. Distinguish implemented locally, approved, published, and pending integrations. Current record covers requests 1 and 2; items 3 and 4 were blank. The fixed mobile review wrapper is at http://127.0.0.1:8766/ (local utility in /tmp/baseline-mobile-preview) and embeds the site server at port 8765.
