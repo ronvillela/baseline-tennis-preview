@@ -160,3 +160,10 @@ All 12 HTML pages now show a fixed mobile BOOK NOW button occupying half the act
 - Prominent Maximum 4 Players / 60 Minutes across clinic hero, homepage cards, booking options and clinic details.
 - Added small-group / individual-attention benefit; $42.50 per-player price retained.
 - Provider must enforce capacity 4 when configured. Local preview only.
+
+
+### Request 15 — Tennis 101/201 program offers
+- Added full-program pricing placeholders and Next Session / dates pending to both hero offers.
+- Program-specific CTAs use Join Program (including booking page); generic fixed CTA stays Book Now.
+- Existing 101 4–6 weeks and 201 6 weeks explicitly provisional, pending separately supplied final details. No invented dates/prices.
+- Join Program uses program-selected contact fallback, not enrollment/payment. BOOKING / STRIPE is next section heading only.

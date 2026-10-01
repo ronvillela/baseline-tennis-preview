@@ -365,3 +365,26 @@ Implementado y revisado en móvil. Este texto comunica el límite del servicio; 
 English summary: Maximum 4 Players and 60 Minutes are prominent across clinic offers. Small-group coaching and individual attention are highlighted. The future booking system must enforce the four-player limit.
 
 Para el PDF final: captura móvil del inicio de Group Clinics.
+
+
+## Solicitud 15 Tennis 101 y Tennis 201 como programas
+
+### Lo que pediste
+
+Conservar ambos programas y presentarlos como productos: nombre, duración, precio, próxima sesión y JOIN PROGRAM. Los detalles definitivos llegarán por separado.
+
+### Lo que hicimos
+
+Las dos páginas muestran el espacio de precio del programa completo y Next Session con fechas pendientes. Los botones propios de estos programas ahora dicen JOIN PROGRAM, también en la página de reservas. Se mantienen los beneficios debajo de la oferta. El botón fijo general sigue siendo BOOK NOW.
+
+### Datos pendientes del coach
+
+Precio total, duración definitiva en semanas, cantidad y duración de clases, máximo de jugadores, fecha de inicio, días y horarios, cancha y condiciones de inscripción. El ejemplo de 6 semanas para Tennis 101 no se tomó como confirmación: por ahora conservamos las 4–6 semanas existentes, marcadas como provisionales. Tennis 201 conserva sus 6 semanas, también sujetas a confirmación.
+
+### Estado
+
+Presentación preparada y revisada en móvil. JOIN PROGRAM abre el contacto con el programa elegido; todavía no inscribe ni cobra. Se conectará al proveedor cuando estén definidos los productos. Guardado localmente, reversible y sin publicar. BOOKING / STRIPE se interpreta como encabezado de las próximas instrucciones.
+
+English summary: Both programs now feature full-program price placeholders, next-session dates pending, and Join Program actions. Final product details will come separately; existing durations are explicitly provisional. Online enrollment/payment is not yet active.
+
+Para el PDF final: captura móvil de Tennis 101 y Tennis 201 con su oferta de programa.
