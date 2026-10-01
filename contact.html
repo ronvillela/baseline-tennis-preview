@@ -48,7 +48,7 @@
   </div>
 </header>
 <main id="main"><section class="page-hero"><div class="container"><span class="eyebrow">Contact Baseline Tennis</span><h1>Plan Your Next Session</h1><p class="lead">Call, text, email, or submit a prepared lesson request to Coach Vittorio Zecca.</p></div></section>
-<section class="section"><div class="container contact-layout"><div><div class="contact-grid"><div class="contact-item"><h3>Phone</h3><a href="tel:+13059229122">(305) 922-9122</a></div><div class="contact-item"><h3>Text</h3><a href="sms:+13059229122">(305) 922-9122</a></div><div class="contact-item"><h3>Email</h3><a href="mailto:vittozecca19@gmail.com">vittozecca19@gmail.com</a></div><div class="contact-item"><h3>Hours</h3><p>By appointment</p></div></div><div class="contact-note"><h3>Locations</h3><p>Serving Brickell, Coconut Grove, Coral Gables, Key Biscayne, Downtown Miami, Edgewater, Midtown, Wynwood, South Miami, Pinecrest, and other locations upon request.</p></div></div><form class="contact-form card-form" id="lesson-request"><span class="eyebrow">Lesson Request</span><h2>Tell Us What You Need</h2><label for="name">Name</label><input id="name" name="name" type="text" required><label for="email">Email</label><input id="email" name="email" type="email" required><label for="phone">Phone</label><input id="phone" name="phone" type="tel"><label for="program">Program</label><select id="program" name="program"><option>Private Lesson</option><option>Sparring Session</option><option>Semi-Private Lesson</option><option>Group Clinic</option><option>Tennis 101</option><option>Tennis 201</option><option>Not sure yet</option></select><label for="message">Player age, level, preferred location, and availability</label><textarea id="message" name="message" rows="6" required></textarea><button class="btn btn--primary btn--block" type="submit">Prepare Email Request</button><p class="small">Submitting opens your email application with the information filled in. No information is stored by this preview website.</p></form></div></section>
+<section class="section"><div class="container contact-layout"><div><div class="contact-grid"><div class="contact-item"><h3>Phone</h3><a href="tel:+13059229122">(305) 922-9122</a></div><div class="contact-item"><h3>Text</h3><a href="sms:+13059229122">(305) 922-9122</a></div><div class="contact-item"><h3>Email</h3><a href="mailto:vittozecca19@gmail.com">vittozecca19@gmail.com</a></div><div class="contact-item"><h3>Hours</h3><p>By appointment</p></div></div><div class="contact-note"><h3>Locations</h3><p>Serving Brickell, Coconut Grove, Coral Gables, Key Biscayne, Downtown Miami, Edgewater, Midtown, Wynwood, South Miami, Pinecrest, and other locations upon request.</p></div></div><form class="contact-form card-form" id="lesson-request"><span class="eyebrow">Lesson Request</span><h2>Tell Us What You Need</h2><p class="small">Online scheduling and payment are coming soon. For now, Vittorio will confirm your court and time by email. This form does not take payment or confirm a reservation.</p><label for="name">Name</label><input id="name" name="name" type="text" required><label for="email">Email</label><input id="email" name="email" type="email" required><label for="phone">Phone</label><input id="phone" name="phone" type="tel"><label for="program">Program</label><select id="program" name="program"><option>Private Lesson</option><option>Sparring Session</option><option>Semi-Private Lesson</option><option>Group Clinic</option><option>Tennis 101</option><option>Tennis 201</option><option>Not sure yet</option></select><label for="message">Player age, level, preferred location, and availability</label><textarea id="message" name="message" rows="6" required></textarea><button class="btn btn--primary btn--block" type="submit">Prepare Email Request</button><p class="small">Submitting opens your email application with the information filled in. No information is stored by this preview website.</p></form></div></section>
 </main>
 
 <footer class="site-footer">
@@ -71,20 +71,12 @@
   <a href="sms:+13059229122"><span aria-hidden="true">✉</span>Text</a>
   <a href="mailto:vittozecca19@gmail.com"><span aria-hidden="true">@</span>Email</a>
 </nav>
+<script src="assets/js/booking-config.js"></script>
+<script src="assets/js/booking.js"></script>
 <script>
 (function () {
   'use strict';
-  var CONFIG = {
-    email: 'vittozecca19@gmail.com',
-    bookingLinks: {
-      private: '',
-      sparring: '',
-      'semi-private': '',
-      clinics: '',
-      'tennis-101': '',
-      'tennis-201': ''
-    }
-  };
+  var CONFIG = window.BaselineBookingConfig || {email: 'vittozecca19@gmail.com', bookingLinks: {}};
 
   var toggle = document.querySelector('.nav-toggle');
   var nav = document.querySelector('.site-nav');
@@ -128,27 +120,6 @@
       if (!open) { item.classList.add('is-open'); button.setAttribute('aria-expanded','true'); }
     });
   });
-
-  document.querySelectorAll('[data-booking]').forEach(function (link) {
-    var key = link.getAttribute('data-booking');
-    var liveUrl = CONFIG.bookingLinks[key];
-    if (liveUrl) {
-      link.href = liveUrl;
-      link.target = '_blank';
-      link.rel = 'noopener';
-    } else if (link.getAttribute('href').indexOf('contact.html') === 0) {
-      link.href = 'contact.html?program=' + encodeURIComponent(key) + '#lesson-request';
-    }
-  });
-
-  var params = new URLSearchParams(window.location.search);
-  var requestedProgram = params.get('program');
-  var programSelect = document.querySelector('[name="program"]');
-  if (requestedProgram && programSelect) {
-    Array.from(programSelect.options).forEach(function (option) {
-      if (option.text.toLowerCase().includes(requestedProgram.toLowerCase())) option.selected = true;
-    });
-  }
 
   var form = document.querySelector('.contact-form');
   if (form) {

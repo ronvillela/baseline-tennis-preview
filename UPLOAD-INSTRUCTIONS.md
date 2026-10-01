@@ -31,7 +31,7 @@ Repository: `ronvillela/baseline-tennis-preview`
 
 ## Booking service later
 
-Open `assets/js/main.js`. Near the top, paste each Square booking URL between the quotation marks in `bookingLinks`. One update there changes the matching buttons throughout the site.
+Open `assets/js/booking-config.js`. Near the top, paste each tested HTTPS booking URL from the chosen provider between the quotation marks in `bookingLinks`. One update there changes the matching buttons throughout the site.
 
 ## Important preview setting
 

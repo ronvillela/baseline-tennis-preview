@@ -71,20 +71,12 @@
   <a href="sms:+13059229122"><span aria-hidden="true">✉</span>Text</a>
   <a href="mailto:vittozecca19@gmail.com"><span aria-hidden="true">@</span>Email</a>
 </nav>
+<script src="assets/js/booking-config.js"></script>
+<script src="assets/js/booking.js"></script>
 <script>
 (function () {
   'use strict';
-  var CONFIG = {
-    email: 'vittozecca19@gmail.com',
-    bookingLinks: {
-      private: '',
-      sparring: '',
-      'semi-private': '',
-      clinics: '',
-      'tennis-101': '',
-      'tennis-201': ''
-    }
-  };
+  var CONFIG = window.BaselineBookingConfig || {email: 'vittozecca19@gmail.com', bookingLinks: {}};
 
   var toggle = document.querySelector('.nav-toggle');
   var nav = document.querySelector('.site-nav');
@@ -128,27 +120,6 @@
       if (!open) { item.classList.add('is-open'); button.setAttribute('aria-expanded','true'); }
     });
   });
-
-  document.querySelectorAll('[data-booking]').forEach(function (link) {
-    var key = link.getAttribute('data-booking');
-    var liveUrl = CONFIG.bookingLinks[key];
-    if (liveUrl) {
-      link.href = liveUrl;
-      link.target = '_blank';
-      link.rel = 'noopener';
-    } else if (link.getAttribute('href').indexOf('contact.html') === 0) {
-      link.href = 'contact.html?program=' + encodeURIComponent(key) + '#lesson-request';
-    }
-  });
-
-  var params = new URLSearchParams(window.location.search);
-  var requestedProgram = params.get('program');
-  var programSelect = document.querySelector('[name="program"]');
-  if (requestedProgram && programSelect) {
-    Array.from(programSelect.options).forEach(function (option) {
-      if (option.text.toLowerCase().includes(requestedProgram.toLowerCase())) option.selected = true;
-    });
-  }
 
   var form = document.querySelector('.contact-form');
   if (form) {

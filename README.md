@@ -19,7 +19,7 @@ Updated July 27, 2026 with:
 
 The static GitHub Pages site cannot independently provide secure payments, real-time appointment availability, automatic reminders, clinic capacity, or student accounts. Those functions require a booking service such as Square Appointments.
 
-When booking links are ready, open `assets/js/main.js` and paste them into the empty `bookingLinks` values near the top. Buttons throughout the site will automatically use the correct links.
+When booking links are ready, open `assets/js/booking-config.js` and paste them into the empty `bookingLinks` values near the top. Buttons throughout the site will automatically use the correct links.
 
 ## Preview SEO status
 

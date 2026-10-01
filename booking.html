@@ -47,8 +47,8 @@
     </nav>
   </div>
 </header>
-<main id="main"><section class="page-hero"><div class="container"><span class="eyebrow">Simple, Mobile-Friendly Booking</span><h1>Book Tennis Coaching</h1><p class="lead">Choose the session you need. The current preview uses direct contact while the secure online booking and payment service is being connected.</p></div></section>
-<section class="section"><div class="container"><div class="notice notice--info"><strong>Online booking setup:</strong> The website structure is complete, but live availability, secure payment, automatic confirmations, reminders, and account management require the booking provider link. Until then, each option opens the lesson request form.</div><div class="booking-option-grid">
+<main id="main"><section class="page-hero"><div class="container"><span class="eyebrow">Simple, Mobile-Friendly Booking</span><h1>Book Tennis Coaching</h1><p class="lead">Choose your session below. Online scheduling and payment are coming soon. For now, send your preferred time and location to Coach Vittorio.</p></div></section>
+<section class="section"><div class="container"><div class="notice notice--info"><strong>Booking by email for now.</strong> Your session choice will be filled in automatically. Sending a request does not reserve a court or charge your card; Vittorio will confirm the details with you.</div><div class="booking-option-grid">
 <article><span class="eyebrow">60 Minutes</span><h2>Private Lesson</h2><p class="price">$95</p><p>Individual coaching based on your goals.</p><a class="btn btn--primary btn--block" href="contact.html#lesson-request" data-booking="private">Book a Private Lesson</a></article>
 <article><span class="eyebrow">60 Minutes</span><h2>Sparring Session</h2><p class="price">$120</p><p>Live hitting and match preparation.</p><a class="btn btn--primary btn--block" href="contact.html#lesson-request" data-booking="sparring">Book a Sparring Session</a></article>
 <article><span class="eyebrow">2 Players</span><h2>Semi-Private</h2><p class="price">$85</p><p>$42.50 per player for 60 minutes.</p><a class="btn btn--primary btn--block" href="contact.html#lesson-request" data-booking="semi-private">Book Semi-Private</a></article>
@@ -56,7 +56,7 @@
 <article><span class="eyebrow">4–6 Weeks</span><h2>Tennis 101</h2><p>Beginner fundamentals and recreational match readiness.</p><a class="btn btn--secondary btn--block" href="contact.html#lesson-request" data-booking="tennis-101">Book Tennis 101</a></article>
 <article><span class="eyebrow">6 Weeks</span><h2>Tennis 201</h2><p>Intermediate development, tactics, and match confidence.</p><a class="btn btn--secondary btn--block" href="contact.html#lesson-request" data-booking="tennis-201">Book Tennis 201</a></article>
 </div></div></section>
-<section class="section section--cream"><div class="container"><div class="section-title"><span class="eyebrow">Planned Student Experience</span><h2>What the Booking Provider Will Add</h2></div><div class="feature-grid"><article><h3>Secure Payments</h3><p>Pay online for lessons, packages, and clinic spots.</p></article><article><h3>Live Availability</h3><p>Choose open lesson times and see remaining clinic spots.</p></article><article><h3>Confirmations &amp; Reminders</h3><p>Receive automatic confirmation and reminder emails.</p></article><article><h3>Changes &amp; Packages</h3><p>Reschedule or cancel within policy and manage future package balances.</p></article></div></div></section>
+<section class="section section--cream"><div class="container"><div class="section-title"><span class="eyebrow">Coming Soon</span><h2>Book. Pay. Play.</h2><p class="lead">Our planned online booking experience:</p></div><ol class="check-list"><li>Choose your program and location</li><li>Select an available date and time</li><li>Enter player details</li><li>Pay securely and receive confirmation</li></ol><p class="small">Online availability and payments are not active yet.</p></div></section>
 </main>
 
 <footer class="site-footer">
@@ -79,20 +79,12 @@
   <a href="sms:+13059229122"><span aria-hidden="true">✉</span>Text</a>
   <a href="mailto:vittozecca19@gmail.com"><span aria-hidden="true">@</span>Email</a>
 </nav>
+<script src="assets/js/booking-config.js"></script>
+<script src="assets/js/booking.js"></script>
 <script>
 (function () {
   'use strict';
-  var CONFIG = {
-    email: 'vittozecca19@gmail.com',
-    bookingLinks: {
-      private: '',
-      sparring: '',
-      'semi-private': '',
-      clinics: '',
-      'tennis-101': '',
-      'tennis-201': ''
-    }
-  };
+  var CONFIG = window.BaselineBookingConfig || {email: 'vittozecca19@gmail.com', bookingLinks: {}};
 
   var toggle = document.querySelector('.nav-toggle');
   var nav = document.querySelector('.site-nav');
@@ -136,27 +128,6 @@
       if (!open) { item.classList.add('is-open'); button.setAttribute('aria-expanded','true'); }
     });
   });
-
-  document.querySelectorAll('[data-booking]').forEach(function (link) {
-    var key = link.getAttribute('data-booking');
-    var liveUrl = CONFIG.bookingLinks[key];
-    if (liveUrl) {
-      link.href = liveUrl;
-      link.target = '_blank';
-      link.rel = 'noopener';
-    } else if (link.getAttribute('href').indexOf('contact.html') === 0) {
-      link.href = 'contact.html?program=' + encodeURIComponent(key) + '#lesson-request';
-    }
-  });
-
-  var params = new URLSearchParams(window.location.search);
-  var requestedProgram = params.get('program');
-  var programSelect = document.querySelector('[name="program"]');
-  if (requestedProgram && programSelect) {
-    Array.from(programSelect.options).forEach(function (option) {
-      if (option.text.toLowerCase().includes(requestedProgram.toLowerCase())) option.selected = true;
-    });
-  }
 
   var form = document.querySelector('.contact-form');
   if (form) {

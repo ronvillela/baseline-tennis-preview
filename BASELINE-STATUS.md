@@ -99,3 +99,8 @@ Maintain COACH-CHANGE-LOG.md after every coach-request implementation. User requ
 ## Coach request 3 current pricing overrides
 
 Choose Your Session now immediately follows the hero. Current semi-private: $85 total for two players, $42.50 each, 60 minutes. Current clinics: $42.50 per player, up to four players, 60 minutes. These supersede the initial inspection's $90 semi-private and $45/90-minute clinic figures. Private $95 and sparring $120 remain 60 minutes. Packages unchanged. Updated related booking/detail pages and metadata. COACH-CHANGE-LOG.md includes request 3.
+
+
+## Step 4 provider-neutral preparation
+
+Shared public booking URLs now live in assets/js/booking-config.js; all pages load that file and assets/js/booking.js. Specific program buttons go directly to the correctly selected contact fallback while URLs are empty, or to a tested HTTPS provider link in the same tab when configured. Generic Book links still open the session chooser. Six exact program mappings replace ambiguous substring selection. Tests: node tests/booking.test.cjs. No provider selected, account opened, or payment activated. Booking-page copy explains the current fallback and planned process without claiming live availability. Step 4 advice in COACH-CHANGE-LOG.md is Spanish-first with a brief English summary, as requested. Update this report after each subsequent coach request.

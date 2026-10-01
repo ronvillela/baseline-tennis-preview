@@ -98,10 +98,52 @@ Updated the semi-private rate from $90 total/$45 per player to $85 total/$42.50 
 Implemented locally. All four options and prices verified in the mobile page structure. Final PDF evidence: mobile pricing cards showing player count, duration, price and action. Actual scheduling and payment still await provider integration.
 
 
-## Online booking and payment request awaiting provider decision
+## Solicitud 4 Reservar y pagar en línea
 
-Coach's desired flow: Choose Program → Choose Location → Choose Date / Time → Enter Player Information → Pay → Confirmation. Replace the request, waiting, messaging and separate-payment process with BOOK → PAY → DONE.
+### Lo que pediste
 
-Status: researched, not implemented. Stripe processes payments; a scheduling system must manage availability, capacity and confirmations. Current candidates are Setmore with Stripe for a low-cost pilot and Acuity with Stripe as a paid alternative. Setmore's current pricing page lists free Stripe integration, although older FAQ material differs; verify account entitlements during setup. Court availability and cross-location coach scheduling must be resolved before enabling automatic paid confirmation. No account, subscription or payment connection has been created.
+Elegir programa → elegir lugar → elegir fecha y hora → datos del jugador → pagar → recibir confirmación. La meta es: BOOK → PAY → DONE.
 
-Sources for provider selection: https://www.setmore.com/pricing ; https://www.setmore.com/features/class-booking ; https://www.setmore.com/features/multiple-locations ; https://www.acuityscheduling.com/pricing ; https://stripe.com/pricing . Recheck rates at activation. Final report should keep this request marked pending until booking, capacity, payment and confirmation have been tested end to end.
+### Lo que ya está listo
+
+- Los botones están preparados para conectar el sistema que elijas.
+- Al elegir una clase, el formulario conserva la opción correcta.
+- Por ahora, el cliente envía un correo. La página explica que todavía no hay pago ni reserva automática.
+- El diseño de Baseline sigue igual. Los cambios están guardados, pero no publicados.
+
+### Mi recomendación
+
+Primero probar Setmore con Stripe. La página actual de Setmore ofrece un plan gratis con pagos por Stripe. Algunas páginas antiguas dicen otra cosa; confirmaremos las funciones al crear la cuenta. Setmore permite clases con cupos, útil para clínicas de cuatro jugadores.
+
+Stripe cobra normalmente 2.9% + $0.30 por pago con tarjeta nacional de EE. UU. Ejemplo: una clase de $95 tiene una comisión aproximada de $3.06. Pueden aplicar otros cargos según la tarjeta o el servicio. Gratis significa sin mensualidad del plan básico, no sin comisión de tarjeta.
+
+Si Setmore no maneja bien tus horarios y lugares, probar Acuity con Stripe. Acuity empieza en $20 al mes, o $16 al mes pagando un año. El plan con hasta seis calendarios cuesta $34 al mes, o $27 al mes pagando un año. Estos importes no incluyen las comisiones por pago ni impuestos aplicables.
+
+No contrataría un plan anual antes de probar una reserva completa desde el celular. Para un solo entrenador que se mueve entre canchas, debemos evitar reservas al mismo tiempo y dejar tiempo para viajar. Setmore maneja sus ubicaciones separadas con cuentas distintas; hay que comprobar que esa organización te sirva.
+
+### Lo que necesitamos de ti
+
+1. ¿Tienes canchas y horarios garantizados, o debes confirmar la cancha después de cada solicitud?
+2. ¿Qué lugares y horarios quieres ofrecer? ¿Cuánto tiempo necesitas entre clases para trasladarte?
+3. ¿Ya tienes Stripe, Square u otro sistema de reservas?
+4. Para semi-private, proponemos un pago de $85 por los dos jugadores. Para clínicas, cada jugador paga $42.50 y hay cuatro cupos. ¿Está bien?
+
+### Lo que falta
+
+Elegir el sistema, abrir o conectar la cuenta, configurar horarios y canchas, y probar pago y confirmación. También debemos probar que no haya doble reserva y que la clínica cierre al llegar a cuatro jugadores. El calendario del entrenador no garantiza por sí solo la disponibilidad de una cancha.
+
+Estado: preparación técnica terminada; reservas y pagos en línea pendientes. No se ha creado ninguna cuenta, contratado ningún plan ni conectado pagos.
+
+### English summary
+
+Booking links are prepared and program selection is fixed. Live booking and payment are not active. Test Setmore + Stripe first for low cost; consider Acuity + Stripe if scheduling needs require it. Confirm court access, working hours, travel time and existing accounts before activation.
+
+### Fuentes de precios y funciones
+
+- Setmore: https://www.setmore.com/pricing
+- Clases y cupos: https://www.setmore.com/features/class-booking
+- Ubicaciones: https://www.setmore.com/features/multiple-locations
+- Acuity: https://www.acuityscheduling.com/pricing
+- Stripe: https://stripe.com/pricing
+
+Confirmar precios y funciones al activar el servicio. En el PDF final, mostrar la pantalla móvil de reserva y mantener este paso marcado como pendiente hasta probar el proceso completo.
