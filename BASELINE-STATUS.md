@@ -72,3 +72,10 @@ A subsequent local preview adds a sticky homepage section bar for Programs, Rate
 The user reviewed the local navigation preview and approved keeping it for a later GitHub upload. The homepage section bar and anchor navigation are approved and saved in local version history on preview/scroll-navigation, together with this checkpoint. Continue building on this version rather than the original homepage.
 
 Publication is still pending explicit user approval. Do not push or deploy yet. The next input expected is the coach's English/Spanish instructions and any approved media; keep conversation and updates in English.
+
+
+## Coach instruction: booking-first calls to action
+
+Implemented locally: use "Book a Lesson" for the homepage hero, closing action, and shared desktop header/footer booking links. Session-specific choices use direct Book wording. Compact mobile/section navigation retains "Book". Keep the approved Club Modern design and scrolling navigation.
+
+The coach's conversion goal is discover → understand → trust → price → availability → reserve → pay → confirmation. This update addresses CTA wording only. Booking still routes through the existing preview/contact fallback; provider integration is required for actual availability, payment and confirmation. Keep that limitation visible, and keep "Prepare Email Request" accurate on the contact form. No publication authorized.
