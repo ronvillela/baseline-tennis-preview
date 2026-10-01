@@ -1,0 +1,74 @@
+# Baseline Tennis development checkpoint
+
+Reviewed September 30, 2026 (America/New_York).
+
+## Source of truth and approval boundary
+
+- Repository: https://github.com/ronvillela/baseline-tennis-preview
+- Live preview: https://ronvillela.github.io/baseline-tennis-preview/
+- Inspected main commit: 46351e1c987560474db2a37e310eb6ed44107601, July 27, 2026.
+- Preserve the user-approved Club Modern design: electric blue, cream, charcoal, Playfair Display headings, DM Sans body, current logos and layout.
+- Do not push, merge, deploy, or publish without explicit user approval. Work locally and provide a reviewable preview first.
+- The initial inspection changed no website implementation. Subsequent approved local changes are recorded below.
+
+## Current implementation
+
+Static site with 12 HTML pages (including 404), five SVG logos, robots.txt and sitemap.xml. No package manager, build pipeline, application backend, or automated test suite is present.
+
+Pages: home, about, contact, booking, policies, private lessons, semi-private lessons, sparring sessions, group clinics, Tennis 101, Tennis 201, and 404.
+
+Current pages embed CSS and JavaScript directly. The files assets/css/main.css and assets/js/main.js remain in the repository but are older and are not loaded by the current HTML pages. Editing them alone will not update the current site.
+
+Published offerings: private $95/60 minutes; sparring $120/60 minutes; semi-private $90 total for two players/60 minutes; clinics $45 per player/90 minutes with four-player maximum and ages 10+. Packages: five lessons $450; ten lessons $850. Tennis 101: 4–6 weeks; Tennis 201: six weeks. General coaching ages 3+. These are existing site claims, not independently verified business approvals.
+
+Contact: Vittorio Zecca, (305) 922-9122, vittozecca19@gmail.com. Hours by appointment; ten Miami neighborhoods listed. Contact requests use the visitor's email application; no server submission or storage.
+
+## History and media findings
+
+- July 18, 8476a37: initial preview including five SVG logos and placeholders.
+- July 18, f132c44: mobile hamburger fix.
+- July 18, 0f19a3a: mobile navigation and desktop header layout changes, including logo reference changes.
+- July 27, 2f08d93: Miami programs, rates, ages, packages, policies, sparring and booking pages, plus text describing video feedback and progress tracking.
+- July 27, 46351e1: inline styling and behavior across all 12 HTML pages to restore navigation/layout.
+
+No photo or video asset files occur anywhere in the fetched five-commit history. Current HTML has no video, source, or iframe elements; image elements are logos only. Homepage uses a CSS court graphic placeholder. About page says "Coach Photo" in a placeholder. "Video Feedback" describes a coaching service; it is not playable media. If newer photographic/video work exists elsewhere, recover that version/assets before replacing placeholders or assuming the repository contains it.
+
+## Remaining issues and priorities
+
+1. Recover approved photos/video and their intended placement. Coach portrait, real tennis imagery, video sources/posters, and detailed approved biography/credentials are not supplied in this repository. Do not invent credentials or testimonials.
+2. Fix program preselection. Inline code matches URL keys against option text using substring matching. `clinics` does not match `Group Clinic`; `tennis-101` and `tennis-201` do not match the space-separated labels. Also `private` matches both Private Lesson and Semi-Private Lesson, causing the later option to win. Use explicit stable values for all six program keys. Clinics failure confirmed on the live form; other cases established from code, not individually browser-tested.
+3. Connect an approved scheduling/payment service. All six bookingLinks values are blank in every page. Calendar, secure payments, reminders, capacity, accounts, and package management are not implemented. The site currently discloses this and offers contact fallbacks.
+4. Correct README and upload guidance: they instruct editing bookingLinks in assets/js/main.js, but the active settings are duplicated inline. Consolidate active styling/scripts/configuration carefully, preserving the existing appearance and working mobile navigation; update docs to match.
+5. Before production: confirm final domain (currently baselinetennis.com in canonical URLs, structured data and sitemap), business rates/policies, court arrangements, and booking provider. Remove preview noindex/nofollow and change robots rules only with launch approval. Current indexing block is intentional.
+
+## Verification completed
+
+- Downloaded full repository and inspected all five commits.
+- Compared live bytes with local files: all 12 HTML pages, five SVG logos, robots.txt and sitemap.xml matched exactly.
+- Parsed links and media references across all HTML pages: no missing local file targets or fragment anchors.
+- Visually inspected desktop homepage and mobile menu at 390×844; mobile menu and Programs expansion worked. Browser viewport restored afterward.
+- Live clinic contact handoff reproduced incorrect Private Lesson selection.
+- No email was sent and no booking/payment was attempted. No exhaustive accessibility or cross-browser audit was performed.
+
+## Resume workflow
+
+Fetch remote changes before new implementation and compare with this commit. Keep local edits isolated from publication, preserve Club Modern visual styling, resolve program selection and documentation drift, then integrate recovered approved media and booking configuration. Preview locally and review changes before any push that could trigger GitHub Pages deployment.
+
+
+## Local scrolling-navigation preview
+
+A subsequent local preview adds a sticky homepage section bar for Programs, Rates, Locations, and Book. Only index.html implementation changed; detailed program pages retain their existing design. No remote push or deployment occurred.
+
+- Working branch: preview/scroll-navigation.
+- Original branch: backup/club-modern-before-scroll-nav at 46351e1.
+- Recovery bundle: ../baseline-before-scroll-nav.bundle (complete history, verified).
+- Local preview: http://127.0.0.1:8765/ while the local server is running.
+- To undo this homepage experiment, restore index.html from backup/club-modern-before-scroll-nav. Preserve any later user edits before restoration. Restore only the homepage when reverting the experiment; preserve this checkpoint.
+- Checked desktop rate navigation, mobile location navigation at 390×844, mobile menu opening, anchor spacing, and diff whitespace. Reduced-motion users receive immediate anchor navigation.
+
+
+## Approved changes awaiting publication
+
+The user reviewed the local navigation preview and approved keeping it for a later GitHub upload. The homepage section bar and anchor navigation are approved and saved in local version history on preview/scroll-navigation, together with this checkpoint. Continue building on this version rather than the original homepage.
+
+Publication is still pending explicit user approval. Do not push or deploy yet. The next input expected is the coach's English/Spanish instructions and any approved media; keep conversation and updates in English.
