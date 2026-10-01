@@ -175,3 +175,9 @@ All 12 HTML pages now show a fixed mobile BOOK NOW button occupying half the act
 - Existing per-program public URL configuration is the integration seam. No credentials/provider links supplied; no actual integration or payment/email test performed.
 - Pending: provider choice/account connection, guaranteed court inventory, coach schedule/travel buffers, cross-location conflict prevention, notification inbox verification, policy approval, 101/201 details.
 - Activation checks: paid booking with both notifications, timezone/location/policy/calendar, failed/abandoned payment, concurrent bookings, four-player capacity, reschedule/cancel/refund behavior. Provider's Stripe integration need not use standalone Stripe Checkout.
+
+
+### Request 18 — confirmation page preview
+- confirmation.html: branded mobile thank-you layout, session fields, payment status/reference placeholders, cancellation/weather policy, contact link.
+- Clearly marked design preview. No URL parameter can mark a booking paid; no customer data handled. Noindex and excluded from sitemap.
+- Real success state requires provider-verified paid booking; emails/calendar/provider return flow remain unimplemented pending selection and access.

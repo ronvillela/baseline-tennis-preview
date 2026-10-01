@@ -475,7 +475,7 @@ Para el PDF final: captura móvil del inicio de Group Clinics.
 
 Tennis 101 como programa. Precio, fechas y otros detalles pendientes.
 
-![Tennis 201: vista móvil](docs/coach-images/request-18.png)
+![Tennis 201: vista móvil](docs/coach-images/request-15-tennis-201.png)
 
 Tennis 201 usa el mismo formato de programa; los datos finales siguen pendientes.
 
@@ -563,3 +563,32 @@ Para el PDF final: mostrar el flujo previsto de Booking y distinguirlo clarament
 **Vista previa local — todavía no activo.** La imagen muestra los pasos previstos: programa y lugar, horario, datos del jugador, política, pago y confirmación con calendario. No es una captura de Stripe ni una prueba de pago completado. Los emails al cliente y al coach se documentarán con imágenes cuando se conecte y pruebe el proveedor.
 
 Esta imagen queda guardada para incluirla en el PDF final que se enviará al coach.
+
+
+## Solicitud 18 Página de confirmación
+
+### Lo que pediste
+
+YOU’RE BOOKED. SEE YOU ON COURT. Después del pago, mostrar programa, fecha, hora, lugar, coach, confirmación de pago y cancelación/lluvia.
+
+### Lo que preparamos
+
+Creamos confirmation.html con el diseño móvil de Baseline, todos los campos solicitados, referencia de reserva y la política actual de cancelación y lluvia. Incluye un enlace a la política completa y ASK A QUESTION. La vista previa está claramente marcada: no confirma ninguna reserva ni pago.
+
+### Pendiente de integración
+
+El proveedor debe devolver una reserva real con pago verificado y sus detalles. Abrir esta página o agregar parámetros a su URL no confirma un pago. No mostramos información de clientes ni simulamos pagos. Add to Calendar y emails se conectarán con los datos reales. Si el proveedor no permite esta página personalizada, adaptaremos su confirmación al mismo contenido y marca. La página de confirmación debe mantenerse fuera de buscadores y del sitemap.
+
+### Evidencia visual
+
+![Solicitud 18: diseño móvil de confirmación](docs/coach-images/request-18.png)
+
+Diseño preparado; datos de ejemplo descriptivos, sin reserva real. La política y contacto continúan debajo.
+
+![Solicitud 18: cancelación y lluvia](docs/coach-images/request-18-policy.png)
+
+### Estado
+
+Diseño local listo; confirmación automática pendiente de proveedor e integración. Guardado reversible, sin publicar. TRUST / SALES es el encabezado del siguiente grupo de solicitudes.
+
+English summary: Added a mobile confirmation preview with all requested session fields and existing cancellation/weather policy. No payment is verified, no real booking is shown; provider integration remains pending.
