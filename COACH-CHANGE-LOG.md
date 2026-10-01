@@ -759,3 +759,14 @@ Revisamos 13 páginas: enlaces y anchors locales, IDs, un H1 por página, JSON d
 ![Reserva como placeholder, vista desktop](docs/coach-images/booking-placeholder-desktop.png)
 
 Cambios guardados localmente; sin publicar.
+
+
+## Adición visual: Why Tennis?
+
+Adaptamos los cuatro diseños enviados a una sección final del inicio, después de las zonas de Miami. Reemplaza el cierre genérico y conserva BOOK NOW y ASK A QUESTION. Usa el azul, tipografía y espaciado de Club Modern; el contenido es texto real, legible en móvil y accesible a buscadores, sin cargar cuatro imágenes grandes.
+
+Incluye los mensajes sociales, actividad, concentración, juego competitivo y aire libre, y termina con “And somehow… it always starts at the Baseline.” Adaptamos “Your heart loves it” a “You get moving” para mantener el enfoque en actividad y evitar prometer un resultado de salud. Los precios y las reservas siguen primero en la página.
+
+![Why Tennis: vista móvil](docs/coach-images/why-tennis-mobile.png)
+
+Implementado localmente y reversible. Sin publicar.
