@@ -167,3 +167,11 @@ All 12 HTML pages now show a fixed mobile BOOK NOW button occupying half the act
 - Program-specific CTAs use Join Program (including booking page); generic fixed CTA stays Book Now.
 - Existing 101 4–6 weeks and 201 6 weeks explicitly provisional, pending separately supplied final details. No invented dates/prices.
 - Join Program uses program-selected contact fallback, not enrollment/payment. BOOKING / STRIPE is next section heading only.
+
+
+### Requests 16–17 — scheduling plus Stripe
+- Recommended managed scheduler with Stripe and mandatory full upfront payment; not a standalone payment link disconnected from availability.
+- Booking page planned flow now includes policy review, confirmation details and calendar option, explicitly inactive.
+- Existing per-program public URL configuration is the integration seam. No credentials/provider links supplied; no actual integration or payment/email test performed.
+- Pending: provider choice/account connection, guaranteed court inventory, coach schedule/travel buffers, cross-location conflict prevention, notification inbox verification, policy approval, 101/201 details.
+- Activation checks: paid booking with both notifications, timezone/location/policy/calendar, failed/abandoned payment, concurrent bookings, four-player capacity, reschedule/cancel/refund behavior. Provider's Stripe integration need not use standalone Stripe Checkout.

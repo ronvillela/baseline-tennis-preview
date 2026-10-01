@@ -388,3 +388,45 @@ Presentación preparada y revisada en móvil. JOIN PROGRAM abre el contacto con 
 English summary: Both programs now feature full-program price placeholders, next-session dates pending, and Join Program actions. Final product details will come separately; existing durations are explicitly provisional. Online enrollment/payment is not yet active.
 
 Para el PDF final: captura móvil de Tennis 101 y Tennis 201 con su oferta de programa.
+
+
+## Solicitudes 16 y 17 Reserva y pago en un solo flujo
+
+### Lo que pediste
+
+BOOK → PAY → DONE. Después del pago: confirmación al cliente, aviso al coach, fecha/hora/lugar claros, política de cancelación y Add to Calendar. Se puede combinar un sistema de reservas con Stripe.
+
+### Recomendación sencilla
+
+Usar un sistema de reservas conectado a Stripe. El sistema maneja horarios, plazas y avisos; Stripe procesa el pago. Acuity + Stripe es una opción adecuada para probar: permite exigir el pago completo al reservar y ofrece confirmaciones con información de la cita e invitación de calendario. Esto no requiere construir un sistema propio de reservas. La comparación de costos de la solicitud 4 sigue siendo una referencia; hay que verificar el plan y precio al elegir. No hemos contratado ningún servicio.
+
+El objetivo es que el cliente elija programa → cancha → horario disponible → datos → revise política → pague → reciba confirmación. Puede hacerse en la página del proveedor con la marca Baseline y sin volver a un formulario por correo. La integración del proveedor con Stripe puede usar su propio formulario de pago; no necesariamente el producto independiente Stripe Checkout.
+
+### Preparado en el sitio
+
+Los botones ya tienen una conexión por programa para llevar al proveedor elegido. Actualizamos la explicación del flujo previsto en Booking y añadimos un enlace a las políticas. La página indica claramente que las reservas, pagos y confirmaciones automáticas todavía no están activos. No agregamos un botón de pago sin un horario reservado.
+
+### Qué debe incluir la confirmación
+
+Programa, nombre del cliente, fecha, hora de inicio y final, zona horaria de Miami, cancha y dirección exacta, importe pagado y referencia de reserva. Incluir la política de cancelación y lluvia, cómo contactar o cambiar la reserva y Add to Calendar. El coach recibe la misma información de la reserva. Su aviso debe llegar al correo que confirme; verificar primero info@baselinetennis.com. El proveedor puede enviar desde su propio dominio aunque use el nombre de Baseline.
+
+### Lo que necesitamos del coach
+
+Elegir el proveedor y conectar su cuenta de Stripe; confirmar horarios y canchas que realmente se puedan reservar, tiempo de traslado entre zonas, correo de avisos y política final. Confirmar también los datos pendientes de Tennis 101/201. Ofrecer solo canchas y horarios garantizados: sin eso no podemos prometer confirmación inmediata.
+
+### Antes de activar
+
+Probar una reserva con pago correcto y comprobar ambos emails, fecha/hora/dirección, política y calendario. Probar pago rechazado o abandonado, dos clientes buscando el mismo horario y el límite de cuatro plazas en clínicas. Comprobar cancelación, cambio de horario y tratamiento del reembolso. Configurar un solo calendario del coach o prevención de conflictos entre todas las zonas. El pago completo debe ser obligatorio; una solicitud sin pagar no debe presentarse como reserva pagada y confirmada.
+
+### Estado
+
+Preparación local terminada. La integración real y sus pruebas quedan pendientes de cuentas, proveedor y disponibilidad. No se activaron cobros, no se enviaron emails y no se publicó el sitio.
+
+English summary: Prepared for a scheduling provider connected to Stripe, with mandatory full payment and one customer flow. Real integration remains pending provider/account access, confirmed courts and schedule, notification settings and end-to-end tests.
+
+Fuentes oficiales:
+- Pagos y pago completo al reservar: https://help.acuityscheduling.com/hc/en-us/articles/16676947528205-Accepting-payments
+- Confirmación e invitación de calendario: https://help.acuityscheduling.com/hc/en-us/articles/25780559174797-Appointment-information-for-clients
+- Opciones de la página de confirmación: https://help.acuityscheduling.com/hc/en-us/articles/16676898629133-Customize-the-confirmation-page
+
+Para el PDF final: mostrar el flujo previsto de Booking y distinguirlo claramente de una integración activa. Agregar capturas de pago y confirmación solo después de las pruebas reales.
