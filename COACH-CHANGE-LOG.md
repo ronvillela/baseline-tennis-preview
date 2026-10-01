@@ -784,3 +784,14 @@ La foto de Vittorio con la raqueta junto a la red se usa como retrato en Meet Yo
 ![Vittorio en cancha, vista móvil](docs/coach-images/coach-real-action-mobile.png)
 
 Estado: incorporadas localmente y revisadas en móvil. Reseñas y datos de experiencia siguen pendientes. Sin publicar.
+
+
+## Galería y video de cancha
+
+Incorporamos las siete fotos nuevas y el video IMG_6632.MOV en Home y About, en una sección On Court después de Meet Your Coach. Video con reproducción manual, controles y formato vertical respetado. Galería horizontal deslizable en móvil, con varias fotos visibles en escritorio. Conservamos el orden de precios y reserva antes de esta sección.
+
+Las fotos se exportaron a WebP con orientación corregida y tamaño reducido para la web; los originales no se modificaron. Las imágenes cargan de forma diferida y el video no se descarga automáticamente al abrir la página. El video suministrado dura aproximadamente 2.4 segundos; se comprobó reproducción completa en el navegador local. No es un montaje ni un video de larga duración.
+
+![Galería y video en móvil](docs/coach-images/court-gallery-mobile.png)
+
+Cambios locales y reversibles. Sin publicar.
