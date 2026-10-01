@@ -96,3 +96,12 @@ Updated the semi-private rate from $90 total/$45 per player to $85 total/$42.50 
 ### Status and demonstration
 
 Implemented locally. All four options and prices verified in the mobile page structure. Final PDF evidence: mobile pricing cards showing player count, duration, price and action. Actual scheduling and payment still await provider integration.
+
+
+## Online booking and payment request awaiting provider decision
+
+Coach's desired flow: Choose Program → Choose Location → Choose Date / Time → Enter Player Information → Pay → Confirmation. Replace the request, waiting, messaging and separate-payment process with BOOK → PAY → DONE.
+
+Status: researched, not implemented. Stripe processes payments; a scheduling system must manage availability, capacity and confirmations. Current candidates are Setmore with Stripe for a low-cost pilot and Acuity with Stripe as a paid alternative. Setmore's current pricing page lists free Stripe integration, although older FAQ material differs; verify account entitlements during setup. Court availability and cross-location coach scheduling must be resolved before enabling automatic paid confirmation. No account, subscription or payment connection has been created.
+
+Sources for provider selection: https://www.setmore.com/pricing ; https://www.setmore.com/features/class-booking ; https://www.setmore.com/features/multiple-locations ; https://www.acuityscheduling.com/pricing ; https://stripe.com/pricing . Recheck rates at activation. Final report should keep this request marked pending until booking, capacity, payment and confirmation have been tested end to end.
