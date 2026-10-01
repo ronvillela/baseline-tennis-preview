@@ -181,3 +181,9 @@ All 12 HTML pages now show a fixed mobile BOOK NOW button occupying half the act
 - confirmation.html: branded mobile thank-you layout, session fields, payment status/reference placeholders, cancellation/weather policy, contact link.
 - Clearly marked design preview. No URL parameter can mark a booking paid; no customer data handled. Noindex and excluded from sitemap.
 - Real success state requires provider-verified paid booking; emails/calendar/provider return flow remain unimplemented pending selection and access.
+
+
+### Request 19 — authentic trust evidence
+- Home: Meet Your Coach after reviews, with portrait/action-photo placeholders and pending years/unique-player figures; link to About.
+- Repository assets contain no real coach photos. No synthetic photos, testimonials, stars or numbers added.
+- Need approved imagery, publication consent, real review source, coaching-start date and unique-player records. Replace or hide pending blocks before launch.

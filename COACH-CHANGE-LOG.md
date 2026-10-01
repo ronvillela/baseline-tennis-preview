@@ -603,3 +603,31 @@ Diseño preparado; datos de ejemplo descriptivos, sin reserva real. La política
 Diseño local listo; confirmación automática pendiente de proveedor e integración. Guardado reversible, sin publicar. TRUST / SALES es el encabezado del siguiente grupo de solicitudes.
 
 English summary: Added a mobile confirmation preview with all requested session fields and existing cancellation/weather policy. No payment is verified, no real booking is shown; provider integration remains pending.
+
+
+## Solicitud 19 Elementos de confianza
+
+### Lo que pediste
+
+Reseñas reales, fotos del coach y de clases, y cifras de experiencia y jugadores entrenados que se puedan respaldar.
+
+### Lo que preparamos
+
+Conservamos Players Love Baseline para reseñas reales y añadimos Meet Your Coach con espacios para un retrato de Vittorio y una foto real dando clase. Añadimos una zona de experiencia y jugadores entrenados marcada como pendiente, sin inventar cifras. El enlace Meet the Coach lleva a su página. En About aclaramos que la foto real sigue pendiente.
+
+### Estado: DISEÑO PREPARADO — CONTENIDO PENDIENTE
+
+- Retrato del coach y fotos reales de clases: faltan archivos aprobados para publicar. No usamos fotos generadas ni de otras personas como si fueran Vittorio.
+- Google Reviews: falta el enlace del perfil del negocio y reseñas reales. Testimonios directos: necesitamos texto auténtico y autorización para publicarlo con el nombre acordado.
+- Experiencia: confirmar fecha de inicio y si el número representa años de enseñanza, no años jugando.
+- Players coached: confirmar total de jugadores únicos y una fuente o registro que lo respalde, evitando contar sesiones como personas.
+- Fotos de alumnos: confirmar permiso de publicación; para menores, autorización de su responsable.
+- Antes de lanzar: sustituir los placeholders con contenido aprobado o esconder los bloques pendientes. No mostrar estrellas, promedios, números ni datos estructurados de reseñas sin evidencia.
+
+### Evidencia visual
+
+![Solicitud 19: espacios para fotos reales](docs/coach-images/request-19.png)
+
+Diseño local con placeholders; todavía no hay fotos reales ni cifras verificadas.
+
+English summary: Added real-photo placeholders and an explicitly pending coaching-record area beside the existing reviews section. Authentic reviews, approved coach/action photos and substantiated numbers are still required. Nothing published.
