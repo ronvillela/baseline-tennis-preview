@@ -430,3 +430,12 @@ Fuentes oficiales:
 - Opciones de la página de confirmación: https://help.acuityscheduling.com/hc/en-us/articles/16676898629133-Customize-the-confirmation-page
 
 Para el PDF final: mostrar el flujo previsto de Booking y distinguirlo claramente de una integración activa. Agregar capturas de pago y confirmación solo después de las pruebas reales.
+
+
+### Imagen de las solicitudes 16–17
+
+![Vista móvil del flujo previsto de reserva y pago](docs/coach-images/requests-16-17-mobile-booking-flow.png)
+
+**Vista previa local — todavía no activo.** La imagen muestra los pasos previstos: programa y lugar, horario, datos del jugador, política, pago y confirmación con calendario. No es una captura de Stripe ni una prueba de pago completado. Los emails al cliente y al coach se documentarán con imágenes cuando se conecte y pruebe el proveedor.
+
+Esta imagen queda guardada para incluirla en el PDF final que se enviará al coach.
