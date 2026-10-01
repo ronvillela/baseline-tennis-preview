@@ -109,3 +109,8 @@ Shared public booking URLs now live in assets/js/booking-config.js; all pages lo
 ## Standing SEO priority
 
 Treat SEO as a requirement for every future update. Maintain unique page titles/descriptions, clear service/location copy, crawlable descriptive links, accurate prices and structured data, and mobile usability. Verify final domain before changing canonicals or sitemap; preserve preview restrictions until launch approval. Before production, review current SportsActivityLocation schema against actual service-area business operations (no fixed court/address yet verified), confirm indexing/robots configuration, set up Search Console, submit sitemap, and evaluate real mobile performance after media is added. robots.txt blocking can prevent crawlers from seeing noindex, so preview directives are not a privacy guarantee. Do not claim ranking gains or measured performance without evidence. Spanish-first SEO explanation is recorded in COACH-CHANGE-LOG.md.
+
+
+## Requests 5 and 6
+
+Request 5 confirms the already implemented Choose Your Session placement; no duplicate section. Request 6 adds a local review-section layout after pricing with proposed Players Love Baseline heading and an explicit pending-reviews notice. No actual reviews, stars, counts, review schema, or Google integration exist yet. Await Google review link or approved customer testimonials. Before production, populate with verified/approved content or remove the pending section. Requests 7 and 8 were blank. Spanish report updated.

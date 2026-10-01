@@ -31,6 +31,14 @@
 #programs,#rates,#locations{scroll-margin-top:calc(var(--header) + 72px)}
 @media(max-width:699px){.section-nav__inner{gap:.25rem;width:calc(100% - 1rem)}.section-nav a{flex:1;padding:.5rem .35rem;font-size:.78rem}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+.reviews-section{background:var(--cream);border-block:1px solid var(--line);scroll-margin-top:calc(var(--header) + 72px)}
+.reviews-section .section-title{margin-bottom:1.5rem}
+.reviews-pending{max-width:760px;padding:1.75rem;background:var(--white);border:1px solid var(--line);border-radius:var(--radius-lg)}
+.reviews-pending p:last-child{margin-bottom:0}
+.reviews-pending h3{font-size:1.4rem}
+.reviews-status{display:inline-block;margin-bottom:1rem;font:700 .7rem var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--gray)}
+@media(max-width:699px){.reviews-section{padding:2.5rem 0}.reviews-pending{padding:1.25rem}}
   </style>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SportsActivityLocation", "name": "Baseline Tennis", "description": "Private tennis lessons, sparring sessions, semi-private lessons, small group clinics, and Tennis 101 and Tennis 201 programs throughout Miami.", "url": "https://baselinetennis.com", "telephone": "+1-305-922-9122", "email": "vittozecca19@gmail.com", "founder": {"@type": "Person", "name": "Vittorio Zecca"}, "priceRange": "$42.50-$120", "areaServed": [{"@type": "Place", "name": "Brickell"}, {"@type": "Place", "name": "Coconut Grove"}, {"@type": "Place", "name": "Coral Gables"}, {"@type": "Place", "name": "Key Biscayne"}, {"@type": "Place", "name": "Downtown Miami"}, {"@type": "Place", "name": "Edgewater"}, {"@type": "Place", "name": "Midtown Miami"}, {"@type": "Place", "name": "Wynwood"}, {"@type": "Place", "name": "South Miami"}, {"@type": "Place", "name": "Pinecrest"}]}</script>
 </head>
@@ -83,6 +91,15 @@
 <article class="pricing-card"><div><h3>Group Clinics</h3><p class="pricing-details">Up to 4 Players<br>60 Minutes</p><p class="price">$42.50</p><p class="pricing-details">/ Player</p></div><a class="btn btn--secondary btn--block" href="group-clinics.html">View Clinics</a></article>
 <article class="pricing-card"><div><h3>Sparring / Hitting Session</h3><p class="pricing-details">60 Minutes</p><p class="price">$120</p></div><a class="btn btn--primary btn--block" href="booking.html" data-booking="sparring" aria-label="Book now: Sparring or Hitting Session">Book Now</a></article>
 </div></div></section>
+<!-- Review section prepared for local approval. Replace the pending notice with real,
+approved testimonials before production, or remove this section until available.
+Do not add stars, ratings, review counts, or review schema without real evidence. -->
+<section class="section reviews-section" id="reviews" aria-labelledby="reviews-heading">
+  <div class="container">
+    <div class="section-title"><span class="eyebrow">The Player Experience</span><h2 id="reviews-heading">Players Love Baseline</h2><p class="lead">Get to know Baseline through the players who train with us.</p></div>
+    <div class="reviews-pending"><span class="reviews-status">Preview · Reviews Coming Soon</span><h3>Real players. Their own words.</h3><p>Player testimonials will appear here once they are ready to share.</p><p class="small">No reviews or star rating are displayed yet.</p></div>
+  </div>
+</section>
 <section class="trust-strip"><div class="container trust-grid"><span>Ages 3+</span><span>Private &amp; Small Group</span><span>Video Feedback</span><span>Miami Service Area</span></div></section>
 <section class="section section--cream" id="programs" aria-labelledby="programs-heading"><div class="container"><div class="section-title"><span class="eyebrow">Programs</span><h2 id="programs-heading">Coaching Built Around the Player</h2><p class="lead">Every lesson is tailored to age, experience, goals, and learning style in a structured environment that keeps tennis engaging.</p></div><div class="program-grid">
 <article class="program-tile"><span class="program-number">01</span><h3>Private Lessons</h3><p>One-on-one technical, tactical, and movement coaching.</p><p class="tile-price">$95 / 60 minutes</p><a href="private-lessons.html">Explore Private Lessons</a></article>

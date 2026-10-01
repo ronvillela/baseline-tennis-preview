@@ -181,3 +181,30 @@ La meta es que más personas adecuadas encuentren Baseline y puedan reservar. Na
 SEO is a standing priority. Current foundations include service-and-location copy, unique titles and descriptions, descriptive internal links, separate service pages, consistent rates, mobile-first review and a sitemap. Production indexing, Search Console, verified business details and media performance checks remain launch tasks. No ranking or traffic improvement is claimed yet.
 
 Sources: https://developers.google.com/search/docs/fundamentals/seo-starter-guide ; https://developers.google.com/search/docs/crawling-indexing/block-indexing ; https://support.google.com/business/answer/3038177 .
+
+
+## Solicitud 5 Elegir sesión después del hero
+
+Esta solicitud confirma lo pedido en el punto 3. Ya está hecha: Choose Your Session aparece justo después del hero con los cuatro servicios, precios y botones. No duplicamos la sección.
+
+## Solicitud 6 Reseñas y testimonios reales
+
+### Lo que pediste
+
+“PLAYERS LOVE BASELINE” con Google Reviews reales y testimonios para que los nuevos visitantes tengan más confianza antes de pagar.
+
+### Lo que preparamos
+
+Agregamos una sección después de los precios llamada Players Love Baseline, con el mismo diseño de la marca y adaptada al celular. Por ahora muestra claramente que las reseñas están pendientes. No inventamos testimonios, nombres, estrellas ni cantidad de reseñas.
+
+### Lo que necesitamos de ti
+
+- El enlace de Google Reviews de Baseline, si ya existe.
+- Dos o tres testimonios reales que podamos mostrar, con el texto exacto y el nombre que el cliente permite publicar.
+- Para testimonios enviados en privado, confirmar que el cliente autoriza publicarlos. No incluir datos personales innecesarios.
+
+### Estado
+
+Diseño preparado; contenido real pendiente. No hay integración automática con Google ni valoración verificada. Antes de publicar, reemplazar el aviso por testimonios reales aprobados, o retirar temporalmente esta sección. El título es una propuesta de diseño, no una medición de satisfacción.
+
+En el PDF final, incluir una captura móvil y distinguir claramente entre diseño preparado y reseñas publicadas. Los puntos 7 y 8 llegaron vacíos; todavía no se han implementado.
