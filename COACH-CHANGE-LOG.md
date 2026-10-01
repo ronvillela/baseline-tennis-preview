@@ -2,6 +2,8 @@
 
 This running review connects Coach Vittorio's requests with the changes made to the Baseline Tennis website. The changes below are saved in the local preview and have not been published. The final email-ready PDF will include mobile screenshots demonstrating each completed item.
 
+Todas las solicitudes 1–17 incluyen una captura móvil del estado actual. Las imágenes muestran la versión acumulada, no comparaciones antes/después. Los pendientes se indican en cada pie de imagen.
+
 ## Overall objective
 
 Coach's request: “no solamente se vea premium, sino que esté diseñado principalmente para CONVERTIR visitantes en clientes que reserven y paguen.”
@@ -11,6 +13,13 @@ Desired journey: discover Baseline → understand the offering → trust the coa
 Progress: the booking language and homepage explanation have been updated. Live availability, payments, and automatic confirmation still require a booking provider. They are not represented as completed by these design changes.
 
 ## Request 1 Make booking the main action
+
+### Evidencia visual · Solicitud 1
+
+![Solicitud 1: vista móvil](docs/coach-images/request-01.png)
+
+BOOK NOW es la acción principal.
+
 
 ### What the coach requested
 
@@ -37,6 +46,13 @@ Final PDF evidence: mobile homepage showing BOOK A LESSON, and booking-page choi
 Remaining dependency: the buttons currently lead through the existing booking/contact fallback. The site still explains that live scheduling and payment are pending. The contact form accurately retains Prepare Email Request.
 
 ## Request 2 Explain the service location and player levels immediately
+
+### Evidencia visual · Solicitud 2
+
+![Solicitud 2: vista móvil](docs/coach-images/request-02.png)
+
+El hero explica clases privadas, Miami y niveles de juego.
+
 
 ### What the coach requested
 
@@ -81,6 +97,13 @@ When the coach's requirements are complete, produce an email-ready PDF with the 
 
 ## Request 3 Show prices directly on the homepage
 
+### Evidencia visual · Solicitud 3
+
+![Solicitud 3: vista móvil](docs/coach-images/request-03.png)
+
+Precios visibles en Choose Your Session; las demás opciones siguen debajo.
+
+
 ### What the coach requested
 
 “MOSTRAR LOS PRECIOS DIRECTAMENTE EN EL HOME” and “No quiero que alguien tenga que entrar en varias páginas para descubrir cuánto cuesta una clase.”
@@ -99,6 +122,13 @@ Implemented locally. All four options and prices verified in the mobile page str
 
 
 ## Solicitud 4 Reservar y pagar en línea
+
+### Evidencia visual · Solicitud 4
+
+![Solicitud 4: vista móvil](docs/coach-images/request-04.png)
+
+Flujo previsto. Reservas y pagos automáticos todavía pendientes.
+
 
 ### Lo que pediste
 
@@ -185,9 +215,23 @@ Sources: https://developers.google.com/search/docs/fundamentals/seo-starter-guid
 
 ## Solicitud 5 Elegir sesión después del hero
 
+### Evidencia visual · Solicitud 5
+
+![Solicitud 5: vista móvil](docs/coach-images/request-05.png)
+
+Choose Your Session está colocado inmediatamente después del hero.
+
+
 Esta solicitud confirma lo pedido en el punto 3. Ya está hecha: Choose Your Session aparece justo después del hero con los cuatro servicios, precios y botones. No duplicamos la sección.
 
 ## Solicitud 6 Reseñas y testimonios reales
+
+### Evidencia visual · Solicitud 6
+
+![Solicitud 6: vista móvil](docs/coach-images/request-06.png)
+
+Sección preparada. Faltan reseñas reales; no se muestran testimonios inventados.
+
 
 ### Lo que pediste
 
@@ -212,6 +256,13 @@ En el PDF final, incluir una captura móvil y distinguir claramente entre diseñ
 
 ## Solicitud 7 La propuesta de valor de Baseline
 
+### Evidencia visual · Solicitud 7
+
+![Solicitud 7: vista móvil](docs/coach-images/request-07.png)
+
+Propuesta de valor y beneficios de Baseline.
+
+
 ### Lo que pediste
 
 “YOUR COURT. YOUR SCHEDULE. YOUR GAME.” con cuatro puntos: Private coaching, Small groups, Convenient Miami locations y All levels welcome. Comunicar comodidad y experiencia con poco texto.
@@ -228,6 +279,13 @@ Para el PDF final: incluir una captura móvil con el título y los cuatro benefi
 
 
 ## Solicitud 8 Miami como enfoque principal de SEO
+
+### Evidencia visual · Solicitud 8
+
+![Solicitud 8: vista móvil](docs/coach-images/request-08.png)
+
+Miami y sus zonas principales ganan protagonismo. La captura no demuestra posicionamiento en Google.
+
 
 ### Lo que pediste
 
@@ -251,6 +309,13 @@ Para el PDF final: captura de la sección móvil Tennis Lessons Across Miami, mo
 
 ## Solicitud 9 Correo de la marca
 
+### Evidencia visual · Solicitud 9
+
+![Solicitud 9: vista móvil](docs/coach-images/request-09.png)
+
+Correo visible de la marca. Falta verificar recepción de mensajes.
+
+
 ### Lo que pediste
 
 Cambiar el Gmail personal por info@baselinetennis.com para que la comunicación del sitio use la marca Baseline.
@@ -267,6 +332,13 @@ Para el PDF final: captura de la página de contacto con el correo de Baseline.
 
 
 ## Solicitud 10 Botón fijo para reservar en el celular
+
+### Evidencia visual · Solicitud 10
+
+![Solicitud 10: vista móvil](docs/coach-images/request-10.png)
+
+Barra fija con BOOK NOW principal y Call/Text secundarios.
+
 
 ### Lo que pediste
 
@@ -286,6 +358,13 @@ Para el PDF final: captura móvil con BOOK NOW como botón principal y Call/Text
 
 
 ## Solicitud 11 Precio y reserva al inicio de cada programa
+
+### Evidencia visual · Solicitud 11
+
+![Solicitud 11: vista móvil](docs/coach-images/request-11.png)
+
+Ejemplo de Private Lessons: información de compra antes de los detalles.
+
 
 ### Lo que pediste
 
@@ -310,6 +389,13 @@ Para el PDF final: captura móvil del resumen de Private y de Tennis 101/201 una
 
 ## Solicitud 12 CTAs simples y consistentes
 
+### Evidencia visual · Solicitud 12
+
+![Solicitud 12: vista móvil](docs/coach-images/request-12.png)
+
+Página de reservas con acciones unificadas; otros botones aparecen al desplazarse.
+
+
 ### Lo que pediste
 
 Simplificar las llamadas a la acción a BOOK NOW, VIEW AVAILABILITY y, como opción secundaria, ASK A QUESTION.
@@ -331,6 +417,13 @@ Para el PDF final: captura móvil de Choose Your Session y del botón de reserva
 
 ## Solicitud 13 Retirar el paquete de 5 clases
 
+### Evidencia visual · Solicitud 13
+
+![Solicitud 13: vista móvil](docs/coach-images/request-13.png)
+
+Se retiró el paquete de cinco. El de diez muestra precio y ahorro.
+
+
 ### Lo que pediste
 
 Quitar por ahora Package of 5 de Private Lessons. Si se ofrecen paquetes después, presentarlos como productos claros con precio y ahorro definidos.
@@ -350,6 +443,13 @@ Para el PDF final: captura móvil de Lesson Options en Private Lessons.
 
 ## Solicitud 14 Clínicas de grupos pequeños
 
+### Evidencia visual · Solicitud 14
+
+![Solicitud 14: vista móvil](docs/coach-images/request-14.png)
+
+60 Minutes y Maximum 4 Players destacados.
+
+
 ### Lo que pediste
 
 Dejar claros 60 Minutes y Maximum 4 Players, usando el límite de cuatro como beneficio de grupos pequeños.
@@ -368,6 +468,17 @@ Para el PDF final: captura móvil del inicio de Group Clinics.
 
 
 ## Solicitud 15 Tennis 101 y Tennis 201 como programas
+
+### Evidencia visual · Solicitud 15
+
+![Solicitud 15: vista móvil](docs/coach-images/request-15.png)
+
+Tennis 101 como programa. Precio, fechas y otros detalles pendientes.
+
+![Tennis 201: vista móvil](docs/coach-images/request-18.png)
+
+Tennis 201 usa el mismo formato de programa; los datos finales siguen pendientes.
+
 
 ### Lo que pediste
 
@@ -391,6 +502,19 @@ Para el PDF final: captura móvil de Tennis 101 y Tennis 201 con su oferta de pr
 
 
 ## Solicitudes 16 y 17 Reserva y pago en un solo flujo
+
+### Evidencia visual · Solicitud 16
+
+![Solicitud 16: vista móvil](docs/coach-images/request-16.png)
+
+Flujo previsto; Stripe y los emails automáticos todavía no están conectados.
+
+### Evidencia visual · Solicitud 17
+
+![Solicitud 17: vista móvil](docs/coach-images/request-17.png)
+
+Objetivo de un solo flujo. La integración del proveedor sigue pendiente.
+
 
 ### Lo que pediste
 
