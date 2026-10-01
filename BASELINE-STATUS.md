@@ -114,3 +114,8 @@ Treat SEO as a requirement for every future update. Maintain unique page titles/
 ## Requests 5 and 6
 
 Request 5 confirms the already implemented Choose Your Session placement; no duplicate section. Request 6 adds a local review-section layout after pricing with proposed Players Love Baseline heading and an explicit pending-reviews notice. No actual reviews, stars, counts, review schema, or Google integration exist yet. Await Google review link or approved customer testimonials. Before production, populate with verified/approved content or remove the pending section. Requests 7 and 8 were blank. Spanish report updated.
+
+
+## Request 7 value proposition
+
+Replaced the compact trust strip with a blue value section (#why-baseline) after reviews, before programs. Headline: Your Court. Your Schedule. Your Game. Four exact benefits supplied by coach. Pricing remains immediately after hero. No new availability guarantees or booking functionality added. Spanish coach log updated; capture final mobile evidence for PDF.

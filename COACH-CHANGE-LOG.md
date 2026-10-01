@@ -208,3 +208,20 @@ Agregamos una sección después de los precios llamada Players Love Baseline, co
 Diseño preparado; contenido real pendiente. No hay integración automática con Google ni valoración verificada. Antes de publicar, reemplazar el aviso por testimonios reales aprobados, o retirar temporalmente esta sección. El título es una propuesta de diseño, no una medición de satisfacción.
 
 En el PDF final, incluir una captura móvil y distinguir claramente entre diseño preparado y reseñas publicadas. Los puntos 7 y 8 llegaron vacíos; todavía no se han implementado.
+
+
+## Solicitud 7 La propuesta de valor de Baseline
+
+### Lo que pediste
+
+“YOUR COURT. YOUR SCHEDULE. YOUR GAME.” con cuatro puntos: Private coaching, Small groups, Convenient Miami locations y All levels welcome. Comunicar comodidad y experiencia con poco texto.
+
+### Lo que hicimos
+
+Creamos una sección azul con el título en tres líneas y los cuatro puntos exactos. Reemplaza la pequeña franja de beneficios anterior, después de la sección de reseñas y antes de los programas. Así mantenemos la página clara, sin repetir otra franja. Los precios siguen directamente después del hero.
+
+### Estado
+
+Implementado en la versión local y revisado en vista móvil. El estilo, los colores y las letras de Baseline se conservan. La frase comunica la propuesta de la marca; no significa que cualquier cancha u horario esté disponible. La disponibilidad real sigue pendiente de configurar en el sistema de reservas.
+
+Para el PDF final: incluir una captura móvil con el título y los cuatro beneficios juntos. Solicitud 8 todavía pendiente de recibir.

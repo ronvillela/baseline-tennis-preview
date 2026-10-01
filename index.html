@@ -39,6 +39,17 @@
 .reviews-pending h3{font-size:1.4rem}
 .reviews-status{display:inline-block;margin-bottom:1rem;font:700 .7rem var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--gray)}
 @media(max-width:699px){.reviews-section{padding:2.5rem 0}.reviews-pending{padding:1.25rem}}
+
+.value-section{background:var(--blue);color:var(--white);scroll-margin-top:calc(var(--header) + 72px)}
+.value-layout{display:grid;gap:2rem;align-items:center}
+.value-section h2{color:var(--white);margin:0;font-size:clamp(2.2rem,5vw,4rem);line-height:1.14}
+.value-section h2 span{display:block}
+.value-points{list-style:none;padding:0;margin:0;display:grid;gap:0}
+.value-points li{display:flex;align-items:center;gap:.85rem;padding:1rem 0;border-bottom:1px solid rgba(255,255,255,.25);font-weight:600;font-size:1.05rem}
+.value-points li:last-child{border-bottom:0}
+.value-points li::before{content:"";width:7px;height:7px;flex-shrink:0;border-radius:50%;background:var(--white)}
+@media(min-width:700px){.value-layout{grid-template-columns:1.2fr 1fr;gap:3rem}}
+@media(max-width:699px){.value-section{padding:3rem 0}.value-points li{padding:.8rem 0}}
   </style>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SportsActivityLocation", "name": "Baseline Tennis", "description": "Private tennis lessons, sparring sessions, semi-private lessons, small group clinics, and Tennis 101 and Tennis 201 programs throughout Miami.", "url": "https://baselinetennis.com", "telephone": "+1-305-922-9122", "email": "vittozecca19@gmail.com", "founder": {"@type": "Person", "name": "Vittorio Zecca"}, "priceRange": "$42.50-$120", "areaServed": [{"@type": "Place", "name": "Brickell"}, {"@type": "Place", "name": "Coconut Grove"}, {"@type": "Place", "name": "Coral Gables"}, {"@type": "Place", "name": "Key Biscayne"}, {"@type": "Place", "name": "Downtown Miami"}, {"@type": "Place", "name": "Edgewater"}, {"@type": "Place", "name": "Midtown Miami"}, {"@type": "Place", "name": "Wynwood"}, {"@type": "Place", "name": "South Miami"}, {"@type": "Place", "name": "Pinecrest"}]}</script>
 </head>
@@ -100,7 +111,12 @@ Do not add stars, ratings, review counts, or review schema without real evidence
     <div class="reviews-pending"><span class="reviews-status">Preview · Reviews Coming Soon</span><h3>Real players. Their own words.</h3><p>Player testimonials will appear here once they are ready to share.</p><p class="small">No reviews or star rating are displayed yet.</p></div>
   </div>
 </section>
-<section class="trust-strip"><div class="container trust-grid"><span>Ages 3+</span><span>Private &amp; Small Group</span><span>Video Feedback</span><span>Miami Service Area</span></div></section>
+<section class="section value-section" id="why-baseline" aria-labelledby="value-heading">
+  <div class="container value-layout">
+    <h2 id="value-heading"><span>Your Court.</span> <span>Your Schedule.</span> <span>Your Game.</span></h2>
+    <ul class="value-points"><li>Private coaching</li><li>Small groups</li><li>Convenient Miami locations</li><li>All levels welcome</li></ul>
+  </div>
+</section>
 <section class="section section--cream" id="programs" aria-labelledby="programs-heading"><div class="container"><div class="section-title"><span class="eyebrow">Programs</span><h2 id="programs-heading">Coaching Built Around the Player</h2><p class="lead">Every lesson is tailored to age, experience, goals, and learning style in a structured environment that keeps tennis engaging.</p></div><div class="program-grid">
 <article class="program-tile"><span class="program-number">01</span><h3>Private Lessons</h3><p>One-on-one technical, tactical, and movement coaching.</p><p class="tile-price">$95 / 60 minutes</p><a href="private-lessons.html">Explore Private Lessons</a></article>
 <article class="program-tile"><span class="program-number">02</span><h3>Sparring Sessions</h3><p>High-quality hitting, point play, and match preparation.</p><p class="tile-price">$120 / 60 minutes</p><a href="sparring-sessions.html">Explore Sparring Sessions</a></article>
