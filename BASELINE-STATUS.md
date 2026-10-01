@@ -94,3 +94,8 @@ Updated the homepage headline to "Private Tennis Lessons in Miami", with beginne
 ## Coach review deliverable
 
 Maintain COACH-CHANGE-LOG.md after every coach-request implementation. User requested a running document that will become an email-ready PDF or image report when all coach requirements are finished. Preserve original Spanish/English requests, explain changes in English, and include final mobile screenshot evidence. Distinguish implemented locally, approved, published, and pending integrations. Current record covers requests 1 and 2; items 3 and 4 were blank. The fixed mobile review wrapper is at http://127.0.0.1:8766/ (local utility in /tmp/baseline-mobile-preview) and embeds the site server at port 8765.
+
+
+## Coach request 3 current pricing overrides
+
+Choose Your Session now immediately follows the hero. Current semi-private: $85 total for two players, $42.50 each, 60 minutes. Current clinics: $42.50 per player, up to four players, 60 minutes. These supersede the initial inspection's $90 semi-private and $45/90-minute clinic figures. Private $95 and sparring $120 remain 60 minutes. Packages unchanged. Updated related booking/detail pages and metadata. COACH-CHANGE-LOG.md includes request 3.
