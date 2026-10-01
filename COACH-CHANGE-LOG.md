@@ -631,3 +631,26 @@ Conservamos Players Love Baseline para reseñas reales y añadimos Meet Your Coa
 Diseño local con placeholders; todavía no hay fotos reales ni cifras verificadas.
 
 English summary: Added real-photo placeholders and an explicitly pending coaching-record area beside the existing reviews section. Authentic reviews, approved coach/action photos and substantiated numbers are still required. Nothing published.
+
+
+## Solicitud 20 Meet Your Coach en el inicio
+
+### Lo que pediste
+
+Presentar a Vittorio Zecca, Founder & Head Coach de Baseline Tennis, con foto profesional o en cancha, bio breve y TRAIN WITH VITTORIO o BOOK A LESSON.
+
+### Lo que hicimos
+
+Ampliamos la sección existente, sin duplicarla. Ahora identifica claramente el nombre, cargo y marca. La bio explica coaching personalizado con feedback claro, para adultos y juniors desde principiantes hasta avanzados. Incluye técnica, movimiento, estrategia y match play, con clases privadas, semi-private, clínicas y hitting/sparring. TRAIN WITH VITTORIO abre las opciones de reserva.
+
+### Estado
+
+Texto y CTA implementados. **Foto real pendiente:** el espacio sigue marcado como placeholder hasta recibir una imagen profesional o de acción aprobada por el coach. Reseñas y cifras verificadas siguen pendientes según la solicitud 19. No se publicó.
+
+### Evidencia visual
+
+![Solicitud 20: identidad y foto pendiente](docs/coach-images/request-20.png)
+
+![Solicitud 20: bio breve y CTA](docs/coach-images/request-20-bio.png)
+
+English summary: Updated the existing homepage coach section with Vittorio’s founder/head-coach title, concise coaching bio covering all requested audiences/services/skills, and Train With Vittorio CTA. Real portrait/action photo remains pending.

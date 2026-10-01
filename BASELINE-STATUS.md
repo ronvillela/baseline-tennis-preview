@@ -187,3 +187,9 @@ All 12 HTML pages now show a fixed mobile BOOK NOW button occupying half the act
 - Home: Meet Your Coach after reviews, with portrait/action-photo placeholders and pending years/unique-player figures; link to About.
 - Repository assets contain no real coach photos. No synthetic photos, testimonials, stars or numbers added.
 - Need approved imagery, publication consent, real review source, coaching-start date and unique-player records. Replace or hide pending blocks before launch.
+
+
+### Request 20 — homepage coach introduction
+- Existing coach section now identifies Vittorio Zecca as Founder & Head Coach, Baseline Tennis.
+- Concise bio covers adults/juniors, beginner–advanced, private/semi-private/clinics/hitting/sparring, technique/movement/strategy/match play.
+- Train With Vittorio → booking options. Real imagery still pending; no duplicate coach section.
