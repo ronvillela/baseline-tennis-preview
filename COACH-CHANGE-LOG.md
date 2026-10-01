@@ -677,3 +677,26 @@ El coach debe revisar y aprobar el texto en primera persona y enviar su historia
 ![Solicitud 21: cuatro pilares de coaching](docs/coach-images/request-21-approach.png)
 
 English summary: Expanded the existing About page into a personal coach profile with draft first-person copy, four coaching pillars, audiences/services and final booking actions. Biography, credentials, real photos and live availability remain pending.
+
+
+## Solicitud 22 Confianza cerca de la reserva
+
+### Lo que pediste
+
+Mensajes pequeños cerca de booking/checkout: Secure Payment via Stripe, Instant Booking Confirmation, Easy Rescheduling y Weather Protection.
+
+### Lo que hicimos
+
+Añadimos un bloque compacto en Booking, justo antes de las opciones de sesión, con los cuatro mensajes y enlace a FAQ & Policies. Stripe y confirmación instantánea están marcados Coming soon porque todavía no están activos. Rescheduling explica que debe solicitarse al coach con al menos 24 horas para cambiar sin cargo adicional. Weather Protection explica que las clases afectadas por lluvia o clima inseguro se reprograman; no promete seguro ni reembolso automático.
+
+### Estado
+
+Diseño listo y revisado en móvil. Pendiente conectar y probar Stripe, confirmaciones y herramientas de cambios antes de quitar los avisos Coming soon. Si el checkout es del proveedor, estos mensajes también deberán configurarse allí, si lo permite. El texto FAQ / POLICIES se toma como encabezado de próximas solicitudes.
+
+### Evidencia visual
+
+![Solicitud 22: mensajes de confianza en Booking](docs/coach-images/request-22.png)
+
+Vista local. Pagos y confirmaciones automáticas pendientes; los mensajes de cambios y clima reflejan la política actual.
+
+English summary: Added compact booking trust messages with explicit coming-soon status for Stripe and instant confirmation, accurate rescheduling/weather terms and a policy link. Actual provider checkout remains pending.

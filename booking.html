@@ -22,8 +22,11 @@
 .mobile-bar a{font-size:.75rem;letter-spacing:.06em;min-height:44px}
 .mobile-bar .mobile-bar__book{font-size:.85rem;font-weight:700}
 @media(max-width:1049px){.site-footer{padding-bottom:calc(6.5rem + env(safe-area-inset-bottom,0px))}.site-nav.is-open{height:calc(100dvh - var(--header) - var(--mobile) - env(safe-area-inset-bottom,0px))}}
-  </style>
-  
+
+.booking-trust{padding:1.25rem;margin:0 0 2rem;border:1px solid var(--line);border-radius:var(--radius-lg);background:var(--cream);scroll-margin-top:calc(var(--header) + 1rem)}
+.booking-trust h2{font-size:1.5rem}.booking-trust-grid{display:grid;gap:1rem;margin-bottom:1rem}.booking-trust-grid strong,.booking-trust-grid span{display:block}.booking-trust-grid strong{font-size:.9rem;color:var(--blue)}.booking-trust-grid span{font-size:.8rem;color:var(--gray);line-height:1.5;margin-top:.2rem}.booking-trust>a{font-size:.85rem;font-weight:600}@media(min-width:700px){.booking-trust-grid{grid-template-columns:1fr 1fr}}
+</style>
+
 </head>
 <body>
 
@@ -54,7 +57,7 @@
   </div>
 </header>
 <main id="main"><section class="page-hero"><div class="container"><span class="eyebrow">Simple, Mobile-Friendly Booking</span><h1>Book Tennis Lessons in Miami</h1><p class="lead">Choose your session below. Online scheduling and payment are coming soon. For now, send your preferred time and location to Coach Vittorio.</p></div></section>
-<section class="section"><div class="container"><div class="notice notice--info"><strong>Booking by email for now.</strong> Your session choice will be filled in automatically. Sending a request does not reserve a court or charge your card; Vittorio will confirm the details with you.</div><div class="booking-option-grid">
+<section class="section"><div class="container"><div class="notice notice--info"><strong>Booking by email for now.</strong> Your session choice will be filled in automatically. Sending a request does not reserve a court or charge your card; Vittorio will confirm the details with you.</div><aside class="booking-trust" id="booking-trust" aria-labelledby="booking-trust-heading"><span class="eyebrow">Book With Confidence</span><h2 id="booking-trust-heading">Clear Policies. Peace of Mind.</h2><div class="booking-trust-grid"><div><strong>Secure Payment via Stripe</strong><span>Coming soon · payments are not connected yet.</span></div><div><strong>Instant Booking Confirmation</strong><span>Coming soon · bookings currently require coach confirmation.</span></div><div><strong>Easy Rescheduling</strong><span>Contact the coach at least 24 hours ahead to reschedule at no additional charge.</span></div><div><strong>Weather Protection</strong><span>Outdoor lessons affected by rain or unsafe weather will be rescheduled.</span></div></div><a href="policies.html">FAQ &amp; Policies</a></aside><div class="booking-option-grid">
 <article><span class="eyebrow">60 Minutes</span><h2>Private Lesson</h2><p class="price">$95</p><p>Individual coaching based on your goals.</p><a class="btn btn--primary btn--block" href="contact.html#lesson-request" data-booking="private">Book Now</a></article>
 <article><span class="eyebrow">60 Minutes</span><h2>Sparring Session</h2><p class="price">$120</p><p>Live hitting and match preparation.</p><a class="btn btn--primary btn--block" href="contact.html#lesson-request" data-booking="sparring">Book Now</a></article>
 <article><span class="eyebrow">2 Players</span><h2>Semi-Private</h2><p class="price">$85</p><p>$42.50 per player for 60 minutes.</p><a class="btn btn--primary btn--block" href="contact.html#lesson-request" data-booking="semi-private">Book Now</a></article>

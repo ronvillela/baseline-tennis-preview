@@ -199,3 +199,8 @@ All 12 HTML pages now show a fixed mobile BOOK NOW button occupying half the act
 - Expanded about.html: identity, first-person intro/philosophy draft, background placeholder, four coaching pillars, audiences/services, value proposition, photo placeholders, Ready to Train CTAs.
 - Coach must approve personal voice and supply factual biography/credentials/photos. No invented background or numbers.
 - View Availability currently points to honest pending booking page; provider activation pending. Existing About URL/title retained.
+
+
+### Request 22 — booking trust messages
+- Compact trust block before booking choices: Stripe and instant confirmation clearly Coming soon; reschedule at least 24h ahead via coach, rain/unsafe weather rescheduled.
+- FAQ/policies link included. No insurance, automatic refund or live payment claims. Provider checkout placement pending integration.
