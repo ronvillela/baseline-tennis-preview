@@ -216,3 +216,9 @@ All 12 HTML pages now show a fixed mobile BOOK NOW button occupying half the act
 ### Why Tennis supplied campaign artwork
 - Adapted supplied four-panel messaging into final homepage Why Tennis section, replacing generic closing CTA; blue/white with existing display typography.
 - Live HTML text, responsive columns, no large raster assets. Heart slogan adapted to You get moving. Booking/contact actions retained; price-first order unchanged.
+
+
+### Real coach photos received
+- Supplied IMG_0180.jpeg → assets/photos/vittorio-portrait.jpeg; IMG_7014.jpg → assets/photos/vittorio-on-court.jpg.
+- Home and About photo placeholders replaced; original source files untouched, website copies preserved without image alterations. CSS cropping, lazy loading and descriptive alt text added.
+- Prior photo-pending notes superseded; actual student/lesson imagery, reviews and verified credentials still not supplied.

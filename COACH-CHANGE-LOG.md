@@ -1,5 +1,8 @@
 # Baseline Tennis Coach Request Review
 
+> **Fotos recibidas:** las fotos reales de retrato y juego en cancha ya reemplazan los placeholders en Home y About. Las notas anteriores de fotos pendientes y sus capturas muestran versiones previas. Siguen pendientes reseñas, cifras verificadas y aprobación de la biografía.
+
+
 > **Actualización vigente:** se eliminó la reserva por email. Los botones ahora llevan a un placeholder de reserva con el programa elegido hasta conectar el proveedor. Las menciones anteriores al formulario o contacto para reservar describen versiones anteriores y ya no aplican. El email sigue disponible solo como contacto general.
 
 
@@ -770,3 +773,14 @@ Incluye los mensajes sociales, actividad, concentración, juego competitivo y ai
 ![Why Tennis: vista móvil](docs/coach-images/why-tennis-mobile.png)
 
 Implementado localmente y reversible. Sin publicar.
+
+
+## Fotos reales incorporadas
+
+La foto de Vittorio con la raqueta junto a la red se usa como retrato en Meet Your Coach y About. La foto golpeando la pelota aparece como imagen de acción en ambas páginas. Conservamos los originales enviados sin modificar; el encuadre se adapta con el diseño de la web. Las imágenes cargan de forma diferida y tienen texto alternativo descriptivo. No se presentan como evidencia de una clase con alumnos.
+
+![Retrato real en móvil](docs/coach-images/coach-real-portrait-mobile.png)
+
+![Vittorio en cancha, vista móvil](docs/coach-images/coach-real-action-mobile.png)
+
+Estado: incorporadas localmente y revisadas en móvil. Reseñas y datos de experiencia siguen pendientes. Sin publicar.
