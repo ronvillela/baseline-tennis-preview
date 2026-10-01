@@ -134,3 +134,10 @@ Current website email is info@baselinetennis.com, replacing the personal Gmail i
 ## Request 10 fixed mobile CTA
 
 All 12 HTML pages now show a fixed mobile BOOK NOW button occupying half the action bar, with Call/Text secondary. Email remains in contact/footer. Safe-area padding added to the bar, footer clearance and open menu height. Desktop breakpoint unchanged. Booking button opens booking.html until provider selection; no payment activation. Coach report updated. Await specific instructions under PROGRAM / SERVICE PAGES.
+
+
+### Request 11 — program purchase summaries
+- Private, Semi-Private, Clinics, Tennis 101 and Tennis 201 now lead with name, price, duration, players, Miami areas and a program-specific BOOK NOW link. Original introductions follow the offer.
+- Mobile summary uses compact typography and full-width CTA; Club Modern colors retained. One H1 per page; Tennis 101/201 H1 now includes Miami.
+- Pending coach input: Tennis 101/201 prices, session lengths and player limits. Explicit unconfirmed labels used; existing 4–6 week / 6 week course durations retained.
+- Verified five summary structures, booking routing tests, mobile Private preview. No publishing.

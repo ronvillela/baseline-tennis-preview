@@ -22,8 +22,24 @@
 .mobile-bar a{font-size:.75rem;letter-spacing:.06em;min-height:44px}
 .mobile-bar .mobile-bar__book{font-size:.85rem;font-weight:700}
 @media(max-width:1049px){.site-footer{padding-bottom:calc(6.5rem + env(safe-area-inset-bottom,0px))}.site-nav.is-open{height:calc(100dvh - var(--header) - var(--mobile) - env(safe-area-inset-bottom,0px))}}
-  </style>
-  
+
+/* Purchase essentials come before program details. */
+.session-hero{padding:1.75rem 0 2rem}
+.session-hero h1{font-size:clamp(2rem,5vw,3.8rem);max-width:850px;margin-bottom:1rem}
+.session-offer{max-width:850px}
+.session-offer__price{font:600 2.5rem var(--display);color:var(--blue);margin:0;line-height:1.15}
+.session-offer__price--pending{font:700 1.15rem var(--body)}
+.session-offer__unit{display:block;font:500 .9rem var(--body);color:var(--gray);margin-top:.25rem}
+.session-facts{display:grid;grid-template-columns:1fr 1fr;gap:.65rem 1rem;margin:1rem 0}
+.session-facts div{border-top:1px solid var(--line);padding-top:.5rem}
+.session-facts dt{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;color:var(--blue)}
+.session-facts dd{margin:0;font-size:.95rem;line-height:1.5}
+.session-facts .session-facts__locations{grid-column:1/-1}
+.session-offer .btn{width:100%;min-height:48px}
+.session-offer__note{font-size:.78rem;color:var(--gray);margin:.65rem 0 0;line-height:1.5}
+@media(min-width:700px){.session-hero{padding:2.5rem 0}.session-offer .btn{width:auto;min-width:240px}}
+</style>
+
 </head>
 <body>
 
@@ -53,8 +69,11 @@
     </nav>
   </div>
 </header>
-<main id="main"><section class="page-hero"><div class="container"><span class="eyebrow">6-Week Intermediate Program</span><h1>Tennis 201</h1><p class="lead">For players who understand the fundamentals and want greater consistency, smarter decisions, and more confidence during match play.</p></div></section>
-<section class="section"><div class="container split-section"><div><h2>Elevate the Way You Play Points</h2><p class="lead">Tennis 201 combines technical development with tactical understanding and competitive live-ball work.</p><ul class="check-list columns"><li>Shot consistency</li><li>Topspin &amp; slice</li><li>Directional control</li><li>Serve placement</li><li>Return of serve</li><li>Transition to the net</li><li>Doubles positioning</li><li>Point construction</li><li>Match strategy</li><li>Competitive drills</li><li>Live-ball play</li></ul></div><aside class="goal-card"><span class="eyebrow">Program Goal</span><p>Develop smarter shot selection, greater consistency, and confidence during match play.</p><a class="btn btn--primary btn--block" href="booking.html" data-booking="tennis-201">Ask About Tennis 201</a></aside></div></section>
+<main id="main"><section class="page-hero session-hero"><div class="container"><span class="eyebrow">6-Week Intermediate Program</span><h1>Tennis 201 in Miami</h1><div class="session-offer"><p class="session-offer__price session-offer__price--pending">Price to be confirmed<span class="session-offer__unit"></span></p>
+<dl class="session-facts"><div><dt>Duration</dt><dd>6 weeks</dd></div><div><dt>Players</dt><dd>To be confirmed</dd></div><div class="session-facts__locations"><dt>Miami locations</dt><dd>Brickell · Coconut Grove · Coral Gables · Key Biscayne · South Miami</dd></div></dl>
+<a class="btn btn--primary" href="contact.html?program=tennis-201#lesson-request" data-booking="tennis-201">Book Now</a>
+<p class="session-offer__note">Session length to be confirmed. Court and time confirmed with coach. Online payment coming soon.</p></div></div></section>
+<section class="section"><div class="container split-section"><div><p class="lead">For players who understand the fundamentals and want greater consistency, smarter decisions, and more confidence during match play.</p><h2>Elevate the Way You Play Points</h2><p class="lead">Tennis 201 combines technical development with tactical understanding and competitive live-ball work.</p><ul class="check-list columns"><li>Shot consistency</li><li>Topspin &amp; slice</li><li>Directional control</li><li>Serve placement</li><li>Return of serve</li><li>Transition to the net</li><li>Doubles positioning</li><li>Point construction</li><li>Match strategy</li><li>Competitive drills</li><li>Live-ball play</li></ul></div><aside class="goal-card"><span class="eyebrow">Program Goal</span><p>Develop smarter shot selection, greater consistency, and confidence during match play.</p><a class="btn btn--primary btn--block" href="booking.html" data-booking="tennis-201">Ask About Tennis 201</a></aside></div></section>
 </main>
 
 <footer class="site-footer">

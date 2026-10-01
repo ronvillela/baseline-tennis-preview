@@ -283,3 +283,26 @@ Aplicamos el cambio a las 12 páginas, incluidas todas las páginas de programas
 Implementado localmente y revisado en móvil. BOOK NOW abre la página de opciones de sesión; las reservas y pagos automáticos siguen pendientes del proveedor. Guardado de forma reversible, sin publicar.
 
 Para el PDF final: captura móvil con BOOK NOW como botón principal y Call/Text como secundarios. El texto PROGRAM / SERVICE PAGES parece ser el encabezado del siguiente grupo de instrucciones; todavía no contiene una solicitud adicional.
+
+
+## Solicitud 11 Precio y reserva al inicio de cada programa
+
+### Lo que pediste
+
+Mostrar primero nombre, precio, duración, cantidad de jugadores, zonas y BOOK NOW en Private, Semi-Private, Clinics, Tennis 101 y Tennis 201. Dejar los beneficios y explicaciones debajo.
+
+### Lo que hicimos
+
+Las cinco páginas ahora empiezan con un resumen claro y un botón grande BOOK NOW. Conservamos el diseño de Baseline y movimos la introducción debajo. Private muestra $95, 60 minutos y 1 jugador. Semi-Private muestra $85 total ($42.50 por jugador), 60 minutos y 2 jugadores. Clinics muestra $42.50 por jugador, 60 minutos y hasta 4 jugadores. Las cinco zonas principales de Miami aparecen arriba; cancha y horario se confirman con el coach.
+
+### Falta confirmar
+
+Tennis 101 conserva la duración publicada de 4–6 semanas y Tennis 201 la de 6 semanas. No encontramos precios, duración de cada clase ni cantidad de jugadores confirmados para estos programas. Mostramos esos datos como pendientes, sin inventar precios ni aplicar tarifas de otros servicios. Necesitamos los datos del coach para finalizar estas dos ofertas.
+
+### Estado
+
+Preparado localmente, con revisión móvil y enlaces de reserva por programa comprobados. Los botones usan la conexión preparada en la solicitud 4; los pagos automáticos todavía no están activos. Cambios reversibles, sin publicar. Cada página conserva un solo título principal y texto accesible para buscadores; añadimos Miami al título visible de Tennis 101 y 201.
+
+English summary: All five service pages now lead with purchase essentials and a program-specific Book Now button. Tennis 101/201 pricing, session length and player limits still need coach confirmation.
+
+Para el PDF final: captura móvil del resumen de Private y de Tennis 101/201 una vez confirmados los datos pendientes.
