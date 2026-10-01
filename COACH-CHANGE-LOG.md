@@ -577,6 +577,17 @@ Creamos confirmation.html con el diseño móvil de Baseline, todos los campos so
 
 ### Pendiente de integración
 
+**Estado: DISEÑO PREPARADO — FUNCIÓN PENDIENTE.** Por ahora la página usa placeholders (textos de ejemplo), no datos de una reserva real.
+
+- Programa elegido, fecha, hora y cancha/dirección: pendientes de recibir de la reserva real.
+- Pago, importe y referencia de reserva: pendientes de verificación por el proveedor.
+- Email al cliente y aviso al coach: pendientes de configurar y probar.
+- Add to Calendar: pendiente de generar con los datos reales de la sesión.
+- Política: mostramos el texto actual de cancelación/lluvia; falta validarlo con el coach antes del lanzamiento y aplicarlo en el proveedor.
+- Publicación y redirección después del pago: pendientes de integración, pruebas y aprobación.
+
+El nombre de Vittorio sí está definido. El encabezado YOU’RE BOOKED es parte del diseño; el aviso visible aclara que no se hizo una reserva ni un pago.
+
 El proveedor debe devolver una reserva real con pago verificado y sus detalles. Abrir esta página o agregar parámetros a su URL no confirma un pago. No mostramos información de clientes ni simulamos pagos. Add to Calendar y emails se conectarán con los datos reales. Si el proveedor no permite esta página personalizada, adaptaremos su confirmación al mismo contenido y marca. La página de confirmación debe mantenerse fuera de buscadores y del sitemap.
 
 ### Evidencia visual
