@@ -700,3 +700,48 @@ Diseño listo y revisado en móvil. Pendiente conectar y probar Stripe, confirma
 Vista local. Pagos y confirmaciones automáticas pendientes; los mensajes de cambios y clima reflejan la política actual.
 
 English summary: Added compact booking trust messages with explicit coming-soon status for Stripe and instant confirmation, accurate rescheduling/weather terms and a policy link. Actual provider checkout remains pending.
+
+
+## Solicitud 23 Políticas definitivas y preparación de lanzamiento
+
+### Lo que pediste
+
+Políticas claras y completas antes de lanzar: cancelación, late cancellation/no-show, lluvia, costos de cancha, reembolsos, vencimiento de paquetes y autorización para juniors. No publicar mensajes que parezcan un negocio incompleto. Priorizar Google → confianza → precio → disponibilidad → pago → confirmación.
+
+### Estado: PENDIENTE DE DECISIONES DEL COACH — NO LISTO PARA LANZAR
+
+Los términos existentes son un borrador de trabajo, no una nueva aprobación del coach. No inventamos cobros, vencimientos ni condiciones. La página de políticas conserva el texto existente y ahora termina con BOOK NOW y ASK A QUESTION. Las preguntas pendientes están en este documento interno, no se agregaron como políticas públicas.
+
+### Decisiones que necesitamos
+
+1. **Cancellation window:** confirmar si se mantienen las 24 horas actuales, cómo solicitar un cambio y la zona horaria aplicable.
+2. **Late cancellation / no-show:** definir el cargo exacto o pérdida de crédito, si se aplica siempre, tolerancia por retraso y qué pasa cuando alguien no asiste. El borrador solo dice que una cancelación tardía puede cobrarse completa; no define no-show.
+3. **Rain / weather:** confirmar quién decide, cómo se avisa, qué pasa si llueve con la clase empezada y cómo se reprograma. El borrador ofrece reprogramación por lluvia o clima inseguro.
+4. **Court fees:** confirmar si están incluidos en cada precio o se cobran aparte, con importe o regla clara por cancha.
+5. **Who pays court reservation fees:** definir quién reserva y quién paga, incluidos cargos no reembolsables de la cancha. Mostrar el total antes del pago.
+6. **Refunds:** confirmar reglas para sesiones sin usar, cancelaciones del coach y clases no reprogramables, además del texto existente sobre clases completadas y revisión excepcional de paquetes. Definir cómo y cuándo se tramita un reembolso.
+7. **Package expiration:** definir vigencia del paquete de diez, cuándo empieza a contar, extensiones por clima y tratamiento de clases restantes. No se ha definido un vencimiento.
+8. **Junior waiver:** el coach debe proporcionar el texto aprobado y el proceso de consentimiento del padre/madre o responsable. Definir cómo se registra y conserva la aceptación. No se redactó ni activó un waiver en esta tarea.
+
+### Regla para el sitio público
+
+Antes de publicar, sustituir todos los placeholders con contenido aprobado o retirar los bloques que sigan pendientes. Esto incluye Coming soon, awaiting verification, fotos pendientes, reseñas pendientes, notas de revisión y el diseño de confirmación. No borrar avisos de pagos pendientes mientras el flujo siga inactivo: primero conectar y probar o mantener la publicación bloqueada. Nunca usar la página de ejemplo como confirmación real.
+
+Aplicar las políticas finales de forma consistente en Policies, Booking, checkout del proveedor, confirmación y emails. Mantener datos de pago/confirmación fuera de buscadores; revisar el dominio y la indexación de las páginas comerciales al lanzar.
+
+### Secuencia de conversión: qué está listo y qué falta
+
+- **Google:** contenido y títulos enfocados en Miami preparados. Dominio final, indexación y configuración de búsqueda pendientes del lanzamiento.
+- **Confianza:** perfil y diseño preparados. Fotos, reseñas reales y datos de experiencia pendientes.
+- **Precio:** servicios principales visibles. Precios definitivos de Tennis 101/201 y costos de cancha pendientes.
+- **Disponibilidad:** integración, canchas y agenda del coach pendientes.
+- **Pago:** proveedor y Stripe pendientes de conectar y probar.
+- **Confirmación:** diseño preparado; reserva/pago verificados, emails y calendario pendientes.
+
+### Evidencia visual
+
+![Solicitud 23: página actual de políticas](docs/coach-images/request-23.png)
+
+Esta imagen documenta el borrador actual, NO políticas definitivas aprobadas. La lista de decisiones pendientes queda en este reporte para el coach. La estética Club Modern y las acciones de reserva se conservan.
+
+English summary: Final policies remain a launch blocker. Existing policy copy is retained pending coach decisions; added booking/contact actions at the end. All unfinished-content markers must be resolved or hidden before publication, without disguising inactive booking/payment features. Nothing published.

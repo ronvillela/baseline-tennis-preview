@@ -11,6 +11,10 @@ Reviewed September 30, 2026 (America/New_York).
 - Do not push, merge, deploy, or publish without explicit user approval. Work locally and provide a reviewable preview first.
 - The initial inspection changed no website implementation. Subsequent approved local changes are recorded below.
 
+
+## Launch gate — request 23
+Do not publish until coach approves final policy decisions (24-hour window, late/no-show charges, weather handling, court/reservation fees and payer, refunds, package expiry, junior consent), real booking/payment/confirmation flow is tested, and unfinished content is replaced or hidden. Never remove inactive-payment warnings merely to imply readiness. Existing policy wording remains a draft, not newly approved terms. Full decision list and conversion readiness are in COACH-CHANGE-LOG.md request 23.
+
 ## Current implementation
 
 Static site with 12 HTML pages (including 404), five SVG logos, robots.txt and sitemap.xml. No package manager, build pipeline, application backend, or automated test suite is present.
