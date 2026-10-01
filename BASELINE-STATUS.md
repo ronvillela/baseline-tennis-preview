@@ -119,3 +119,8 @@ Request 5 confirms the already implemented Choose Your Session placement; no dup
 ## Request 7 value proposition
 
 Replaced the compact trust strip with a blue value section (#why-baseline) after reviews, before programs. Headline: Your Court. Your Schedule. Your Game. Four exact benefits supplied by coach. Pricing remains immediately after hero. No new availability guarantees or booking functionality added. Spanish coach log updated; capture final mobile evidence for PDF.
+
+
+## Request 8 Miami positioning
+
+Miami is the primary geographic focus. No South Florida wording was present in active HTML at audit. Updated homepage title, about title/description/H1, service H1s and booking H1 to emphasize Miami naturally. Homepage locations highlights Brickell, Coconut Grove, Coral Gables, Key Biscayne and South Miami, with other existing neighborhoods secondary; includes booking/service links and court-confirmation wording. Do not create thin duplicate neighborhood pages, fabricate addresses or imply guaranteed courts. Preserve preview noindex until production approval. Spanish coach report updated.

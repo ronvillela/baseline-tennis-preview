@@ -225,3 +225,25 @@ Creamos una sección azul con el título en tres líneas y los cuatro puntos exa
 Implementado en la versión local y revisado en vista móvil. El estilo, los colores y las letras de Baseline se conservan. La frase comunica la propuesta de la marca; no significa que cualquier cancha u horario esté disponible. La disponibilidad real sigue pendiente de configurar en el sistema de reservas.
 
 Para el PDF final: incluir una captura móvil con el título y los cuatro beneficios juntos. Solicitud 8 todavía pendiente de recibir.
+
+
+## Solicitud 8 Miami como enfoque principal de SEO
+
+### Lo que pediste
+
+Dar prioridad a Miami sobre South Florida. Enfocar la web en clases privadas, entrenador de tenis y clases de tenis en Miami, Brickell, Coconut Grove, Coral Gables, Key Biscayne y South Miami.
+
+### Lo que hicimos
+
+- Revisamos la versión actual: ya no tenía menciones de South Florida en las páginas del sitio.
+- Reforzamos Miami en los títulos principales de clases privadas, semi-private, clínicas, sparring y reservas.
+- La página del entrenador ahora dice Your Tennis Coach in Miami y su título de búsqueda identifica a Vittorio Zecca.
+- El inicio mantiene Private Tennis Lessons in Miami y su título de búsqueda dice Tennis Lessons in Miami.
+- La sección de zonas destaca las cinco áreas solicitadas con enlaces claros para reservar o conocer las clases privadas. Conservamos las otras zonas atendidas como información secundaria.
+- No creamos páginas repetidas por barrio ni direcciones de canchas sin confirmar. Cada página mantiene su título y descripción propios.
+
+### Estado
+
+Implementado en la versión local. Revisado en móvil y comprobados los títulos y enlaces. Es preparación para SEO; no significa que ya estemos apareciendo en Google ni garantiza posiciones. La indexación de la versión final sigue pendiente de la aprobación de lanzamiento.
+
+Para el PDF final: captura de la sección móvil Tennis Lessons Across Miami, mostrando las cinco zonas prioritarias.
