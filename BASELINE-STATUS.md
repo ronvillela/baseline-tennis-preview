@@ -141,3 +141,10 @@ All 12 HTML pages now show a fixed mobile BOOK NOW button occupying half the act
 - Mobile summary uses compact typography and full-width CTA; Club Modern colors retained. One H1 per page; Tennis 101/201 H1 now includes Miami.
 - Pending coach input: Tennis 101/201 prices, session lengths and player limits. Explicit unconfirmed labels used; existing 4–6 week / 6 week course durations retained.
 - Verified five summary structures, booking routing tests, mobile Private preview. No publishing.
+
+
+### Request 12 — CTA consistency
+- Standardized booking action links across all 12 pages to Book Now, preserving routes and program selection.
+- Homepage clinic card now View Availability → group-clinics.html#clinic-availability, an explicitly pending schedule; original card order retained.
+- Ask a Question remains secondary. Informational links retain descriptive labels; final mailto form button remains Prepare Email Request to accurately describe behavior.
+- Real availability/payment integration remains pending. Local changes only.

@@ -306,3 +306,24 @@ Preparado localmente, con revisión móvil y enlaces de reserva por programa com
 English summary: All five service pages now lead with purchase essentials and a program-specific Book Now button. Tennis 101/201 pricing, session length and player limits still need coach confirmation.
 
 Para el PDF final: captura móvil del resumen de Private y de Tennis 101/201 una vez confirmados los datos pendientes.
+
+
+## Solicitud 12 CTAs simples y consistentes
+
+### Lo que pediste
+
+Simplificar las llamadas a la acción a BOOK NOW, VIEW AVAILABILITY y, como opción secundaria, ASK A QUESTION.
+
+### Lo que hicimos
+
+Unificamos los botones de reserva de todas las páginas, encabezados, pies y programas con BOOK NOW. Los enlaces mantienen el programa seleccionado. La tarjeta de clínicas del inicio ahora dice VIEW AVAILABILITY y lleva a Upcoming Clinics, donde se explica que el calendario sigue pendiente. ASK A QUESTION se mantiene como opción secundaria de contacto.
+
+Conservamos el orden original del coach: Private, Semi-Private, Group Clinics y Sparring. Los enlaces informativos (por ejemplo View Rates y los nombres del menú) conservan etiquetas que describen su destino. El botón final del formulario sigue diciendo Prepare Email Request porque actualmente prepara un correo; no confirma ni cobra una reserva.
+
+### Estado
+
+Implementado localmente y revisado en móvil. No hay disponibilidad en tiempo real ni pago activo hasta conectar el proveedor. Guardado de forma reversible, sin publicar.
+
+English summary: Booking CTAs now use Book Now throughout. The homepage clinic CTA uses View Availability and leads to the pending clinic schedule. Ask a Question remains the secondary contact action. Original session order retained.
+
+Para el PDF final: captura móvil de Choose Your Session y del botón de reserva de un programa.
