@@ -124,3 +124,8 @@ Replaced the compact trust strip with a blue value section (#why-baseline) after
 ## Request 8 Miami positioning
 
 Miami is the primary geographic focus. No South Florida wording was present in active HTML at audit. Updated homepage title, about title/description/H1, service H1s and booking H1 to emphasize Miami naturally. Homepage locations highlights Brickell, Coconut Grove, Coral Gables, Key Biscayne and South Miami, with other existing neighborhoods secondary; includes booking/service links and court-confirmation wording. Do not create thin duplicate neighborhood pages, fabricate addresses or imply guaranteed courts. Preserve preview noindex until production approval. Spanish coach report updated.
+
+
+## Request 9 branded email
+
+Current website email is info@baselinetennis.com, replacing the personal Gmail in all HTML, mailto links, inline fallback configuration, shared booking configuration, legacy main.js and homepage structured data. Earlier inspection notes retain historical context. Mailbox existence/delivery not verified; confirm before publication. No mailbox provisioning, DNS modification or email sending performed. Coach report updated in Spanish.

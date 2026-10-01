@@ -247,3 +247,20 @@ Dar prioridad a Miami sobre South Florida. Enfocar la web en clases privadas, en
 Implementado en la versión local. Revisado en móvil y comprobados los títulos y enlaces. Es preparación para SEO; no significa que ya estemos apareciendo en Google ni garantiza posiciones. La indexación de la versión final sigue pendiente de la aprobación de lanzamiento.
 
 Para el PDF final: captura de la sección móvil Tennis Lessons Across Miami, mostrando las cinco zonas prioritarias.
+
+
+## Solicitud 9 Correo de la marca
+
+### Lo que pediste
+
+Cambiar el Gmail personal por info@baselinetennis.com para que la comunicación del sitio use la marca Baseline.
+
+### Lo que hicimos
+
+Actualizamos el correo visible, los enlaces Email del pie de página y del menú móvil, el destino del formulario que prepara correos y los datos del negocio para buscadores. El cambio se aplica a todas las páginas.
+
+### Estado
+
+Implementado localmente y revisado en la vista móvil. Falta confirmar que info@baselinetennis.com exista y pueda recibir mensajes antes de publicar. Cambiar la web no crea la casilla de correo. No enviamos mensajes de prueba ni modificamos el proveedor de correo.
+
+Para el PDF final: captura de la página de contacto con el correo de Baseline.

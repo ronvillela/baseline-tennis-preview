@@ -4,7 +4,7 @@
   var BOOKING_URL = 'contact.html#lesson-request';
   var PHONE = '3059229122';
   var PHONE_DISPLAY = '(305) 922-9122';
-  var EMAIL = 'vittozecca19@gmail.com';
+  var EMAIL = 'info@baselinetennis.com';
 
   /* Mobile navigation is initialized inline in each page for reliable mobile loading. */
 

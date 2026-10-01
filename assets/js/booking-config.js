@@ -2,7 +2,7 @@
    Activate each link only after its availability, capacity, payment and
    confirmation flow has been tested. Empty links retain the contact fallback. */
 window.BaselineBookingConfig = {
-  email: 'vittozecca19@gmail.com',
+  email: 'info@baselinetennis.com',
   bookingLinks: {
     private: '',
     sparring: '',
