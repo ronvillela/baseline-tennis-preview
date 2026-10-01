@@ -1,5 +1,19 @@
 # Baseline Tennis development checkpoint
 
+## Latest handoff — ready for Vittorio’s review
+
+- User approved GitHub upload. Published commit `cd377c5c41486766a642d226ab373171881035bd` to `origin/main`; GitHub Pages build returned `built`, no error. Live gallery verified (seven photos).
+- Temporary live site: https://ronvillela.github.io/baseline-tennis-preview/
+- Final coach review PDF: `../output/pdf/Baseline-Revision-del-Coach.pdf` (31 pages, Spanish, requests 1–23, labeled screenshots, supplemental media, pending decisions and GoDaddy plan). Shared with user for emailing; no email was sent by the assistant.
+- Running source notes: COACH-CHANGE-LOG.md. Image evidence: docs/coach-images/. PDF builder: ../tmp/pdfs/build_report.py.
+- Current work is ready for coach feedback. Next step: incorporate Vittorio’s feedback and confirmed policies/program details; choose scheduling/payment provider, connect Stripe and test the complete booking → payment → confirmation flow.
+- Pending: real reviews, verified experience/player statistics, approval of personal bio, final Tennis 101/201 details, final policies (no-show, fees, refunds, package expiry, junior waiver), court availability/travel buffers and email delivery verification.
+- Booking by email was explicitly removed. Program buttons retain selection and lead to honest booking placeholders until provider activation. Confirmation page remains a clearly labeled design preview; no payments or bookings are processed.
+- Real portrait, action photos, seven-photo gallery and short playable video are included. Preserve Club Modern styling, mobile-first review, reversible changes, and the coach’s original session order.
+- GitHub is temporary review hosting. After scheduling/payment decisions and final testing, prepare move to the coach’s GoDaddy account. Final domain/hosting details and production SEO/indexing still need confirmation.
+- This upload was authorized; future pushes/publication still require user approval. Existing local recovery branch and bundle remain available.
+
+
 Reviewed September 30, 2026 (America/New_York).
 
 ## Source of truth and approval boundary
