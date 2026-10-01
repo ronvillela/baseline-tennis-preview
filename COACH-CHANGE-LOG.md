@@ -654,3 +654,26 @@ Texto y CTA implementados. **Foto real pendiente:** el espacio sigue marcado com
 ![Solicitud 20: bio breve y CTA](docs/coach-images/request-20-bio.png)
 
 English summary: Updated the existing homepage coach section with Vittorio’s founder/head-coach title, concise coaching bio covering all requested audiences/services/skills, and Train With Vittorio CTA. Real portrait/action photo remains pending.
+
+
+## Solicitud 21 Perfil completo de Vittorio
+
+### Lo que pediste
+
+Una página personal y premium que explique quién es Vittorio, su experiencia, filosofía, jugadores y servicios, My Coaching Approach (Technique, Movement, Strategy, Match Play) y un cierre Ready to Train con reserva y disponibilidad.
+
+### Lo que hicimos
+
+Ampliamos About, conservando su dirección y SEO de entrenador en Miami. Presenta Vittorio Zecca, Founder & Head Coach de Baseline Tennis. Redactamos una introducción y filosofía en primera persona para su revisión. Incluimos los cuatro pilares solicitados, adultos y juniors desde principiantes hasta avanzados, y enlaces a private, semi-private, clinics y hitting/sparring. Explicamos el valor de entrenar directamente con Vittorio, con feedback claro y práctica orientada al juego. El cierre usa BOOK A LESSON y VIEW AVAILABILITY como se pidió aquí.
+
+### Estado: TEXTO PREPARADO — DATOS PERSONALES PENDIENTES
+
+El coach debe revisar y aprobar el texto en primera persona y enviar su historia, experiencia y credenciales verificables. No inventamos trayectoria, títulos, resultados ni cifras. Fotos profesionales y de acción siguen como placeholders. VIEW AVAILABILITY lleva por ahora a la página de reservas, que indica claramente que el calendario no está activo; se conectará al proveedor después. No se publicó.
+
+### Evidencia visual
+
+![Solicitud 21: perfil de Vittorio](docs/coach-images/request-21.png)
+
+![Solicitud 21: cuatro pilares de coaching](docs/coach-images/request-21-approach.png)
+
+English summary: Expanded the existing About page into a personal coach profile with draft first-person copy, four coaching pillars, audiences/services and final booking actions. Biography, credentials, real photos and live availability remain pending.
