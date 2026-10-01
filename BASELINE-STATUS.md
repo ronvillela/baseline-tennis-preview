@@ -104,3 +104,8 @@ Choose Your Session now immediately follows the hero. Current semi-private: $85 
 ## Step 4 provider-neutral preparation
 
 Shared public booking URLs now live in assets/js/booking-config.js; all pages load that file and assets/js/booking.js. Specific program buttons go directly to the correctly selected contact fallback while URLs are empty, or to a tested HTTPS provider link in the same tab when configured. Generic Book links still open the session chooser. Six exact program mappings replace ambiguous substring selection. Tests: node tests/booking.test.cjs. No provider selected, account opened, or payment activated. Booking-page copy explains the current fallback and planned process without claiming live availability. Step 4 advice in COACH-CHANGE-LOG.md is Spanish-first with a brief English summary, as requested. Update this report after each subsequent coach request.
+
+
+## Standing SEO priority
+
+Treat SEO as a requirement for every future update. Maintain unique page titles/descriptions, clear service/location copy, crawlable descriptive links, accurate prices and structured data, and mobile usability. Verify final domain before changing canonicals or sitemap; preserve preview restrictions until launch approval. Before production, review current SportsActivityLocation schema against actual service-area business operations (no fixed court/address yet verified), confirm indexing/robots configuration, set up Search Console, submit sitemap, and evaluate real mobile performance after media is added. robots.txt blocking can prevent crawlers from seeing noindex, so preview directives are not a privacy guarantee. Do not claim ranking gains or measured performance without evidence. Spanish-first SEO explanation is recorded in COACH-CHANGE-LOG.md.

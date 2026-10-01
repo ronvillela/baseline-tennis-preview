@@ -147,3 +147,37 @@ Booking links are prepared and program selection is fixed. Live booking and paym
 - Stripe: https://stripe.com/pricing
 
 Confirmar precios y funciones al activar el servicio. En el PDF final, mostrar la pantalla móvil de reserva y mantener este paso marcado como pendiente hasta probar el proceso completo.
+
+
+## SEO Cómo ayudamos a que encuentren Baseline en Google
+
+SEO significa preparar la web para que Google entienda qué ofreces y pueda mostrarla a las personas que buscan clases de tenis.
+
+### Lo que ya estamos haciendo
+
+- El inicio dice claramente Private Tennis Lessons in Miami y menciona las zonas donde trabajas.
+- Cada página tiene su propio título y una descripción del servicio. Revisamos las 12 páginas.
+- Cada programa tiene una página propia: clases privadas, semi-private, clínicas, sparring, Tennis 101 y Tennis 201.
+- Los enlaces del inicio describen el destino, por ejemplo Explore Private Lessons, en lugar de decir solamente Details.
+- Los precios y duraciones actualizados coinciden entre las páginas relacionadas.
+- El contenido principal está escrito en la página y puede leerse sin depender de un sistema de reservas externo.
+- Revisamos primero la experiencia móvil: texto legible, navegación y botones fáciles de usar.
+- Ya existe un mapa de las 11 páginas principales para buscadores. La página de error no está incluida.
+
+### Lo que falta antes del lanzamiento
+
+- Confirmar el dominio definitivo. Las direcciones para buscadores usan por ahora baselinetennis.com; todavía debemos confirmar que sea el dominio correcto.
+- Activar la indexación solamente al publicar la versión final aprobada. La versión de prueba contiene instrucciones para no aparecer en buscadores; esto no funciona como una contraseña ni garantiza privacidad.
+- Configurar Google Search Console y enviar el mapa del sitio con el dominio confirmado.
+- Revisar los datos estructurados del negocio según los lugares reales donde trabajas. No agregaremos direcciones, reseñas ni credenciales inventadas.
+- Si corresponde, crear o revisar Google Business Profile con tus datos reales y zonas de servicio. No presentar cada barrio como si fuera una sede propia.
+- Cuando tengamos fotos y videos: usar archivos livianos, descripciones útiles y revisar la velocidad desde el celular.
+- Medir visitas desde Google y reservas después del lanzamiento. Todavía no hemos medido resultados, posiciones en Google ni velocidad en condiciones reales.
+
+La meta es que más personas adecuadas encuentren Baseline y puedan reservar. Nadie puede garantizar el primer lugar en Google.
+
+### English summary
+
+SEO is a standing priority. Current foundations include service-and-location copy, unique titles and descriptions, descriptive internal links, separate service pages, consistent rates, mobile-first review and a sitemap. Production indexing, Search Console, verified business details and media performance checks remain launch tasks. No ranking or traffic improvement is claimed yet.
+
+Sources: https://developers.google.com/search/docs/fundamentals/seo-starter-guide ; https://developers.google.com/search/docs/crawling-indexing/block-indexing ; https://support.google.com/business/answer/3038177 .
