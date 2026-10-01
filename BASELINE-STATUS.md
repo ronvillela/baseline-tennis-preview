@@ -154,3 +154,9 @@ All 12 HTML pages now show a fixed mobile BOOK NOW button occupying half the act
 - Removed $450 five-lesson offer from Private, homepage and policy FAQ.
 - Existing $95 single and $850 ten-lesson options retained; ten-lesson savings clarified as $100 versus ten singles.
 - Adjusted remaining card grids. Future package sales require coach terms and provider setup. No publishing.
+
+
+### Request 14 — clinic capacity selling point
+- Prominent Maximum 4 Players / 60 Minutes across clinic hero, homepage cards, booking options and clinic details.
+- Added small-group / individual-attention benefit; $42.50 per-player price retained.
+- Provider must enforce capacity 4 when configured. Local preview only.

@@ -346,3 +346,22 @@ Cambio local y reversible, sin publicar. No agregamos nuevos paquetes. Antes de 
 English summary: Removed the 5-lesson package throughout visible site content. Retained the existing $850 ten-lesson option and clarified its $100 savings against ten $95 single lessons.
 
 Para el PDF final: captura móvil de Lesson Options en Private Lessons.
+
+
+## Solicitud 14 Clínicas de grupos pequeños
+
+### Lo que pediste
+
+Dejar claros 60 Minutes y Maximum 4 Players, usando el límite de cuatro como beneficio de grupos pequeños.
+
+### Lo que hicimos
+
+Destacamos Maximum 4 Players en la oferta principal de Group Clinics, en las tarjetas del inicio y en la página de reservas. La duración de 60 Minutes aparece junto a la información de compra. Añadimos el beneficio: grupos pequeños, más atención individual. Conservamos el precio de $42.50 por jugador y el orden de las sesiones.
+
+### Estado
+
+Implementado y revisado en móvil. Este texto comunica el límite del servicio; al conectar reservas, el proveedor debe configurarse para impedir más de cuatro plazas por clínica. Guardado localmente, sin publicar.
+
+English summary: Maximum 4 Players and 60 Minutes are prominent across clinic offers. Small-group coaching and individual attention are highlighted. The future booking system must enforce the four-player limit.
+
+Para el PDF final: captura móvil del inicio de Group Clinics.
