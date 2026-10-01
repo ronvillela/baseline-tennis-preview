@@ -79,3 +79,8 @@ Publication is still pending explicit user approval. Do not push or deploy yet. 
 Implemented locally: use "Book a Lesson" for the homepage hero, closing action, and shared desktop header/footer booking links. Session-specific choices use direct Book wording. Compact mobile/section navigation retains "Book". Keep the approved Club Modern design and scrolling navigation.
 
 The coach's conversion goal is discover → understand → trust → price → availability → reserve → pay → confirmation. This update addresses CTA wording only. Booking still routes through the existing preview/contact fallback; provider integration is required for actual availability, payment and confirmation. Keep that limitation visible, and keep "Prepare Email Request" accurate on the contact form. No publication authorized.
+
+
+## User preference: mobile-first review
+
+Prioritize mobile layout and usability for every subsequent change. After each completed update, verify the mobile preview and show it to the user in the browser panel. Keep the preview at a phone-sized viewport for review unless the user requests another size. Check desktop compatibility as appropriate. Preserve local version history and require explicit approval before publishing.
