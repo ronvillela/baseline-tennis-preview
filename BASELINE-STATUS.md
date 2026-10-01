@@ -84,3 +84,8 @@ The coach's conversion goal is discover → understand → trust → price → a
 ## User preference: mobile-first review
 
 Prioritize mobile layout and usability for every subsequent change. After each completed update, verify the mobile preview and show it to the user in the browser panel. Keep the preview at a phone-sized viewport for review unless the user requests another size. Check desktop compatibility as appropriate. Preserve local version history and require explicit approval before publishing.
+
+
+## Coach instruction 2: clear homepage hero
+
+Updated the homepage headline to "Private Tennis Lessons in Miami", with beginner/intermediate/advanced coaching copy and Brickell, Coconut Grove, Coral Gables, Key Biscayne, South Miami directly beneath. Retained Ages 3+, Book a Lesson, View Rates, existing styling and mobile section navigation. Items 3 and 4 in the supplied message were blank. This change remains local and reversible.
