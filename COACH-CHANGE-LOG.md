@@ -264,3 +264,22 @@ Actualizamos el correo visible, los enlaces Email del pie de página y del menú
 Implementado localmente y revisado en la vista móvil. Falta confirmar que info@baselinetennis.com exista y pueda recibir mensajes antes de publicar. Cambiar la web no crea la casilla de correo. No enviamos mensajes de prueba ni modificamos el proveedor de correo.
 
 Para el PDF final: captura de la página de contacto con el correo de Baseline.
+
+
+## Solicitud 10 Botón fijo para reservar en el celular
+
+### Lo que pediste
+
+Un botón BOOK NOW siempre visible abajo de la pantalla. Call o Text como opciones secundarias. Reservar debe ser la acción principal.
+
+### Lo que hicimos
+
+La barra inferior ahora dedica la mitad de su ancho a BOOK NOW, en azul. Call y Text ocupan espacios más pequeños a su lado. Quitamos Email de esta barra para mantener el foco; el correo sigue en Contact y en el pie de página.
+
+Aplicamos el cambio a las 12 páginas, incluidas todas las páginas de programas y servicios. La barra sigue fija al desplazarse y deja espacio para la zona inferior de los teléfonos compatibles. En pantallas grandes se mantiene la navegación de escritorio.
+
+### Estado
+
+Implementado localmente y revisado en móvil. BOOK NOW abre la página de opciones de sesión; las reservas y pagos automáticos siguen pendientes del proveedor. Guardado de forma reversible, sin publicar.
+
+Para el PDF final: captura móvil con BOOK NOW como botón principal y Call/Text como secundarios. El texto PROGRAM / SERVICE PAGES parece ser el encabezado del siguiente grupo de instrucciones; todavía no contiene una solicitud adicional.

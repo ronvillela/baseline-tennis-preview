@@ -16,6 +16,12 @@
 @media(min-width:1050px){body{padding-bottom:0}.nav-toggle{display:none}.site-nav{display:flex;align-items:center;gap:1.5rem}.nav-list{display:flex;align-items:center;gap:1.2rem}.nav-list>li{border:0;position:relative}.nav-list>li>a,.nav-list>li>button{padding:1rem 0;font-size:.87rem}.nav-submenu{position:absolute;top:100%;left:-1rem;width:235px;padding:.6rem;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);border-radius:var(--radius);display:none}.has-submenu:hover .nav-submenu,.has-submenu:focus-within .nav-submenu,.nav-submenu.is-open{display:block}.nav-submenu a{padding:.55rem .65rem}.header-cta{display:inline-flex}.mobile-bar{display:none}.site-footer{padding-bottom:3.5rem}.program-grid{grid-template-columns:repeat(3,1fr)}.pricing-grid{grid-template-columns:repeat(4,1fr)}.feature-grid{grid-template-columns:repeat(4,1fr)}.age-grid{grid-template-columns:repeat(4,1fr)}.detail-layout{grid-template-columns:minmax(0,1fr) 340px}.split-section{grid-template-columns:minmax(0,1fr) 360px}.contact-layout{grid-template-columns:.8fr 1.2fr}.coach-section{grid-template-columns:.85fr 1.15fr}.booking-option-grid{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:420px){.hero__actions,.button-row{flex-direction:column}.btn{width:100%}.package-options{grid-template-columns:1fr}.policy-stack article{grid-template-columns:1fr}.policy-number{width:42px;height:42px}}
 
+
+/* Mobile booking action remains visible on every page. */
+.mobile-bar{grid-template-columns:2fr 1fr 1fr;height:calc(var(--mobile) + env(safe-area-inset-bottom,0px));padding-bottom:env(safe-area-inset-bottom,0px)}
+.mobile-bar a{font-size:.75rem;letter-spacing:.06em;min-height:44px}
+.mobile-bar .mobile-bar__book{font-size:.85rem;font-weight:700}
+@media(max-width:1049px){.site-footer{padding-bottom:calc(6.5rem + env(safe-area-inset-bottom,0px))}.site-nav.is-open{height:calc(100dvh - var(--header) - var(--mobile) - env(safe-area-inset-bottom,0px))}}
   </style>
   
 </head>
@@ -64,10 +70,9 @@
   <div class="container footer-bottom"><p>&copy; 2026 Baseline Tennis. All rights reserved.</p><p class="preview-note">Temporary preview site — search indexing remains disabled until production launch.</p></div>
 </footer>
 <nav class="mobile-bar" aria-label="Quick actions">
-  <a class="mobile-bar__book" href="booking.html"><span aria-hidden="true">◫</span>Book</a>
-  <a href="tel:+13059229122"><span aria-hidden="true">☎</span>Call</a>
-  <a href="sms:+13059229122"><span aria-hidden="true">✉</span>Text</a>
-  <a href="mailto:info@baselinetennis.com"><span aria-hidden="true">@</span>Email</a>
+  <a class="mobile-bar__book" href="booking.html">Book Now</a>
+  <a href="tel:+13059229122">Call</a>
+  <a href="sms:+13059229122">Text</a>
 </nav>
 <script src="assets/js/booking-config.js"></script>
 <script src="assets/js/booking.js"></script>

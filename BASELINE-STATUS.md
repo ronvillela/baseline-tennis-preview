@@ -129,3 +129,8 @@ Miami is the primary geographic focus. No South Florida wording was present in a
 ## Request 9 branded email
 
 Current website email is info@baselinetennis.com, replacing the personal Gmail in all HTML, mailto links, inline fallback configuration, shared booking configuration, legacy main.js and homepage structured data. Earlier inspection notes retain historical context. Mailbox existence/delivery not verified; confirm before publication. No mailbox provisioning, DNS modification or email sending performed. Coach report updated in Spanish.
+
+
+## Request 10 fixed mobile CTA
+
+All 12 HTML pages now show a fixed mobile BOOK NOW button occupying half the action bar, with Call/Text secondary. Email remains in contact/footer. Safe-area padding added to the bar, footer clearance and open menu height. Desktop breakpoint unchanged. Booking button opens booking.html until provider selection; no payment activation. Coach report updated. Await specific instructions under PROGRAM / SERVICE PAGES.
