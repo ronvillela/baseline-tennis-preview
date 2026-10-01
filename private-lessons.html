@@ -73,9 +73,9 @@
 </header>
 <main id="main"><section class="page-hero session-hero"><div class="container"><span class="eyebrow">One-on-One Coaching</span><h1>Private Tennis Lessons in Miami</h1><div class="session-offer"><p class="session-offer__price">$95<span class="session-offer__unit">per session</span></p>
 <dl class="session-facts"><div><dt>Duration</dt><dd>60 minutes</dd></div><div><dt>Players</dt><dd>1 player</dd></div><div class="session-facts__locations"><dt>Miami locations</dt><dd>Brickell · Coconut Grove · Coral Gables · Key Biscayne · South Miami</dd></div></dl>
-<a class="btn btn--primary" href="contact.html?program=private#lesson-request" data-booking="private">Book Now</a>
+<a class="btn btn--primary" href="booking.html?program=private#booking-pending" data-booking="private">Book Now</a>
 <p class="session-offer__note">Court and time confirmed with coach. Online payment coming soon.</p></div></div></section>
-<section class="section"><div class="container detail-layout"><div class="content-block"><p class="lead">A focused 60-minute session built around your technique, movement, consistency, tactics, and personal goals.</p><h2>Focused Instruction, Personalized to You</h2><p>Private lessons give each player the time and attention to understand what is happening in their game and make practical corrections. Sessions may include technical drills, movement patterns, live-ball work, point construction, serving, returning, and match strategy.</p><h2>What May Be Included</h2><ul class="check-list"><li>Stroke evaluation and technical corrections</li><li>Footwork and court movement</li><li>Serve and return development</li><li>Consistency, placement, and point construction</li><li>Slow-motion video analysis</li><li>Progress tracking and personalized development goals</li></ul><h2 id="lesson-options" style="scroll-margin-top:calc(var(--header) + 1rem)">Lesson Options</h2><div class="inline-pricing"><div><strong>Single Lesson</strong><span>$95</span><small>60 minutes</small></div><div><strong>10-Lesson Package</strong><span>$850</span><small>$85 per lesson · Save $100 compared with 10 single lessons</small></div></div><p class="small">Packages are designed for players committed to long-term improvement while receiving the best value.</p></div><aside class="booking-card"><span class="eyebrow">Private Lesson</span><p class="price">$95</p><p>60-minute session</p><a class="btn btn--primary btn--block" href="booking.html" data-booking="private">Book Now</a><p class="small">Complimentary loaner racquets are available for first-time students and beginners.</p></aside></div></section>
+<section class="section"><div class="container detail-layout"><div class="content-block"><p class="lead">A focused 60-minute session built around your technique, movement, consistency, tactics, and personal goals.</p><h2>Focused Instruction, Personalized to You</h2><p>Private lessons give each player the time and attention to understand what is happening in their game and make practical corrections. Sessions may include technical drills, movement patterns, live-ball work, point construction, serving, returning, and match strategy.</p><h2>What May Be Included</h2><ul class="check-list"><li>Stroke evaluation and technical corrections</li><li>Footwork and court movement</li><li>Serve and return development</li><li>Consistency, placement, and point construction</li><li>Slow-motion video analysis</li><li>Progress tracking and personalized development goals</li></ul><h2 id="lesson-options" style="scroll-margin-top:calc(var(--header) + 1rem)">Lesson Options</h2><div class="inline-pricing"><div><strong>Single Lesson</strong><span>$95</span><small>60 minutes</small></div><div><strong>10-Lesson Package</strong><span>$850</span><small>$85 per lesson · Save $100 compared with 10 single lessons</small></div></div><p class="small">Packages are designed for players committed to long-term improvement while receiving the best value.</p></div><aside class="booking-card"><span class="eyebrow">Private Lesson</span><p class="price">$95</p><p>60-minute session</p><a class="btn btn--primary btn--block" href="booking.html?program=private#booking-pending" data-booking="private">Book Now</a><p class="small">Complimentary loaner racquets are available for first-time students and beginners.</p></aside></div></section>
 </main>
 
 <footer class="site-footer">
@@ -146,25 +146,6 @@
       if (!open) { item.classList.add('is-open'); button.setAttribute('aria-expanded','true'); }
     });
   });
-
-  var form = document.querySelector('.contact-form');
-  if (form) {
-    form.addEventListener('submit', function (event) {
-      event.preventDefault();
-      if (!form.checkValidity()) { form.reportValidity(); return; }
-      var data = new FormData(form);
-      var subject = 'Baseline Tennis — ' + data.get('program') + ' Request';
-      var body = [
-        'Name: ' + data.get('name'),
-        'Email: ' + data.get('email'),
-        'Phone: ' + (data.get('phone') || 'Not provided'),
-        'Program: ' + data.get('program'),
-        '',
-        data.get('message')
-      ].join('\n');
-      window.location.href = 'mailto:' + CONFIG.email + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-    });
-  }
 
   window.BaselineTennis = CONFIG;
 })();

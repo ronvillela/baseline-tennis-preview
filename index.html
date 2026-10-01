@@ -114,10 +114,10 @@
 <section class="section session-section" id="rates" aria-labelledby="rates-heading"><div class="container">
 <div class="section-title"><span class="eyebrow">Lessons &amp; Rates</span><h2 id="rates-heading">Choose Your Session</h2></div>
 <div class="pricing-grid">
-<article class="pricing-card pricing-card--featured"><div><h3>Private Lesson</h3><p class="pricing-details">1 Player<br>60 Minutes</p><p class="price">$95</p></div><a class="btn btn--primary btn--block" href="booking.html" data-booking="private" aria-label="Book now: Private Lesson">Book Now</a></article>
-<article class="pricing-card"><div><h3>Semi-Private</h3><p class="pricing-details">2 Players<br>60 Minutes</p><p class="price">$85 <span class="price-unit">Total</span></p><p class="pricing-details">$42.50 / Player</p></div><a class="btn btn--primary btn--block" href="booking.html" data-booking="semi-private" aria-label="Book now: Semi-Private">Book Now</a></article>
+<article class="pricing-card pricing-card--featured"><div><h3>Private Lesson</h3><p class="pricing-details">1 Player<br>60 Minutes</p><p class="price">$95</p></div><a class="btn btn--primary btn--block" href="booking.html?program=private#booking-pending" data-booking="private" aria-label="Book now: Private Lesson">Book Now</a></article>
+<article class="pricing-card"><div><h3>Semi-Private</h3><p class="pricing-details">2 Players<br>60 Minutes</p><p class="price">$85 <span class="price-unit">Total</span></p><p class="pricing-details">$42.50 / Player</p></div><a class="btn btn--primary btn--block" href="booking.html?program=semi-private#booking-pending" data-booking="semi-private" aria-label="Book now: Semi-Private">Book Now</a></article>
 <article class="pricing-card"><div><h3>Group Clinics</h3><p class="pricing-details">60 Minutes<br><strong>Maximum 4 Players</strong></p><p class="price">$42.50</p><p class="pricing-details">/ Player</p></div><a class="btn btn--secondary btn--block" href="group-clinics.html#clinic-availability">View Availability</a></article>
-<article class="pricing-card"><div><h3>Sparring / Hitting Session</h3><p class="pricing-details">60 Minutes</p><p class="price">$120</p></div><a class="btn btn--primary btn--block" href="booking.html" data-booking="sparring" aria-label="Book now: Sparring or Hitting Session">Book Now</a></article>
+<article class="pricing-card"><div><h3>Sparring / Hitting Session</h3><p class="pricing-details">60 Minutes</p><p class="price">$120</p></div><a class="btn btn--primary btn--block" href="booking.html?program=sparring#booking-pending" data-booking="sparring" aria-label="Book now: Sparring or Hitting Session">Book Now</a></article>
 </div></div></section>
 <!-- Review section prepared for local approval. Replace the pending notice with real,
 approved testimonials before production, or remove this section until available.
@@ -229,25 +229,6 @@ Do not add stars, ratings, review counts, or review schema without real evidence
       if (!open) { item.classList.add('is-open'); button.setAttribute('aria-expanded','true'); }
     });
   });
-
-  var form = document.querySelector('.contact-form');
-  if (form) {
-    form.addEventListener('submit', function (event) {
-      event.preventDefault();
-      if (!form.checkValidity()) { form.reportValidity(); return; }
-      var data = new FormData(form);
-      var subject = 'Baseline Tennis — ' + data.get('program') + ' Request';
-      var body = [
-        'Name: ' + data.get('name'),
-        'Email: ' + data.get('email'),
-        'Phone: ' + (data.get('phone') || 'Not provided'),
-        'Program: ' + data.get('program'),
-        '',
-        data.get('message')
-      ].join('\n');
-      window.location.href = 'mailto:' + CONFIG.email + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-    });
-  }
 
   window.BaselineTennis = CONFIG;
 })();

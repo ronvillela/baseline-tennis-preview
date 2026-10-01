@@ -1,5 +1,8 @@
 # Baseline Tennis Coach Request Review
 
+> **Actualización vigente:** se eliminó la reserva por email. Los botones ahora llevan a un placeholder de reserva con el programa elegido hasta conectar el proveedor. Las menciones anteriores al formulario o contacto para reservar describen versiones anteriores y ya no aplican. El email sigue disponible solo como contacto general.
+
+
 This running review connects Coach Vittorio's requests with the changes made to the Baseline Tennis website. The changes below are saved in the local preview and have not been published. The final email-ready PDF will include mobile screenshots demonstrating each completed item.
 
 Todas las solicitudes 1–17 incluyen una captura móvil del estado actual. Las imágenes muestran la versión acumulada, no comparaciones antes/después. Los pendientes se indican en cada pie de imagen.
@@ -745,3 +748,14 @@ Aplicar las políticas finales de forma consistente en Policies, Booking, checko
 Esta imagen documenta el borrador actual, NO políticas definitivas aprobadas. La lista de decisiones pendientes queda en este reporte para el coach. La estética Club Modern y las acciones de reserva se conservan.
 
 English summary: Final policies remain a launch blocker. Existing policy copy is retained pending coach decisions; added booking/contact actions at the end. All unfinished-content markers must be resolved or hidden before publication, without disguising inactive booking/payment features. Nothing published.
+
+
+## Ajuste posterior: sin reservas por email
+
+Retiramos el formulario que preparaba un correo y los redireccionamientos de reserva al contacto. BOOK NOW y JOIN PROGRAM permanecen, con selección del programa y un aviso claro de que el sistema todavía no está activo. Los enlaces públicos del proveedor se podrán configurar después. El correo de la marca sigue como contacto para preguntas.
+
+Revisamos 13 páginas: enlaces y anchors locales, IDs, un H1 por página, JSON de datos estructurados y sintaxis de JavaScript. Pasaron las pruebas de las seis selecciones y destinos HTTPS. Corregimos la tolerancia a configuración incompleta y eliminamos código de formulario que ya no se usa. No hubo errores de consola en la vista de reserva comprobada. No se probaron pagos reales porque no están conectados.
+
+![Reserva como placeholder, vista desktop](docs/coach-images/booking-placeholder-desktop.png)
+
+Cambios guardados localmente; sin publicar.

@@ -71,9 +71,9 @@
 </header>
 <main id="main"><section class="page-hero session-hero"><div class="container"><span class="eyebrow">6-Week Intermediate Program</span><h1>Tennis 201 in Miami</h1><div class="session-offer"><p class="session-offer__price session-offer__price--pending">Price to be confirmed<span class="session-offer__unit">Full program pricing coming soon</span></p>
 <dl class="session-facts"><div><dt>Program length*</dt><dd>6 weeks</dd></div><div><dt>Players</dt><dd>To be confirmed</dd></div><div class="session-facts__locations"><dt>Miami locations</dt><dd>Brickell · Coconut Grove · Coral Gables · Key Biscayne · South Miami</dd></div><div class="session-facts__locations"><dt>Next Session</dt><dd>Dates to be announced</dd></div></dl>
-<a class="btn btn--primary" href="contact.html?program=tennis-201#lesson-request" data-booking="tennis-201">Join Program</a>
-<p class="session-offer__note">*Program length is provisional. Price, schedule, group size and court are being finalized. Join Program contacts the coach; enrollment and payment are not yet available online.</p></div></div></section>
-<section class="section"><div class="container split-section"><div><p class="lead">For players who understand the fundamentals and want greater consistency, smarter decisions, and more confidence during match play.</p><h2>Elevate the Way You Play Points</h2><p class="lead">Tennis 201 combines technical development with tactical understanding and competitive live-ball work.</p><ul class="check-list columns"><li>Shot consistency</li><li>Topspin &amp; slice</li><li>Directional control</li><li>Serve placement</li><li>Return of serve</li><li>Transition to the net</li><li>Doubles positioning</li><li>Point construction</li><li>Match strategy</li><li>Competitive drills</li><li>Live-ball play</li></ul></div><aside class="goal-card"><span class="eyebrow">Program Goal</span><p>Develop smarter shot selection, greater consistency, and confidence during match play.</p><a class="btn btn--primary btn--block" href="booking.html" data-booking="tennis-201">Join Program</a></aside></div></section>
+<a class="btn btn--primary" href="booking.html?program=tennis-201#booking-pending" data-booking="tennis-201">Join Program</a>
+<p class="session-offer__note">*Program length is provisional. Price, schedule, group size and court are being finalized. Online enrollment and payment are not yet available.</p></div></div></section>
+<section class="section"><div class="container split-section"><div><p class="lead">For players who understand the fundamentals and want greater consistency, smarter decisions, and more confidence during match play.</p><h2>Elevate the Way You Play Points</h2><p class="lead">Tennis 201 combines technical development with tactical understanding and competitive live-ball work.</p><ul class="check-list columns"><li>Shot consistency</li><li>Topspin &amp; slice</li><li>Directional control</li><li>Serve placement</li><li>Return of serve</li><li>Transition to the net</li><li>Doubles positioning</li><li>Point construction</li><li>Match strategy</li><li>Competitive drills</li><li>Live-ball play</li></ul></div><aside class="goal-card"><span class="eyebrow">Program Goal</span><p>Develop smarter shot selection, greater consistency, and confidence during match play.</p><a class="btn btn--primary btn--block" href="booking.html?program=tennis-201#booking-pending" data-booking="tennis-201">Join Program</a></aside></div></section>
 </main>
 
 <footer class="site-footer">
@@ -144,25 +144,6 @@
       if (!open) { item.classList.add('is-open'); button.setAttribute('aria-expanded','true'); }
     });
   });
-
-  var form = document.querySelector('.contact-form');
-  if (form) {
-    form.addEventListener('submit', function (event) {
-      event.preventDefault();
-      if (!form.checkValidity()) { form.reportValidity(); return; }
-      var data = new FormData(form);
-      var subject = 'Baseline Tennis — ' + data.get('program') + ' Request';
-      var body = [
-        'Name: ' + data.get('name'),
-        'Email: ' + data.get('email'),
-        'Phone: ' + (data.get('phone') || 'Not provided'),
-        'Program: ' + data.get('program'),
-        '',
-        data.get('message')
-      ].join('\n');
-      window.location.href = 'mailto:' + CONFIG.email + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-    });
-  }
 
   window.BaselineTennis = CONFIG;
 })();

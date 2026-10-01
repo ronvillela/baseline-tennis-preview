@@ -71,9 +71,9 @@
 </header>
 <main id="main"><section class="page-hero session-hero"><div class="container"><span class="eyebrow">Train Together</span><h1>Semi-Private Tennis Lessons in Miami</h1><div class="session-offer"><p class="session-offer__price">$85<span class="session-offer__unit">total · $42.50 per player</span></p>
 <dl class="session-facts"><div><dt>Duration</dt><dd>60 minutes</dd></div><div><dt>Players</dt><dd>2 players</dd></div><div class="session-facts__locations"><dt>Miami locations</dt><dd>Brickell · Coconut Grove · Coral Gables · Key Biscayne · South Miami</dd></div></dl>
-<a class="btn btn--primary" href="contact.html?program=semi-private#lesson-request" data-booking="semi-private">Book Now</a>
+<a class="btn btn--primary" href="booking.html?program=semi-private#booking-pending" data-booking="semi-private">Book Now</a>
 <p class="session-offer__note">Court and time confirmed with coach. Online payment coming soon.</p></div></div></section>
-<section class="section"><div class="container detail-layout"><div class="content-block"><p class="lead">A 60-minute coaching session for two players who want shared training with individual feedback.</p><h2>Personal Coaching for Two Players</h2><p>Semi-private lessons are ideal for friends, couples, siblings, or doubles partners. Both players receive technical feedback while benefiting from cooperative drills, live-ball practice, and point play.</p><h2>What to Expect</h2><ul class="check-list"><li>Maximum of two players</li><li>Individual corrections within shared drills</li><li>Rally, movement, and consistency work</li><li>Singles or doubles patterns</li><li>Fun, productive competition</li></ul></div><aside class="booking-card"><span class="eyebrow">Semi-Private</span><p class="price">$85</p><p>60 minutes · 2 players<br>$42.50 per player</p><a class="btn btn--primary btn--block" href="booking.html" data-booking="semi-private">Book Now</a></aside></div></section>
+<section class="section"><div class="container detail-layout"><div class="content-block"><p class="lead">A 60-minute coaching session for two players who want shared training with individual feedback.</p><h2>Personal Coaching for Two Players</h2><p>Semi-private lessons are ideal for friends, couples, siblings, or doubles partners. Both players receive technical feedback while benefiting from cooperative drills, live-ball practice, and point play.</p><h2>What to Expect</h2><ul class="check-list"><li>Maximum of two players</li><li>Individual corrections within shared drills</li><li>Rally, movement, and consistency work</li><li>Singles or doubles patterns</li><li>Fun, productive competition</li></ul></div><aside class="booking-card"><span class="eyebrow">Semi-Private</span><p class="price">$85</p><p>60 minutes · 2 players<br>$42.50 per player</p><a class="btn btn--primary btn--block" href="booking.html?program=semi-private#booking-pending" data-booking="semi-private">Book Now</a></aside></div></section>
 </main>
 
 <footer class="site-footer">
@@ -144,25 +144,6 @@
       if (!open) { item.classList.add('is-open'); button.setAttribute('aria-expanded','true'); }
     });
   });
-
-  var form = document.querySelector('.contact-form');
-  if (form) {
-    form.addEventListener('submit', function (event) {
-      event.preventDefault();
-      if (!form.checkValidity()) { form.reportValidity(); return; }
-      var data = new FormData(form);
-      var subject = 'Baseline Tennis — ' + data.get('program') + ' Request';
-      var body = [
-        'Name: ' + data.get('name'),
-        'Email: ' + data.get('email'),
-        'Phone: ' + (data.get('phone') || 'Not provided'),
-        'Program: ' + data.get('program'),
-        '',
-        data.get('message')
-      ].join('\n');
-      window.location.href = 'mailto:' + CONFIG.email + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-    });
-  }
 
   window.BaselineTennis = CONFIG;
 })();

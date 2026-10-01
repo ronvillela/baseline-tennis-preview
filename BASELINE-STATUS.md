@@ -15,6 +15,9 @@ Reviewed September 30, 2026 (America/New_York).
 ## Launch gate — request 23
 Do not publish until coach approves final policy decisions (24-hour window, late/no-show charges, weather handling, court/reservation fees and payer, refunds, package expiry, junior consent), real booking/payment/confirmation flow is tested, and unfinished content is replaced or hidden. Never remove inactive-payment warnings merely to imply readiness. Existing policy wording remains a draft, not newly approved terms. Full decision list and conversion readiness are in COACH-CHANGE-LOG.md request 23.
 
+## Current booking behavior — supersedes earlier email fallback notes
+Email booking is removed. All program CTAs default to booking.html?program=KEY#booking-pending; selection is displayed as text, no reservation/payment is created. HTTPS provider links still activate per program. General contact email remains. Removed contact request form and unused inline handlers. Audit: 13 pages, local links/anchors, IDs/H1, JSON and JS syntax passed; routing tests and desktop browser check passed.
+
 ## Current implementation
 
 Static site with 12 HTML pages (including 404), five SVG logos, robots.txt and sitemap.xml. No package manager, build pipeline, application backend, or automated test suite is present.

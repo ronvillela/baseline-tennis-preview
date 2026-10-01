@@ -33,3 +33,6 @@ The preview intentionally contains `noindex, nofollow`, and `robots.txt` blocks 
 ## Existing logo folder
 
 This update references the existing files in `assets/logos`. Keep that folder in the repository when uploading this update.
+
+
+Booking update: empty provider links now show the booking placeholder with the selected program. Email booking and the lesson-request form have been removed. Configure public HTTPS links in assets/js/booking-config.js after provider testing.

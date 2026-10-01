@@ -153,25 +153,6 @@
     });
   });
 
-  var form = document.querySelector('.contact-form');
-  if (form) {
-    form.addEventListener('submit', function (event) {
-      event.preventDefault();
-      if (!form.checkValidity()) { form.reportValidity(); return; }
-      var data = new FormData(form);
-      var subject = 'Baseline Tennis — ' + data.get('program') + ' Request';
-      var body = [
-        'Name: ' + data.get('name'),
-        'Email: ' + data.get('email'),
-        'Phone: ' + (data.get('phone') || 'Not provided'),
-        'Program: ' + data.get('program'),
-        '',
-        data.get('message')
-      ].join('\n');
-      window.location.href = 'mailto:' + CONFIG.email + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-    });
-  }
-
   window.BaselineTennis = CONFIG;
 })();
 

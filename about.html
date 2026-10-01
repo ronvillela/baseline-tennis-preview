@@ -65,7 +65,7 @@
 <section class="section section--cream" id="coaching-approach"><div class="container"><div class="section-title"><span class="eyebrow">How We Train</span><h2>My Coaching Approach</h2></div><div class="feature-grid"><article><h3>Technique</h3><p>Build efficient, repeatable strokes.</p></article><article><h3>Movement</h3><p>Better positioning, balance and court coverage.</p></article><article><h3>Strategy</h3><p>Understand patterns, point construction and decision-making.</p></article><article><h3>Match Play</h3><p>Learn how to actually use your game under pressure.</p></article></div></div></section>
 <section class="section"><div class="container content-block"><span class="eyebrow">Who I Work With</span><h2>From Your First Rally to Your Next Challenge</h2><p>I coach adults and juniors, from beginner through advanced. Whether you’re learning the basics, returning to tennis or preparing for competitive points, we start with your goals.</p><ul class="check-list"><li><a href="private-lessons.html">Private lessons</a> — focused one-on-one attention.</li><li><a href="semi-private-lessons.html">Semi-private lessons</a> — shared training for two players.</li><li><a href="group-clinics.html">Clinics</a> — maximum four players, with individual feedback.</li><li><a href="sparring-sessions.html">Hitting / sparring</a> — live-ball practice and match preparation.</li></ul><h2>Why Train With Me?</h2><p>You’ll work directly with me on the details that matter to your game. We connect technique and movement with strategy and match play, so practice has a purpose beyond the drill.</p><p>Choose the format that suits you, with coaching across Miami and clear feedback throughout your session.</p></div></section>
 <section class="section section--cream"><div class="container"><div class="section-title"><span class="eyebrow">On Court</span><h2>Coaching in Action</h2></div><div class="profile-action-photo" role="img" aria-label="Placeholder for an approved real photo of Vittorio teaching on court">Real lesson photo coming soon</div><p class="small">Approved on-court photos will be added here.</p></div></section>
-<section class="cta-band" id="ready-to-train"><div class="container"><h2>Ready to Train?</h2><p>Let’s find the right session for your game.</p><div class="button-row button-row--center"><a class="btn btn--white" href="booking.html">Book a Lesson</a><a class="btn btn--outline-white" href="booking.html">View Availability</a></div><p class="small" style="margin-top:1rem">Online availability is coming soon. For now, booking options lead to a request with Vittorio.</p></div></section>
+<section class="cta-band" id="ready-to-train"><div class="container"><h2>Ready to Train?</h2><p>Let’s find the right session for your game.</p><div class="button-row button-row--center"><a class="btn btn--white" href="booking.html">Book a Lesson</a><a class="btn btn--outline-white" href="booking.html">View Availability</a></div><p class="small" style="margin-top:1rem">Online availability is coming soon. Booking buttons are placeholders until scheduling opens.</p></div></section>
 </main>
 
 <footer class="site-footer">
@@ -136,25 +136,6 @@
       if (!open) { item.classList.add('is-open'); button.setAttribute('aria-expanded','true'); }
     });
   });
-
-  var form = document.querySelector('.contact-form');
-  if (form) {
-    form.addEventListener('submit', function (event) {
-      event.preventDefault();
-      if (!form.checkValidity()) { form.reportValidity(); return; }
-      var data = new FormData(form);
-      var subject = 'Baseline Tennis — ' + data.get('program') + ' Request';
-      var body = [
-        'Name: ' + data.get('name'),
-        'Email: ' + data.get('email'),
-        'Phone: ' + (data.get('phone') || 'Not provided'),
-        'Program: ' + data.get('program'),
-        '',
-        data.get('message')
-      ].join('\n');
-      window.location.href = 'mailto:' + CONFIG.email + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-    });
-  }
 
   window.BaselineTennis = CONFIG;
 })();

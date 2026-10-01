@@ -36,3 +36,6 @@ Open `assets/js/booking-config.js`. Near the top, paste each tested HTTPS bookin
 ## Important preview setting
 
 The preview remains blocked from Google indexing. Do not remove `noindex`, `nofollow`, or the blocking `robots.txt` until the production domain is ready.
+
+
+Booking update: empty provider links now show the booking placeholder with the selected program. Email booking and the lesson-request form have been removed. Configure public HTTPS links in assets/js/booking-config.js after provider testing.

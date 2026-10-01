@@ -35,25 +35,6 @@
   });
 
   /* Contact form — mailto fallback */
-  var form = document.querySelector('.contact-form');
-  if (form) {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var name = form.querySelector('[name="name"]').value;
-      var userEmail = form.querySelector('[name="email"]').value;
-      var userPhone = form.querySelector('[name="phone"]').value;
-      var subject = form.querySelector('[name="subject"]').value || 'Baseline Tennis Inquiry';
-      var message = form.querySelector('[name="message"]').value;
-      if (!form.checkValidity()) {
-        form.reportValidity();
-        return;
-      }
-      var body = 'Name: ' + name + '\nEmail: ' + userEmail + '\nPhone: ' + userPhone + '\n\n' + message;
-      window.location.href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-    });
-  }
-
-  /* Expose constants for inline use if needed */
   window.BaselineTennis = {
     bookingUrl: BOOKING_URL,
     phone: PHONE,

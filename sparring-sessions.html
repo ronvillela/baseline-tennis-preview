@@ -54,7 +54,7 @@
   </div>
 </header>
 <main id="main"><section class="page-hero"><div class="container"><span class="eyebrow">High-Quality Hitting</span><h1>Tennis Sparring Sessions in Miami</h1><p class="lead">Live hitting and match preparation for intermediate and advanced players who need pace, patterns, and purposeful competition.</p></div></section>
-<section class="section"><div class="container detail-layout"><div class="content-block"><h2>Train at Match Speed</h2><p>Sparring sessions are designed for intermediate and advanced players who want a reliable hitting partner and realistic point play. The session can be shaped around upcoming competition, specific patterns, or the situations that need the most work.</p><h2>Session Focus</h2><ul class="check-list"><li>High-quality rallying and controlled hitting</li><li>Live point play and competitive games</li><li>Serve-plus-one and return-plus-one patterns</li><li>Directional control and court positioning</li><li>Match preparation and situational practice</li><li>Feedback on shot selection and strategy</li></ul></div><aside class="booking-card"><span class="eyebrow">Sparring Session</span><p class="price">$120</p><p>60-minute session</p><a class="btn btn--primary btn--block" href="booking.html" data-booking="sparring">Book Now</a><p class="small">Recommended for intermediate, advanced, and competitive players.</p></aside></div></section>
+<section class="section"><div class="container detail-layout"><div class="content-block"><h2>Train at Match Speed</h2><p>Sparring sessions are designed for intermediate and advanced players who want a reliable hitting partner and realistic point play. The session can be shaped around upcoming competition, specific patterns, or the situations that need the most work.</p><h2>Session Focus</h2><ul class="check-list"><li>High-quality rallying and controlled hitting</li><li>Live point play and competitive games</li><li>Serve-plus-one and return-plus-one patterns</li><li>Directional control and court positioning</li><li>Match preparation and situational practice</li><li>Feedback on shot selection and strategy</li></ul></div><aside class="booking-card"><span class="eyebrow">Sparring Session</span><p class="price">$120</p><p>60-minute session</p><a class="btn btn--primary btn--block" href="booking.html?program=sparring#booking-pending" data-booking="sparring">Book Now</a><p class="small">Recommended for intermediate, advanced, and competitive players.</p></aside></div></section>
 </main>
 
 <footer class="site-footer">
@@ -125,25 +125,6 @@
       if (!open) { item.classList.add('is-open'); button.setAttribute('aria-expanded','true'); }
     });
   });
-
-  var form = document.querySelector('.contact-form');
-  if (form) {
-    form.addEventListener('submit', function (event) {
-      event.preventDefault();
-      if (!form.checkValidity()) { form.reportValidity(); return; }
-      var data = new FormData(form);
-      var subject = 'Baseline Tennis — ' + data.get('program') + ' Request';
-      var body = [
-        'Name: ' + data.get('name'),
-        'Email: ' + data.get('email'),
-        'Phone: ' + (data.get('phone') || 'Not provided'),
-        'Program: ' + data.get('program'),
-        '',
-        data.get('message')
-      ].join('\n');
-      window.location.href = 'mailto:' + CONFIG.email + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-    });
-  }
 
   window.BaselineTennis = CONFIG;
 })();

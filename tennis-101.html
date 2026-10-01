@@ -71,9 +71,9 @@
 </header>
 <main id="main"><section class="page-hero session-hero"><div class="container"><span class="eyebrow">4–6 Week Beginner Program</span><h1>Tennis 101 in Miami</h1><div class="session-offer"><p class="session-offer__price session-offer__price--pending">Price to be confirmed<span class="session-offer__unit">Full program pricing coming soon</span></p>
 <dl class="session-facts"><div><dt>Program length*</dt><dd>4–6 weeks</dd></div><div><dt>Players</dt><dd>To be confirmed</dd></div><div class="session-facts__locations"><dt>Miami locations</dt><dd>Brickell · Coconut Grove · Coral Gables · Key Biscayne · South Miami</dd></div><div class="session-facts__locations"><dt>Next Session</dt><dd>Dates to be announced</dd></div></dl>
-<a class="btn btn--primary" href="contact.html?program=tennis-101#lesson-request" data-booking="tennis-101">Join Program</a>
-<p class="session-offer__note">*Program length is provisional. Price, schedule, group size and court are being finalized. Join Program contacts the coach; enrollment and payment are not yet available online.</p></div></div></section>
-<section class="section"><div class="container split-section"><div><p class="lead">A welcoming, structured introduction for players with little or no tennis experience.</p><h2>Learn the Game from the Ground Up</h2><p class="lead">Tennis 101 gives beginners the essential skills and understanding needed to enjoy the court with confidence.</p><ul class="check-list columns"><li>Proper grips</li><li>Forehand fundamentals</li><li>Backhand fundamentals</li><li>Volleys</li><li>Serve fundamentals</li><li>Footwork &amp; movement</li><li>Tennis scoring and rules</li><li>Singles &amp; doubles basics</li><li>Rally consistency</li><li>Court positioning</li></ul></div><aside class="goal-card"><span class="eyebrow">Program Goal</span><p>By the end of Tennis 101, students should feel confident rallying, serving, keeping score, and playing recreational matches.</p><a class="btn btn--primary btn--block" href="booking.html" data-booking="tennis-101">Join Program</a></aside></div></section>
+<a class="btn btn--primary" href="booking.html?program=tennis-101#booking-pending" data-booking="tennis-101">Join Program</a>
+<p class="session-offer__note">*Program length is provisional. Price, schedule, group size and court are being finalized. Online enrollment and payment are not yet available.</p></div></div></section>
+<section class="section"><div class="container split-section"><div><p class="lead">A welcoming, structured introduction for players with little or no tennis experience.</p><h2>Learn the Game from the Ground Up</h2><p class="lead">Tennis 101 gives beginners the essential skills and understanding needed to enjoy the court with confidence.</p><ul class="check-list columns"><li>Proper grips</li><li>Forehand fundamentals</li><li>Backhand fundamentals</li><li>Volleys</li><li>Serve fundamentals</li><li>Footwork &amp; movement</li><li>Tennis scoring and rules</li><li>Singles &amp; doubles basics</li><li>Rally consistency</li><li>Court positioning</li></ul></div><aside class="goal-card"><span class="eyebrow">Program Goal</span><p>By the end of Tennis 101, students should feel confident rallying, serving, keeping score, and playing recreational matches.</p><a class="btn btn--primary btn--block" href="booking.html?program=tennis-101#booking-pending" data-booking="tennis-101">Join Program</a></aside></div></section>
 <section class="section section--cream"><div class="container"><h2>New to Tennis?</h2><p class="lead">Complimentary loaner racquets are available for first-time students and beginners, so owning equipment is not required to begin.</p></div></section>
 </main>
 
@@ -145,25 +145,6 @@
       if (!open) { item.classList.add('is-open'); button.setAttribute('aria-expanded','true'); }
     });
   });
-
-  var form = document.querySelector('.contact-form');
-  if (form) {
-    form.addEventListener('submit', function (event) {
-      event.preventDefault();
-      if (!form.checkValidity()) { form.reportValidity(); return; }
-      var data = new FormData(form);
-      var subject = 'Baseline Tennis — ' + data.get('program') + ' Request';
-      var body = [
-        'Name: ' + data.get('name'),
-        'Email: ' + data.get('email'),
-        'Phone: ' + (data.get('phone') || 'Not provided'),
-        'Program: ' + data.get('program'),
-        '',
-        data.get('message')
-      ].join('\n');
-      window.location.href = 'mailto:' + CONFIG.email + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-    });
-  }
 
   window.BaselineTennis = CONFIG;
 })();

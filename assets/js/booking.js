@@ -13,16 +13,14 @@
   document.querySelectorAll('[data-booking]').forEach(function (link) {
     var key = link.getAttribute('data-booking');
     if (!Object.prototype.hasOwnProperty.call(labels, key)) return;
-    var destination = config.bookingLinks[key];
+    var destination = (config.bookingLinks || {})[key];
     // Continue in the same tab for a simpler mobile booking journey.
     link.href = validUrl(destination) ? destination :
-      'contact.html?program=' + encodeURIComponent(key) + '#lesson-request';
+      'booking.html?program=' + encodeURIComponent(key) + '#booking-pending';
   });
   var key = new URLSearchParams(window.location.search).get('program');
-  var select = document.querySelector('[name="program"]');
-  if (select && Object.prototype.hasOwnProperty.call(labels, key)) {
-    Array.from(select.options).forEach(function (option) {
-      option.selected = option.text === labels[key];
-    });
+  var selection = document.querySelector('#booking-selection');
+  if (selection && Object.prototype.hasOwnProperty.call(labels, key)) {
+    selection.textContent = labels[key] + ' selected. Availability and secure payment will appear here once booking opens.';
   }
 })();
