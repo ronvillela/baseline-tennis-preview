@@ -1,0 +1,86 @@
+/* Homepage section rhythm. Isolated for easy review or reversal. */
+#main > .section,
+#main > .why-tennis { padding-block: 3.5rem; }
+#rates, #meet-your-coach, #locations { background: var(--white); }
+#reviews, #on-court { background: var(--cream); }
+#reviews { border: 0; }
+#main .section-title,
+#main .why-tennis-intro {
+  max-width: 50rem;
+  margin-inline: auto;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+#main .section-title h2,
+#main .why-tennis-intro h2 {
+  font-size: clamp(2.2rem, 4.8vw, 3.4rem);
+  line-height: 1.16;
+  text-wrap: balance;
+  margin-bottom: 1rem;
+}
+#main .section-title .eyebrow,
+#main .why-tennis-intro .eyebrow {
+  font-size: .82rem;
+  letter-spacing: .13em;
+  margin-bottom: 1rem;
+}
+#main .section-title p { margin-inline: auto; }
+#main .section-title > :last-child { margin-bottom: 0; }
+#main .reviews-pending,
+#main .home-coach-bio { margin-inline: auto; }
+#main .trust-photo-grid figcaption { text-align: center; }
+@media (max-width: 699px) {
+  #main .reviews-pending, #main .home-coach-bio { text-align: center; }
+  #main .value-section h2, #main .why-tennis { text-align: center; }
+  #main .value-points li { justify-content: center; }
+  #main .why-tennis .button-row { justify-content: center; }
+}
+@media (min-width: 700px) {
+  #main > .section, #main > .why-tennis { padding-block: 4.5rem; }
+  #main .section-title, #main .why-tennis-intro { margin-bottom: 2.5rem; }
+}
+
+/* Compact section dropdown; native disclosure remains usable without JavaScript. */
+.section-nav__inner{position:relative;justify-content:space-between;gap:.75rem}
+.page-jump{flex:1;min-width:0}
+.page-jump summary{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:48px;padding:.65rem 1rem;cursor:pointer;list-style:none;font-size:.88rem;font-weight:700;color:var(--charcoal);border-radius:var(--radius)}
+.page-jump summary::-webkit-details-marker{display:none}
+.page-jump summary:hover,.page-jump[open] summary{background:var(--white)}
+.page-jump summary span{font-size:1.25rem;line-height:1;transition:transform .2s}
+.page-jump[open] summary span{transform:rotate(180deg)}
+.page-jump__panel{position:absolute;top:calc(100% + 1px);left:0;right:0;max-height:calc(100dvh - var(--header) - 140px);overflow-y:auto;background:var(--white);padding:.5rem;border:1px solid var(--line);border-radius:0 0 var(--radius-lg) var(--radius-lg);box-shadow:var(--shadow)}
+.section-nav .page-jump__panel a{justify-content:flex-start;min-height:48px;padding:.75rem 1rem;font-size:.9rem;border-radius:var(--radius)}
+.section-nav .page-jump__panel a+a{border-top:1px solid var(--line)}
+.section-nav .section-nav__book{flex:0 0 auto;min-height:44px;padding:.65rem 1.1rem}
+#main > section[id]{scroll-margin-top:calc(var(--header) + 72px)}
+@media(prefers-reduced-motion:reduce){.page-jump summary span{transition:none}}
+
+/* Preserve section contrast after regrouping the homepage. */
+#locations{background:var(--cream)}
+#reviews[hidden]{display:none}
+#why-baseline .eyebrow{color:var(--white)}
+@media(max-width:699px){#why-baseline .eyebrow{text-align:center}}
+/* Program cards: compact on phones, balanced grid on larger screens. */
+#programs .program-grid { grid-template-columns: minmax(0, 1fr); justify-items: center; gap: 1.25rem; }
+#programs .program-tile { width: 100%; max-width: 320px; min-width: 0; min-height: 0; padding: 1.25rem; text-align: center; }
+#programs .program-tile h3 { margin-top: 1rem; text-wrap: balance; }
+#programs .program-tile a { display: flex; align-items: center; justify-content: center; min-height: 44px; }
+@media (min-width: 700px) {
+  #programs .program-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 1fr; align-items: stretch; }
+  #programs .program-tile { max-width: none; height: 100%; padding: 1.5rem; }
+}
+@media (min-width: 1050px) {
+  #programs .program-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+/* Center the final package card beneath the six program cards. */
+@media(min-width:700px) and (max-width:1049px){
+  #programs .program-tile--package{grid-column:1 / -1;width:calc((100% - 1.25rem) / 2)}
+}
+@media(min-width:1050px){#programs .program-tile--package{grid-column:2}}
+
+#lesson-package{scroll-margin-top:calc(var(--header) + 72px)}
+
+/* Pair booking with a secondary program-details link. */
+.session-card-actions{display:flex;flex-direction:column;gap:.35rem;margin-top:auto}
+.session-explore{display:flex;align-items:center;justify-content:center;min-height:44px;padding:.5rem .25rem;font-size:.9rem;font-weight:700;text-underline-offset:4px}

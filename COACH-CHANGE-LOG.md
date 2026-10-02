@@ -1,5 +1,25 @@
 # Baseline Tennis Coach Request Review
 
+## Revisión móvil adicional — 2 de octubre de 2026
+
+9. **Explorar desde tarifas:** las cuatro tarjetas de sesiones incluyen un enlace secundario Explore a la página de su categoría, debajo del botón de reserva/disponibilidad. Solo local.
+
+8. **Paquete integrado:** la oferta de 10 clases por $850 ($85/clase, ahorro de $100) ahora usa la misma tarjeta que Tennis 101/201 y aparece debajo de esos programas. Se retiró la sección independiente. Términos y vencimiento siguen pendientes del coach. Solo local.
+
+7. **Tarjetas de programas:** contenido centrado, ancho máximo de 320 px en móvil; dos columnas en tablet y tres en escritorio, con alturas iguales y enlaces alineados. Solo local.
+
+6. **Orden de contenido y navegación:** sesiones/programas/paquetes → ubicaciones → coach → reseñas (ocultas hasta recibir testimonios reales) → fotos/video → beneficios/apoyo/Why Tennis. Menú sincronizado con los cinco grupos visibles. Cambios locales; publicación pendiente.
+
+5. **Navegación por secciones:** menú “On this page” con seis enlaces directos; Book Now permanece separado. Al elegir un enlace, el menú se cierra y navega a la sección. Solo local, pendiente de aprobación.
+
+4. **Separación de secciones:** fondos blancos y crema alternados para sesiones, reseñas, coach y galería. Títulos más grandes y centrados; espaciado uniforme. Se conserva la tipografía y el azul de Baseline. Prueba local pendiente de aprobación.
+
+3. **Orden actualizado por Ron:** Private Lesson → Semi-Private → Sparring / Hitting Session → Group Clinics. Sustituye la indicación anterior de conservar el orden original. Solo local.
+
+2. **Tarjetas de sesiones centradas:** nombres, jugadores, duración y precios centrados en las cuatro opciones. Tarjetas móviles más compactas (máximo 320 px), centradas bajo el título. Cambio local pendiente de aprobación.
+
+1. **Hero simplificado:** se quitaron los botones Book Now y View Rates debajo de “Private Tennis Lessons in Miami”. Las acciones de reserva siguen en la navegación, la barra fija móvil y las tarjetas de sesiones. Cambio local, pendiente de revisión; no publicado.
+
 > **Fotos recibidas:** las fotos reales de retrato y juego en cancha ya reemplazan los placeholders en Home y About. Las notas anteriores de fotos pendientes y sus capturas muestran versiones previas. Siguen pendientes reseñas, cifras verificadas y aprobación de la biografía.
 
 

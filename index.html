@@ -21,6 +21,14 @@
 .session-section .section-title{margin-bottom:1.5rem}
 @media(max-width:699px){.session-section{padding:2.5rem 0}.session-section .pricing-card{gap:1rem}}
 .hero__locations{color:rgba(255,255,255,.88);font-size:.9rem;line-height:1.8;max-width:43rem}
+/* Centered session cards for mobile cleanup review. */
+.session-section .section-title{text-align:center;margin-inline:auto}
+.session-section .pricing-grid{justify-items:center}
+.session-section .pricing-card{width:100%;text-align:center;gap:1.25rem}
+.session-section .pricing-card h3{margin-bottom:.75rem}
+.session-section .pricing-card p:last-child{margin-bottom:0}
+@media(max-width:699px){.session-section .pricing-card{max-width:320px;padding:1.25rem}.session-section .pricing-grid{gap:1.25rem}}
+
 /* Homepage section navigation — isolated, reversible enhancement. */
 .section-nav{position:sticky;top:var(--header);z-index:900;background:var(--cream);border-bottom:1px solid var(--line)}
 .section-nav__inner{display:flex;align-items:center;justify-content:center;gap:.5rem;min-height:56px}
@@ -79,6 +87,7 @@
 </style>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SportsActivityLocation", "name": "Baseline Tennis", "description": "Private tennis lessons, sparring sessions, semi-private lessons, small group clinics, and Tennis 101 and Tennis 201 programs throughout Miami.", "url": "https://baselinetennis.com", "telephone": "+1-305-922-9122", "email": "info@baselinetennis.com", "founder": {"@type": "Person", "name": "Vittorio Zecca"}, "priceRange": "$42.50-$120", "areaServed": [{"@type": "Place", "name": "Brickell"}, {"@type": "Place", "name": "Coconut Grove"}, {"@type": "Place", "name": "Coral Gables"}, {"@type": "Place", "name": "Key Biscayne"}, {"@type": "Place", "name": "Downtown Miami"}, {"@type": "Place", "name": "Edgewater"}, {"@type": "Place", "name": "Midtown Miami"}, {"@type": "Place", "name": "Wynwood"}, {"@type": "Place", "name": "South Miami"}, {"@type": "Place", "name": "Pinecrest"}]}</script>
 <link rel="stylesheet" href="assets/css/court-gallery.css">
+<link rel="stylesheet" href="assets/css/home-sections.css">
 </head>
 <body>
 
@@ -108,48 +117,34 @@
     </nav>
   </div>
 </header>
-<nav class="section-nav" aria-label="Explore this page">
+<nav class="section-nav" aria-label="On this page">
   <div class="container section-nav__inner">
-    <a href="#programs">Programs</a>
-    <a href="#rates">Rates</a>
-    <a href="#locations">Locations</a>
+    <details class="page-jump">
+      <summary>On this page <span aria-hidden="true">⌄</span></summary>
+      <div class="page-jump__panel">
+        <a href="#rates">Lessons &amp; Pricing</a>
+        <a href="#locations">Miami Locations</a>
+        <a href="#meet-your-coach">Meet Your Coach</a>
+        <a href="#on-court">Photos &amp; Video</a>
+        <a href="#why-baseline">Why Baseline</a>
+      </div>
+    </details>
     <a class="section-nav__book" href="booking.html">Book Now</a>
   </div>
 </nav>
 <main id="main">
 <section class="hero" aria-labelledby="hero-heading">
   <div class="hero__media"><div class="hero__placeholder" role="img" aria-label="Tennis court graphic placeholder"></div></div><div class="hero__overlay"></div>
-  <div class="container hero__content"><span class="eyebrow">Baseline Tennis · Ages 3+</span><h1 id="hero-heading">Private Tennis Lessons in Miami</h1><p class="lead">Personalized coaching for beginners, intermediate and advanced players.</p><p class="hero__locations">Brickell &bull; Coconut Grove &bull; Coral Gables &bull; Key Biscayne &bull; South Miami</p><div class="hero__actions"><a class="btn btn--primary" href="booking.html">Book Now</a><a class="btn btn--white" href="#rates">View Rates</a></div></div>
+  <div class="container hero__content"><span class="eyebrow">Baseline Tennis · Ages 3+</span><h1 id="hero-heading">Private Tennis Lessons in Miami</h1><p class="lead">Personalized coaching for beginners, intermediate and advanced players.</p><p class="hero__locations">Brickell &bull; Coconut Grove &bull; Coral Gables &bull; Key Biscayne &bull; South Miami</p></div>
 </section>
 <section class="section session-section" id="rates" aria-labelledby="rates-heading"><div class="container">
 <div class="section-title"><span class="eyebrow">Lessons &amp; Rates</span><h2 id="rates-heading">Choose Your Session</h2></div>
 <div class="pricing-grid">
-<article class="pricing-card pricing-card--featured"><div><h3>Private Lesson</h3><p class="pricing-details">1 Player<br>60 Minutes</p><p class="price">$95</p></div><a class="btn btn--primary btn--block" href="booking.html?program=private#booking-pending" data-booking="private" aria-label="Book now: Private Lesson">Book Now</a></article>
-<article class="pricing-card"><div><h3>Semi-Private</h3><p class="pricing-details">2 Players<br>60 Minutes</p><p class="price">$85 <span class="price-unit">Total</span></p><p class="pricing-details">$42.50 / Player</p></div><a class="btn btn--primary btn--block" href="booking.html?program=semi-private#booking-pending" data-booking="semi-private" aria-label="Book now: Semi-Private">Book Now</a></article>
-<article class="pricing-card"><div><h3>Group Clinics</h3><p class="pricing-details">60 Minutes<br><strong>Maximum 4 Players</strong></p><p class="price">$42.50</p><p class="pricing-details">/ Player</p></div><a class="btn btn--secondary btn--block" href="group-clinics.html#clinic-availability">View Availability</a></article>
-<article class="pricing-card"><div><h3>Sparring / Hitting Session</h3><p class="pricing-details">60 Minutes</p><p class="price">$120</p></div><a class="btn btn--primary btn--block" href="booking.html?program=sparring#booking-pending" data-booking="sparring" aria-label="Book now: Sparring or Hitting Session">Book Now</a></article>
+<article class="pricing-card pricing-card--featured"><div><h3>Private Lesson</h3><p class="pricing-details">1 Player<br>60 Minutes</p><p class="price">$95</p></div><div class="session-card-actions"><a class="btn btn--primary btn--block" href="booking.html?program=private#booking-pending" data-booking="private" aria-label="Book now: Private Lesson">Book Now</a><a class="session-explore" href="private-lessons.html">Explore Private Lessons</a></div></article>
+<article class="pricing-card"><div><h3>Semi-Private</h3><p class="pricing-details">2 Players<br>60 Minutes</p><p class="price">$85 <span class="price-unit">Total</span></p><p class="pricing-details">$42.50 / Player</p></div><div class="session-card-actions"><a class="btn btn--primary btn--block" href="booking.html?program=semi-private#booking-pending" data-booking="semi-private" aria-label="Book now: Semi-Private">Book Now</a><a class="session-explore" href="semi-private-lessons.html">Explore Semi-Private</a></div></article>
+<article class="pricing-card"><div><h3>Sparring / Hitting Session</h3><p class="pricing-details">60 Minutes</p><p class="price">$120</p></div><div class="session-card-actions"><a class="btn btn--primary btn--block" href="booking.html?program=sparring#booking-pending" data-booking="sparring" aria-label="Book now: Sparring or Hitting Session">Book Now</a><a class="session-explore" href="sparring-sessions.html">Explore Sparring</a></div></article>
+<article class="pricing-card"><div><h3>Group Clinics</h3><p class="pricing-details">60 Minutes<br><strong>Maximum 4 Players</strong></p><p class="price">$42.50</p><p class="pricing-details">/ Player</p></div><div class="session-card-actions"><a class="btn btn--secondary btn--block" href="group-clinics.html#clinic-availability">View Availability</a><a class="session-explore" href="group-clinics.html">Explore Group Clinics</a></div></article>
 </div></div></section>
-<!-- Review section prepared for local approval. Replace the pending notice with real,
-approved testimonials before production, or remove this section until available.
-Do not add stars, ratings, review counts, or review schema without real evidence. -->
-<section class="section reviews-section" id="reviews" aria-labelledby="reviews-heading">
-  <div class="container">
-    <div class="section-title"><span class="eyebrow">The Player Experience</span><h2 id="reviews-heading">Players Love Baseline</h2><p class="lead">Get to know Baseline through the players who train with us.</p></div>
-    <div class="reviews-pending"><span class="reviews-status">Preview · Reviews Coming Soon</span><h3>Real players. Their own words.</h3><p>Player testimonials will appear here once they are ready to share.</p><p class="small">No reviews or star rating are displayed yet.</p></div>
-  </div>
-</section>
-<section class="section section--cream trust-evidence" id="meet-your-coach" aria-labelledby="coach-evidence-heading">
-<div class="container"><div class="section-title"><span class="eyebrow">Meet Your Coach</span><h2 id="coach-evidence-heading">Vittorio Zecca</h2><p class="coach-role"><strong>Founder &amp; Head Coach</strong><br>Baseline Tennis</p></div>
-<div class="trust-photo-grid"><figure><img class="coach-real-photo coach-real-photo--portrait" src="assets/photos/vittorio-portrait.jpeg" alt="Vittorio Zecca standing at the tennis net with his racquet" width="1200" height="1600" loading="lazy" decoding="async"><figcaption>Vittorio Zecca · Founder &amp; Head Coach</figcaption></figure><figure><img class="coach-real-photo coach-real-photo--action" src="assets/photos/vittorio-on-court.jpg" alt="Vittorio Zecca hitting a tennis ball on an outdoor court" width="900" height="1600" loading="lazy" decoding="async"><figcaption>Vittorio on court</figcaption></figure></div>
-<div class="home-coach-bio" id="coach-bio" style="scroll-margin-top:calc(var(--header) + 80px)"><p class="lead">Personal coaching. Clear feedback. A game built around you.</p><p>Vittorio coaches adults and juniors, from beginner through advanced, with a focus on technique, movement, strategy and match play.</p><p>Train through private lessons, semi-private sessions, small-group clinics or hitting and sparring sessions—tailored to your level and goals.</p><a class="btn btn--primary" href="booking.html">Train With Vittorio</a></div>
-<div class="trust-stats-pending"><span class="eyebrow">Preview · Coaching Record Pending</span><p><strong>Years of coaching experience</strong> — awaiting verification<br><strong>Players coached</strong> — awaiting verification</p><p class="small">Verified figures will be added once confirmed by the coach.</p></div>
-<a class="btn btn--secondary" href="about.html">Meet the Coach</a></div></section>
-<section class="section court-gallery" id="on-court" aria-labelledby="court-gallery-heading"><div class="container"><div class="section-title"><span class="eyebrow">Inside Baseline</span><h2 id="court-gallery-heading">See the Work. Feel the Game.</h2><p class="lead">A closer look at Vittorio on court.</p></div><figure class="court-film"><video controls playsinline preload="none" poster="assets/photos/court-6631.webp" aria-label="Vittorio on-court video"><source src="assets/video/vittorio-court-session.mov"><p><a href="assets/video/vittorio-court-session.mov">Watch the on-court video</a></p></video><figcaption><span>On court with Vittorio</span><span>Press play</span></figcaption></figure><p class="court-gallery-hint">Swipe through the photos <span aria-hidden="true">→</span></p><div class="court-photo-strip" tabindex="0" role="region" aria-label="On-court photo gallery"><figure><img src="assets/photos/court-6566.webp" alt="Vittorio preparing a tennis feed beside the net" loading="lazy" decoding="async" width="1400" height="1050"><figcaption>01 / On court</figcaption></figure><figure><img src="assets/photos/court-6631.webp" alt="Vittorio beside a ball basket on court" loading="lazy" decoding="async" width="1400" height="1050"><figcaption>02 / On court</figcaption></figure><figure><img src="assets/photos/court-6617.webp" alt="Vittorio in a ready position beside the ball basket" loading="lazy" decoding="async" width="1400" height="1050"><figcaption>03 / On court</figcaption></figure><figure><img src="assets/photos/court-6569.webp" alt="Vittorio practicing a forehand feed" loading="lazy" decoding="async" width="1400" height="1050"><figcaption>04 / On court</figcaption></figure><figure><img src="assets/photos/court-6596.webp" alt="Vittorio feeding balls during court practice" loading="lazy" decoding="async" width="1400" height="1050"><figcaption>05 / On court</figcaption></figure><figure><img src="assets/photos/court-6629.webp" alt="Vittorio watching the opposite side of the court" loading="lazy" decoding="async" width="1400" height="1050"><figcaption>06 / On court</figcaption></figure><figure><img src="assets/photos/court-6587.webp" alt="Wide view of Vittorio practicing on court" loading="lazy" decoding="async" width="1400" height="1050"><figcaption>07 / On court</figcaption></figure></div><a class="btn btn--primary" href="booking.html">Train With Vittorio</a></div></section><section class="section value-section" id="why-baseline" aria-labelledby="value-heading">
-  <div class="container value-layout">
-    <h2 id="value-heading"><span>Your Court.</span> <span>Your Schedule.</span> <span>Your Game.</span></h2>
-    <ul class="value-points"><li>Private coaching</li><li>Small groups</li><li>Convenient Miami locations</li><li>All levels welcome</li></ul>
-  </div>
-</section>
 <section class="section section--cream" id="programs" aria-labelledby="programs-heading"><div class="container"><div class="section-title"><span class="eyebrow">Programs</span><h2 id="programs-heading">Coaching Built Around the Player</h2><p class="lead">Every lesson is tailored to age, experience, goals, and learning style in a structured environment that keeps tennis engaging.</p></div><div class="program-grid">
 <article class="program-tile"><span class="program-number">01</span><h3>Private Lessons</h3><p>One-on-one technical, tactical, and movement coaching.</p><p class="tile-price">$95 / 60 minutes</p><a href="private-lessons.html">Explore Private Lessons</a></article>
 <article class="program-tile"><span class="program-number">02</span><h3>Sparring Sessions</h3><p>High-quality hitting, point play, and match preparation.</p><p class="tile-price">$120 / 60 minutes</p><a href="sparring-sessions.html">Explore Sparring Sessions</a></article>
@@ -157,10 +152,8 @@ Do not add stars, ratings, review counts, or review schema without real evidence
 <article class="program-tile"><span class="program-number">04</span><h3>Group Clinics</h3><p>Small groups, more individual attention.</p><p><strong>Maximum 4 Players</strong> · 60 Minutes</p><p class="tile-price">$42.50 / player</p><a href="group-clinics.html">Browse Clinics</a></article>
 <article class="program-tile"><span class="program-number">101</span><h3>Tennis 101</h3><p>A 4–6 week foundation program for new players.</p><a href="tennis-101.html">Explore Tennis 101</a></article>
 <article class="program-tile"><span class="program-number">201</span><h3>Tennis 201</h3><p>A 6-week intermediate program for smarter match play.</p><a href="tennis-201.html">Explore Tennis 201</a></article>
+<article class="program-tile program-tile--package" id="lesson-package"><span class="program-number">10 LESSONS</span><h3>10 Lesson Package</h3><p>Train consistently and build on your progress.</p><p class="tile-price">$850</p><p>$85 per lesson · Save $100</p><a href="private-lessons.html#lesson-options">Explore Lesson Package</a></article>
 </div></div></section>
-
-<section class="section" aria-label="Lesson packages"><div class="container"><div class="package-band"><div><span class="eyebrow">Lesson Packages</span><h3>Commit to Long-Term Improvement</h3><p>Packages provide the best value for players ready to train consistently.</p></div><div class="package-options"><div><strong>10 Lesson Package</strong><span>$850</span><small>$85 per lesson · Save $100</small></div></div></div></div></section>
-<section class="section section--court" aria-labelledby="experience-heading"><div class="container"><div class="section-title"><span class="eyebrow">The Baseline Experience</span><h2 id="experience-heading">Support Beyond the Ball Basket</h2></div><div class="feature-grid"><article><h3>Video Feedback</h3><p>Coaching may include slow-motion analysis, stroke-by-stroke feedback, and clear technical corrections.</p></article><article><h3>Progress Tracking</h3><p>Personalized development goals help students understand what improved and what comes next.</p></article><article><h3>Loaner Racquets</h3><p>Complimentary loaner racquets are available for first-time students and beginners.</p></article><article><h3>Age-Appropriate Training</h3><p>Red Ball ages 3–8, Orange Ball, Green Ball, junior development, adult programs, and competitive training.</p></article></div></div></section>
 <section class="section" id="locations" aria-labelledby="locations-heading"><div class="container">
 <div class="section-title"><span class="eyebrow">Miami Tennis Coaching</span><h2 id="locations-heading">Tennis Lessons Across Miami</h2><p class="lead">Train with Coach Vittorio Zecca in Brickell, Coconut Grove, Coral Gables, Key Biscayne, or South Miami. Private lessons and small-group coaching welcome players of all levels.</p></div>
 <ul class="location-list grid grid--2" aria-label="Featured Miami areas"><li>Tennis lessons in Brickell</li><li>Tennis lessons in Coconut Grove</li><li>Tennis lessons in Coral Gables</li><li>Tennis lessons in Key Biscayne</li><li>Tennis lessons in South Miami</li></ul>
@@ -168,6 +161,26 @@ Do not add stars, ratings, review counts, or review schema without real evidence
 <p>Share your preferred area when booking. Your court and time will be confirmed with Vittorio.</p>
 <div class="button-row"><a class="btn btn--primary" href="booking.html">Book Now</a><a class="btn btn--secondary" href="private-lessons.html">Explore Private Lessons</a></div>
 </div></section>
+<section class="section section--cream trust-evidence" id="meet-your-coach" aria-labelledby="coach-evidence-heading">
+<div class="container"><div class="section-title"><span class="eyebrow">Meet Your Coach</span><h2 id="coach-evidence-heading">Vittorio Zecca</h2><p class="coach-role"><strong>Founder &amp; Head Coach</strong><br>Baseline Tennis</p></div>
+<div class="trust-photo-grid"><figure><img class="coach-real-photo coach-real-photo--portrait" src="assets/photos/vittorio-portrait.jpeg" alt="Vittorio Zecca standing at the tennis net with his racquet" width="1200" height="1600" loading="lazy" decoding="async"><figcaption>Vittorio Zecca · Founder &amp; Head Coach</figcaption></figure><figure><img class="coach-real-photo coach-real-photo--action" src="assets/photos/vittorio-on-court.jpg" alt="Vittorio Zecca hitting a tennis ball on an outdoor court" width="900" height="1600" loading="lazy" decoding="async"><figcaption>Vittorio on court</figcaption></figure></div>
+<div class="home-coach-bio" id="coach-bio" style="scroll-margin-top:calc(var(--header) + 80px)"><p class="lead">Personal coaching. Clear feedback. A game built around you.</p><p>Vittorio coaches adults and juniors, from beginner through advanced, with a focus on technique, movement, strategy and match play.</p><p>Train through private lessons, semi-private sessions, small-group clinics or hitting and sparring sessions—tailored to your level and goals.</p><a class="btn btn--primary" href="booking.html">Train With Vittorio</a></div>
+<div class="trust-stats-pending"><span class="eyebrow">Preview · Coaching Record Pending</span><p><strong>Years of coaching experience</strong> — awaiting verification<br><strong>Players coached</strong> — awaiting verification</p><p class="small">Verified figures will be added once confirmed by the coach.</p></div>
+<a class="btn btn--secondary" href="about.html">Meet the Coach</a></div></section>
+<section hidden class="section reviews-section" id="reviews" aria-labelledby="reviews-heading">
+  <div class="container">
+    <div class="section-title"><span class="eyebrow">The Player Experience</span><h2 id="reviews-heading">Players Love Baseline</h2><p class="lead">Get to know Baseline through the players who train with us.</p></div>
+    <div class="reviews-pending"><span class="reviews-status">Preview · Reviews Coming Soon</span><h3>Real players. Their own words.</h3><p>Player testimonials will appear here once they are ready to share.</p><p class="small">No reviews or star rating are displayed yet.</p></div>
+  </div>
+</section>
+<section class="section court-gallery" id="on-court" aria-labelledby="court-gallery-heading"><div class="container"><div class="section-title"><span class="eyebrow">Photos &amp; Video</span><h2 id="court-gallery-heading">See the Work. Feel the Game.</h2><p class="lead">A closer look at Vittorio on court.</p></div><figure class="court-film"><video controls playsinline preload="none" poster="assets/photos/court-6631.webp" aria-label="Vittorio on-court video"><source src="assets/video/vittorio-court-session.mov"><p><a href="assets/video/vittorio-court-session.mov">Watch the on-court video</a></p></video><figcaption><span>On court with Vittorio</span><span>Press play</span></figcaption></figure><p class="court-gallery-hint">Swipe through the photos <span aria-hidden="true">→</span></p><div class="court-photo-strip" tabindex="0" role="region" aria-label="On-court photo gallery"><figure><img src="assets/photos/court-6566.webp" alt="Vittorio preparing a tennis feed beside the net" loading="lazy" decoding="async" width="1400" height="1050"><figcaption>01 / On court</figcaption></figure><figure><img src="assets/photos/court-6631.webp" alt="Vittorio beside a ball basket on court" loading="lazy" decoding="async" width="1400" height="1050"><figcaption>02 / On court</figcaption></figure><figure><img src="assets/photos/court-6617.webp" alt="Vittorio in a ready position beside the ball basket" loading="lazy" decoding="async" width="1400" height="1050"><figcaption>03 / On court</figcaption></figure><figure><img src="assets/photos/court-6569.webp" alt="Vittorio practicing a forehand feed" loading="lazy" decoding="async" width="1400" height="1050"><figcaption>04 / On court</figcaption></figure><figure><img src="assets/photos/court-6596.webp" alt="Vittorio feeding balls during court practice" loading="lazy" decoding="async" width="1400" height="1050"><figcaption>05 / On court</figcaption></figure><figure><img src="assets/photos/court-6629.webp" alt="Vittorio watching the opposite side of the court" loading="lazy" decoding="async" width="1400" height="1050"><figcaption>06 / On court</figcaption></figure><figure><img src="assets/photos/court-6587.webp" alt="Wide view of Vittorio practicing on court" loading="lazy" decoding="async" width="1400" height="1050"><figcaption>07 / On court</figcaption></figure></div><a class="btn btn--primary" href="booking.html">Train With Vittorio</a></div></section>
+<section class="section value-section" id="why-baseline" aria-labelledby="value-heading">
+  <div class="container value-layout">
+    <div><span class="eyebrow">Why Baseline</span><h2 id="value-heading"><span>Your Court.</span> <span>Your Schedule.</span> <span>Your Game.</span></h2></div>
+    <ul class="value-points"><li>Private coaching</li><li>Small groups</li><li>Convenient Miami locations</li><li>All levels welcome</li></ul>
+  </div>
+</section>
+<section class="section section--court" aria-labelledby="experience-heading"><div class="container"><div class="section-title"><span class="eyebrow">The Baseline Experience</span><h2 id="experience-heading">Support Beyond the Ball Basket</h2></div><div class="feature-grid"><article><h3>Video Feedback</h3><p>Coaching may include slow-motion analysis, stroke-by-stroke feedback, and clear technical corrections.</p></article><article><h3>Progress Tracking</h3><p>Personalized development goals help students understand what improved and what comes next.</p></article><article><h3>Loaner Racquets</h3><p>Complimentary loaner racquets are available for first-time students and beginners.</p></article><article><h3>Age-Appropriate Training</h3><p>Red Ball ages 3–8, Orange Ball, Green Ball, junior development, adult programs, and competitive training.</p></article></div></div></section>
 <section class="why-tennis" id="why-tennis" aria-labelledby="why-tennis-heading"><div class="container">
 <div class="why-tennis-intro"><span class="eyebrow">More Than a Game</span><h2 id="why-tennis-heading">Why Tennis?</h2></div>
 <div class="why-tennis-reasons"><ul><li>You make friends.</li><li>You get moving.</li><li>Your brain stays busy.</li><li>Your whole body works.</li></ul><ul><li>You get competitive.</li><li>You stay outside.</li><li>You step out.</li></ul></div>
@@ -248,5 +261,6 @@ Do not add stars, ratings, review counts, or review schema without real evidence
 })();
 
 </script>
+<script src="assets/js/page-jump.js"></script>
 </body>
 </html>

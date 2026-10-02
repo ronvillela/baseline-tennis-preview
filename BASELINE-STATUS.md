@@ -1,5 +1,16 @@
 # Baseline Tennis development checkpoint
 
+## Mobile cleanup review — October 2, 2026
+
+- User approved publishing this batch to GitHub on October 2. Includes hero CTA removal, centered responsive cards, reordered sections/dropdown, hidden pending reviews, integrated package card and Explore links on session cards.
+
+- Homepage regrouped: hero → sessions/programs/packages → locations → coach → hidden reviews → photos/video → value/support/Why Tennis. Dropdown follows the five visible groups. Reviews retained hidden until real testimonials arrive.
+- Current session order approved by Ron: Private → Semi-Private → Sparring → Group Clinics (supersedes original coach ordering). Centered cards, section styling and dropdown are local pending final upload approval.
+
+- This batch is approved for GitHub upload. Future changes still require approval before publication.
+- Removed the homepage hero Book Now and View Rates buttons at user request. Header, sticky mobile booking bar and session buttons remain available.
+- Review preview: http://127.0.0.1:8770/index.html (440px phone frame).
+
 ## Latest handoff — ready for Vittorio’s review
 
 - User approved GitHub upload. Published commit `cd377c5c41486766a642d226ab373171881035bd` to `origin/main`; GitHub Pages build returned `built`, no error. Live gallery verified (seven photos).
