@@ -1,38 +1,80 @@
-# Baseline Tennis Website Update
+# Baseline Tennis
 
-Updated July 27, 2026 with:
+A mobile-first website for Vittorio Zecca’s Miami tennis coaching business, using the approved **Club Modern** design. The site introduces the coach, explains services and prices, and prepares visitors for online booking.
 
-- Miami neighborhoods served
-- Current lesson, sparring, semi-private, clinic, and package rates
-- Tennis 101 and Tennis 201 program details
-- Ages 3+ and ball-stage information
-- Loaner racquets
-- Video feedback and progress tracking
-- Dedicated group clinics page and live-calendar placeholder
-- Booking page prepared for future scheduling/payment links
-- Cancellation, rain, and refund policies
-- New sparring sessions page
-- Mobile-friendly navigation and action bar
-- Updated Miami-focused SEO content and structured data
+**[Open the live preview](https://ronvillela.github.io/baseline-tennis-preview/)** · [Project status](BASELINE-STATUS.md) · [Coach request log](COACH-CHANGE-LOG.md)
 
-## Important booking setup
+## Current status
 
-The static GitHub Pages site cannot independently provide secure payments, real-time appointment availability, automatic reminders, clinic capacity, or student accounts. Those functions require a booking service such as Square Appointments.
+GitHub Pages is temporary preview hosting. The website is not yet a live booking or payment system. Scheduling and payment links remain empty until the coach selects a provider and the complete flow is tested. Email is for general questions, not booking.
 
-When booking links are ready, open `assets/js/booking-config.js` and paste them into the empty `bookingLinks` values near the top. Buttons throughout the site will automatically use the correct links.
+The intended journey is: choose program → choose location → choose date/time → enter player details → pay → receive confirmation. Moving to the coach’s GoDaddy setup is a later, separately approved step.
 
-## Preview SEO status
+## Local preview
 
-The preview intentionally contains `noindex, nofollow`, and `robots.txt` blocks search engines. Before the production launch:
+This is a static HTML, CSS and JavaScript site. No build step, framework or package installation is required.
 
-1. Remove the robots meta tag from every HTML file.
-2. Change `robots.txt` to allow indexing.
-3. Confirm the final domain in canonical links and `sitemap.xml`.
-4. Submit the sitemap through Google Search Console.
+From the repository directory, run:
 
-## Existing logo folder
+```sh
+python3 -m http.server 8771 --bind 127.0.0.1
+```
 
-This update references the existing files in `assets/logos`. Keep that folder in the repository when uploading this update.
+Open `http://127.0.0.1:8771/`. If that port is already in use, choose another. Browser responsive mode can approximate a phone; also review on a real iPhone before release. Refresh cached styles after changes.
 
+## File guide
 
-Booking update: empty provider links now show the booking placeholder with the selected program. Email booking and the lesson-request form have been removed. Configure public HTTPS links in assets/js/booking-config.js after provider testing.
+- `index.html`: homepage, session rates, programs, locations, coach, court gallery and Why Tennis.
+- Service pages: `private-lessons.html`, `semi-private-lessons.html`, `sparring-sessions.html`, `group-clinics.html`, `tennis-101.html`, `tennis-201.html`.
+- `about.html`: full coach profile. `contact.html`: general contact details. `policies.html`: policy/FAQ preview.
+- `booking.html` and `confirmation.html`: booking and confirmation placeholders; neither creates reservations or verifies payment.
+- `assets/js/booking-config.js`: public booking URLs, keyed by service.
+- `assets/js/booking.js`: booking routing and selected-program messaging.
+- `assets/js/page-jump.js`: homepage section dropdown behavior and keyboard focus.
+- `assets/css/home-sections.css`: homepage layout refinements; `court-gallery.css`: shared photo/video presentation.
+- `assets/photos`, `assets/video`, `assets/logos`: site media and approved branding.
+- `scripts/check-site.py` and `tests/booking.test.cjs`: repeatable checks.
+- `docs/coach-images`: screenshot evidence. `COACH-CHANGE-LOG.md`: numbered requests, implementation notes and pending items.
+
+## Maintenance conventions
+
+- Preserve the approved colors, typography and page content unless a change is approved.
+- Review narrow phones (320–440 px), tablets (700–1049 px) and desktops (1050 px and wider). Check text wrapping, card alignment, menu behavior and the fixed mobile booking bar.
+- Use semantic headings, descriptive image alternatives, keyboard-operable controls and visible focus. Keep relative links so GitHub’s project subdirectory works.
+- Use comments to explain behavior and constraints. Keep edits scoped and reversible in Git; avoid broad formatting or architecture changes during visual refinements.
+- Most pages currently contain inline styles and repeated navigation scripts. This is a maintainability limitation, not a build requirement. Changes to common navigation need checking across all pages. A shared-file refactor should be a separate reviewed change.
+- `assets/css/main.css` and `assets/js/main.js` are legacy files, not loaded by the current HTML. Do not reconnect them without review; their old behavior may conflict with current navigation.
+- Update the stylesheet query version in `index.html` when changing homepage styling for a release.
+- Keep credentials, Stripe secret keys and personal customer information out of this public repository. Use only tested public HTTPS provider URLs in booking configuration.
+
+## Checks before publishing
+
+Requires Python 3 and Node.js. From the repository root:
+
+```sh
+python3 scripts/check-site.py
+node --test tests/booking.test.cjs
+git diff --check
+```
+
+The static check covers all 13 HTML pages: local files and anchors, duplicate IDs, image alt attributes, accessibility references, language/viewport metadata, inline/external JavaScript syntax, structured JSON and sitemap XML. Booking tests cover every service, empty links, invalid URLs and unknown program keys.
+
+These checks do not guarantee complete HTML/CSS standards compliance, accessibility or browser compatibility. Manually check mobile/desktop layouts, navigation, Explore links, phone/text actions and video playback. See [review notes](docs/CODE-REVIEW.md).
+
+## Before accepting real bookings
+
+The coach must confirm the provider, availability, court locations/fees, program details and final cancellation, no-show, weather, refund, package-expiration and junior-waiver terms. Confirm real testimonials and experience statistics before showing them as verified claims.
+
+After selecting a provider, add its public HTTPS session URLs in `assets/js/booking-config.js`. Test payment success/failure, capacity and schedule conflicts, customer and coach emails, date/time/timezone/location, policies, rescheduling and calendar links. A visit to the static confirmation page is **not** proof of payment; the chosen service or secure backend must verify payment and create the booking.
+
+## SEO and production launch
+
+Miami is the main geographic focus, with neighborhood references, page titles/descriptions, semantic content and image alternatives. Search indexing is intentionally blocked on the temporary preview (`noindex, nofollow` and `robots.txt`). The production-domain references in canonical links, structured data and `sitemap.xml` still need verification.
+
+At approved production launch, confirm the domain/hosting and HTTPS, resolve placeholders and policies, update canonical/sitemap URLs, and enable indexing for public content pages. Keep confirmation pages out of search results. Submit the final sitemap to Google Search Console.
+
+## Publishing and documentation
+
+Publish only an approved batch. Follow [upload instructions](UPLOAD-INSTRUCTIONS.md), confirm the GitHub Pages build succeeds, and check the live page after deployment. Preserve commit history; do not force-push. Use a reviewed revert commit if rollback is needed.
+
+The coach’s previously exported PDF is a snapshot, not an automatically updated report. Regenerate it with current screenshots before presenting it as a report of the latest version.

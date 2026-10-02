@@ -1,41 +1,17 @@
-# Uploading the Baseline Tennis Update to GitHub
+# Publishing the Baseline Tennis preview
 
-Repository: `ronvillela/baseline-tennis-preview`
+Repository: [ronvillela/baseline-tennis-preview](https://github.com/ronvillela/baseline-tennis-preview)
 
-## Safest browser method
+Live preview: [Baseline Tennis](https://ronvillela.github.io/baseline-tennis-preview/)
 
-1. Sign in to GitHub and open the `baseline-tennis-preview` repository.
-2. Download `baseline-tennis-update.zip` from ChatGPT and unzip it on your Mac.
-3. Open the extracted `baseline-tennis-update` folder.
-4. In GitHub, stay on the **Code** tab and confirm the branch selector says **main**.
-5. Click **Add file** and choose **Upload files**.
-6. Drag all files and folders from inside `baseline-tennis-update` into the GitHub upload area. Do not drag the outer folder itself.
-7. Keep the repository's existing `assets/logos` folder. The update uses those approved logo files.
-8. In the commit message, enter: `Add rates, programs, clinics and booking structure`.
-9. Select **Commit directly to the main branch** and click **Commit changes**.
-10. Wait for GitHub Pages to redeploy, then refresh the preview site. A hard refresh may be needed: **Command + Shift + R** on a Mac.
+1. Obtain approval for the current batch of changes.
+2. Fetch `origin/main` and reconcile any new remote work without overwriting it.
+3. Run the checks in [README.md](README.md) and review the site on mobile and desktop.
+4. Review the diff; stage only intended website, media, tests and documentation files. Do not upload credentials or local preview wrappers.
+5. Commit with a clear description, then push the approved commit to `main`. Never force-push.
+6. Confirm GitHub Pages reports a successful build for that commit.
+7. Open the live site, refresh if needed, and check navigation, updated sections and booking placeholders. A `?release=COMMIT` URL helps distinguish versions, but shared styles also need their own cache version when changed.
 
-## Confirm these pages after publishing
+Keep the approved logo/media folders. Old ZIP exports may predate the current repository and should not be used to replace it.
 
-- Home page and mobile menu
-- Private Lessons
-- Sparring Sessions
-- Semi-Private Lessons
-- Group Clinics
-- Tennis 101
-- Tennis 201
-- About
-- Booking
-- Contact form
-- Policies and FAQ
-
-## Booking service later
-
-Open `assets/js/booking-config.js`. Near the top, paste each tested HTTPS booking URL from the chosen provider between the quotation marks in `bookingLinks`. One update there changes the matching buttons throughout the site.
-
-## Important preview setting
-
-The preview remains blocked from Google indexing. Do not remove `noindex`, `nofollow`, or the blocking `robots.txt` until the production domain is ready.
-
-
-Booking update: empty provider links now show the booking placeholder with the selected program. Email booking and the lesson-request form have been removed. Configure public HTTPS links in assets/js/booking-config.js after provider testing.
+The preview remains blocked from search indexing. Payment and scheduling activation and migration to GoDaddy are separate launch tasks. See the README for the current setup and pending decisions.
