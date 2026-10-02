@@ -73,14 +73,50 @@
   #programs .program-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
-/* Center the final package card beneath the six program cards. */
+/* Center the final package card on the two-column tablet layout. */
 @media(min-width:700px) and (max-width:1049px){
   #programs .program-tile--package{grid-column:1 / -1;width:calc((100% - 1.25rem) / 2)}
 }
-@media(min-width:1050px){#programs .program-tile--package{grid-column:2}}
+@media(min-width:1050px){#programs .program-tile--package{grid-column:auto}}
 
 #lesson-package{scroll-margin-top:calc(var(--header) + 72px)}
 
 /* Pair booking with a secondary program-details link. */
 .session-card-actions{display:flex;flex-direction:column;gap:.35rem;margin-top:auto}
 .session-explore{display:flex;align-items:center;justify-content:center;min-height:44px;padding:.5rem .25rem;font-size:.9rem;font-weight:700;text-underline-offset:4px}
+
+/* A centered coach introduction and grouped actions on all screen sizes. */
+#meet-your-coach .home-coach-bio{max-width:46rem;text-align:center;margin:2rem auto}
+.coach-actions{display:flex;flex-direction:column;align-items:center;gap:.5rem;margin-top:1.5rem}
+#meet-your-coach .coach-actions .btn{width:auto;max-width:100%;margin:0}
+.coach-profile-link{display:flex;align-items:center;justify-content:center;min-height:44px;font-weight:700;text-underline-offset:4px}
+#meet-your-coach .trust-stats-pending{max-width:46rem;margin:2rem auto 0;padding:1.5rem;text-align:center}
+.coach-stats-grid{display:grid;gap:1.25rem;margin:1.25rem 0}
+.coach-stats-grid p{margin:0}
+.coach-stats-grid strong,.coach-stats-grid span{display:block}
+.coach-stats-grid span{font-size:.875rem;color:var(--gray);margin-top:.35rem}
+@media(min-width:700px){.coach-stats-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Symmetric location layout at both phone and desktop widths. */
+#locations .container{text-align:center}
+#locations .location-list{max-width:46rem;margin-inline:auto;justify-items:center}
+#locations .location-list li{width:100%;max-width:320px;align-items:center;justify-content:center}
+#locations .location-list li::before{margin-top:0}
+#locations .container > p{max-width:46rem;margin-inline:auto}
+#locations .button-row{justify-content:center;margin-top:1.5rem}
+@media(max-width:699px){#locations .button-row{max-width:320px;margin-inline:auto;flex-direction:column}#locations .button-row .btn{width:100%}}
+@media(min-width:700px){
+  #locations .location-list li{max-width:none}
+  #locations .location-list li:last-child:nth-child(odd){grid-column:1 / -1;width:calc((100% - 1rem) / 2)}
+}
+
+/* Balanced closing section: six benefits and centered closing actions. */
+#why-tennis{text-align:center}
+#why-tennis .why-tennis-reasons{display:block;max-width:56rem;margin-inline:auto}
+#why-tennis .why-tennis-reasons ul{display:grid;grid-template-columns:minmax(0,1fr);gap:0}
+#why-tennis .why-tennis-reasons li{padding:.85rem .5rem;text-wrap:balance}
+#why-tennis .why-tennis-close{display:flex;flex-direction:column;align-items:center;gap:1.5rem;max-width:56rem;margin:2rem auto 0;padding-top:2rem}
+#why-tennis .why-tennis-close p{margin:0}
+#why-tennis .button-row{justify-content:center;gap:.75rem}
+@media(min-width:700px){#why-tennis .why-tennis-reasons ul{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:2rem}}
+@media(max-width:699px){#why-tennis .button-row{width:100%;max-width:320px;flex-direction:column}#why-tennis .button-row .btn{width:100%}}

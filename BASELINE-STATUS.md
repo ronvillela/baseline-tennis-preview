@@ -1,3 +1,14 @@
+## Approved homepage refinements — October 2, 2026
+
+User approved publishing this batch to the temporary GitHub Pages site.
+- Centered coach introduction, actions and pending statistics layout.
+- Balanced Miami location cards and supporting content on mobile and desktop.
+- Removed the Train With Vittorio button from the court photo section.
+- Simplified Programs & Packages to Tennis 101, Tennis 201 and the lesson package; individual lessons remain in Lessons & Rates.
+- Centered Why Tennis benefits, closing message and actions with responsive columns.
+- Added a stylesheet version to refresh the updated styling in returning browsers.
+- Existing coach PDF has not been regenerated for this refinement batch. Payment, scheduling and final business decisions remain pending.
+
 # Baseline Tennis development checkpoint
 
 ## Mobile cleanup review — October 2, 2026

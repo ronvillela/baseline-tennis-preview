@@ -815,3 +815,23 @@ Las fotos se exportaron a WebP con orientación corregida y tamaño reducido par
 ![Galería y video en móvil](docs/coach-images/court-gallery-mobile.png)
 
 Cambios locales y reversibles. Sin publicar.
+
+## Revisión posterior a publicación — alineación del coach
+
+Bio y acciones centradas en una columna. Meet the Coach agrupado debajo de Train With Vittorio como enlace secundario. Caja de cifras pendiente centrada: dos columnas en escritorio y una en móvil. Solo local, pendiente de aprobación para publicar.
+
+### Alineación de ubicaciones
+
+Se centraron las tarjetas de Miami, los textos y los botones. Dos columnas en escritorio con South Miami centrado debajo; una columna compacta en móvil. Solo local, pendiente de publicación.
+
+### Photos & Video — simplificación
+
+Se retiró el botón Train With Vittorio de la sección de fotos y video a petición de Ron. Solo local.
+
+### Programs & Packages — sin duplicación
+
+Se eliminaron las cuatro tarjetas de servicios repetidas de Programs. Ahora Programs & Packages contiene solo Tennis 101, Tennis 201 y el paquete de 10 clases. Los servicios individuales conservan precios, reserva y Explore en Choose Your Session. Solo local, pendiente de publicación.
+
+### More Than a Game — composición centrada
+
+Se centraron el cierre y los botones. Seis beneficios en dos columnas en escritorio y una en móvil; “You stay outside” y “You step out” se combinaron en “Step outside. Try something new.” Solo local, pendiente de revisión.
