@@ -1,3 +1,31 @@
+## Current checkpoint — October 4, 2026 release
+
+The user explicitly approved uploading the current work to GitHub and documenting it. This checkpoint supersedes prior local-only notes for the modernization batch below.
+
+- Approved release: rounded floating header and hamburger across all 13 pages; centered menu links; homepage section shortcuts integrated into the menu; subtle tennis-ball color and decorative seams on the hamburger; hover/press feedback with reduced-motion support.
+- Shared rounded action buttons, symmetric button groups and floating mobile Book Now / Call / Text bar across all pages. Homepage lesson cards have rounded corners and consistent button widths.
+- Removed the separate homepage On this page row and its Book Now button. Desktop uses a two-column hamburger panel; phone menu scrolls when needed.
+- Validation: all-page static checks, booking tests, mobile/desktop menu interactions, narrow-phone overflow and reduced-motion checks. Corrected focus timing after section navigation.
+- Booking planning: use an existing scheduling/payment provider rather than build the entire system. Acuity + Stripe is the leading candidate, not a finalized coach decision. No provider account, paid subscription, live scheduling, payment connection, chat system or account-creation system has been created.
+- Next: confirm provider/trial choice with the coach; obtain exact courts, availability, travel buffers, group rules and final policies. A labelled local prototype can be prepared once requested. Booking should work for guests; optional customer accounts come later.
+- Preview stays on GitHub Pages with indexing disabled. GoDaddy migration remains pending. Future edits require separate release approval.
+- Repository documentation is current for this batch; the previously exported coach PDF still needs updated labelled screenshots before being sent as the latest report.
+
+## Session checkpoint — October 2, 2026 (end of day)
+
+The user reviewed the result and approved it: “looks good.” Resume from this state tomorrow.
+
+- Published GitHub main revision: `243ec8493d56c7880fffbd233ca2819a5975291e` (documentation and checks), following visual revision `290491f`.
+- Live preview: https://ronvillela.github.io/baseline-tennis-preview/?release=243ec84
+- Today’s approved visual changes are published: centered coach introduction/actions and statistics layout; balanced Miami locations; removed the photo section’s Train With Vittorio button; simplified Programs & Packages to Tennis 101, Tennis 201 and the lesson package; centered Why Tennis benefits and closing actions.
+- README, upload instructions, docs/CODE-REVIEW.md and scripts/check-site.py are published. All 13 pages passed the documented static checks; booking tests passed; GitHub Pages build succeeded.
+- The local browser was still showing http://127.0.0.1:8771/site/index.html?closing=centered#why-tennis. Distinguish that local preview from the published site when resuming.
+- Coach PDF has NOT been refreshed with today’s visual changes. Update it with labelled screenshots before sending it as the latest report.
+- Pending: coach’s scheduling/payment provider decision, actual availability and checkout integration, verified confirmations/emails/calendar links, final policies, Tennis 101/201 details, genuine reviews and supported coaching statistics. Do not invent these.
+- GitHub Pages remains temporary hosting with indexing disabled. Production/GoDaddy migration remains a later approved step.
+- Continue preserving Club Modern design and mobile/desktop symmetry. Explain proposed changes before editing; keep future changes local until the user approves publishing that batch.
+- No next design task was selected. Resume by reviewing this checkpoint and asking what the user wants to tackle next. No reminder or automatic work was requested.
+
 ## Approved homepage refinements — October 2, 2026
 
 User approved publishing this batch to the temporary GitHub Pages site.

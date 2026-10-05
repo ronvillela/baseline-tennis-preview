@@ -23,3 +23,13 @@ Replaced outdated README and upload instructions that described an old ZIP and a
 - Final policies, program details, reviews and factual credentials require coach approval. The current draft must be reviewed before production; no policy decisions were made in this audit.
 - Preview SEO remains intentionally disabled. Production domain references need verification before launch.
 - The previously exported coach PDF has not been refreshed for this review or the latest visual refinements.
+
+## Local modernization verification — October 4, 2026
+
+- All 13 pages passed static checks; booking tests and whitespace checks passed.
+- Browser checks at 440px confirmed menu open/close, scrolling when Programs expands, Escape returning focus to the hamburger, and section navigation closing the menu.
+- At 1280px the menu uses two columns and the mobile action bar is hidden. At 320px the document had no horizontal overflow and the floating bar stayed within the viewport.
+- Reduced-motion emulation confirmed zero transition duration and no transform on menu links. Test emulation was reset afterward.
+- Fixed section-link focus timing: native fragment navigation previously overrode heading focus; focus now moves after navigation. Verified focus lands on locations-heading.
+- No browser console errors were captured during the initial menu interaction checks. This is a scoped regression review, not exhaustive browser/device certification.
+- Changes remain local and unpublished pending the user’s release approval.

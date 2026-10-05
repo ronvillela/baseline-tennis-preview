@@ -30,7 +30,9 @@ Open `http://127.0.0.1:8771/`. If that port is already in use, choose another. B
 - `booking.html` and `confirmation.html`: booking and confirmation placeholders; neither creates reservations or verifies payment.
 - `assets/js/booking-config.js`: public booking URLs, keyed by service.
 - `assets/js/booking.js`: booking routing and selected-program messaging.
-- `assets/js/page-jump.js`: homepage section dropdown behavior and keyboard focus.
+- `assets/js/page-jump.js`: homepage section-shortcut keyboard focus inside the hamburger menu.
+- `assets/css/header.css`: shared floating header, centered hamburger navigation, tennis-ball accent, hover feedback and reduced-motion support.
+- `assets/css/actions.css`: shared rounded action buttons and floating mobile booking bar.
 - `assets/css/home-sections.css`: homepage layout refinements; `court-gallery.css`: shared photo/video presentation.
 - `assets/photos`, `assets/video`, `assets/logos`: site media and approved branding.
 - `scripts/check-site.py` and `tests/booking.test.cjs`: repeatable checks.

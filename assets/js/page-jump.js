@@ -1,26 +1,19 @@
+/* Homepage shortcuts live inside the main menu. The page navigation handler
+   closes the menu; move keyboard focus to the destination heading as well. */
 (() => {
-  const menu = document.querySelector('.page-jump');
-  if (!menu) return;
-  const toggle = menu.querySelector('summary');
-  menu.addEventListener('click', event => {
+  const links = document.querySelector('.header-section-links');
+  if (!links) return;
+  links.addEventListener('click', event => {
     const link = event.target.closest('a[href^="#"]');
     if (!link) return;
-    menu.open = false;
     const target = document.getElementById(link.hash.slice(1));
     const heading = target && target.querySelector('h2');
-    if (heading) {
+    if (!heading) return;
+    // Wait for native fragment navigation and menu closure before moving focus.
+    requestAnimationFrame(() => {
       heading.setAttribute('tabindex', '-1');
       heading.focus({ preventScroll: true });
       heading.addEventListener('blur', () => heading.removeAttribute('tabindex'), { once: true });
-    }
-  });
-  document.addEventListener('click', event => {
-    if (!menu.contains(event.target)) menu.open = false;
-  });
-  document.addEventListener('keydown', event => {
-    if (event.key === 'Escape' && menu.open) {
-      menu.open = false;
-      toggle.focus();
-    }
+    });
   });
 })();

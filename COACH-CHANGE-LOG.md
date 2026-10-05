@@ -1,3 +1,19 @@
+## Actualización aprobada para GitHub — 4 de octubre de 2026
+
+Esta nota reemplaza las menciones “solo local” de los cambios visuales anteriores incluidos en esta versión.
+
+1. Encabezado flotante y redondeado en las 13 páginas, con menú hamburguesa.
+2. Enlaces del menú centrados; accesos a secciones del inicio dentro del menú. Se eliminó la barra separada “On this page”.
+3. Botón del menú con color suave de pelota de tenis y líneas curvas decorativas.
+4. Animación sutil al pasar el cursor o pulsar; se respeta la preferencia de movimiento reducido.
+5. Botones de acción redondeados y consistentes; tarjetas de clases con esquinas suaves y botones alineados.
+6. Barra móvil flotante y redondeada: Book Now / Call / Text.
+7. Revisión de enlaces, archivos, JavaScript, reservas de prueba y navegación. Se corrigió el foco del teclado al saltar a una sección.
+
+**Pendiente:** elegir y configurar reservas/pagos. Acuity + Stripe es una opción recomendada, todavía sin conexión. Faltan horarios, canchas exactas, tiempos de traslado, reglas de grupos y políticas finales. Primero reservas sin cuenta obligatoria; cuentas opcionales después. Chat también pendiente. No se cobran pagos ni se confirman reservas reales.
+
+**Documento para enviar:** este registro se actualizó; el PDF anterior aún necesita capturas nuevas de los cambios recientes.
+
 # Baseline Tennis Coach Request Review
 
 ## Revisión móvil adicional — 2 de octubre de 2026
@@ -835,3 +851,13 @@ Se eliminaron las cuatro tarjetas de servicios repetidas de Programs. Ahora Prog
 ### More Than a Game — composición centrada
 
 Se centraron el cierre y los botones. Seis beneficios en dos columnas en escritorio y una en móvil; “You stay outside” y “You step out” se combinaron en “Step outside. Try something new.” Solo local, pendiente de revisión.
+
+### Local modernization preview — October 4, 2026
+- Removed the Book Now link beside the homepage On this page dropdown.
+- Rounded homepage lesson cards and standardized their border thickness for equal inner button widths.
+- Added shared actions.css across all 13 pages: pill-shaped action buttons, consistent 52px minimum height, padding and typography; equal-width paired actions, stacked on phones.
+- Shared floating rounded Book Now / Call / Text bar across mobile pages, including safe-area spacing and footer clearance. Desktop retains its existing navigation.
+- Local only, awaiting visual approval before publishing. Menus and FAQ disclosures retain their control styles; general text links remain text links.
+- Homepage header preview: rounded floating header, hamburger menu on phone/desktop, existing five section shortcuts grouped under Explore this page; separate section-nav row removed. Destination heading focus and Escape focus return supported. Desktop menu opening and location shortcut verified; iframe preview click automation was unavailable. Local only.
+- Extended the floating header and hamburger to all 13 pages using shared header.css. Inner-page Explore Baseline shortcuts return to homepage sections; active-page navigation labels are preserved. Mobile booking page visually checked; all-page static checks pass. Not published.
+- Centered all menu links and labels; added gentle hover/press feedback with reduced-motion support. October 4 regression checks passed; corrected keyboard focus timing after section navigation. Local only.

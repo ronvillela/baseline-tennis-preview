@@ -87,7 +87,9 @@
 </style>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SportsActivityLocation", "name": "Baseline Tennis", "description": "Private tennis lessons, sparring sessions, semi-private lessons, small group clinics, and Tennis 101 and Tennis 201 programs throughout Miami.", "url": "https://baselinetennis.com", "telephone": "+1-305-922-9122", "email": "info@baselinetennis.com", "founder": {"@type": "Person", "name": "Vittorio Zecca"}, "priceRange": "$42.50-$120", "areaServed": [{"@type": "Place", "name": "Brickell"}, {"@type": "Place", "name": "Coconut Grove"}, {"@type": "Place", "name": "Coral Gables"}, {"@type": "Place", "name": "Key Biscayne"}, {"@type": "Place", "name": "Downtown Miami"}, {"@type": "Place", "name": "Edgewater"}, {"@type": "Place", "name": "Midtown Miami"}, {"@type": "Place", "name": "Wynwood"}, {"@type": "Place", "name": "South Miami"}, {"@type": "Place", "name": "Pinecrest"}]}</script>
 <link rel="stylesheet" href="assets/css/court-gallery.css">
-<link rel="stylesheet" href="assets/css/home-sections.css?v=20261002-2">
+<link rel="stylesheet" href="assets/css/home-sections.css?v=20261004-4">
+<link rel="stylesheet" href="assets/css/actions.css?v=20261004-1">
+<link rel="stylesheet" href="assets/css/header.css?v=20261004-4">
 </head>
 <body>
 
@@ -113,25 +115,20 @@
         <li><a href="policies.html">Policies</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
+      <div class="header-sections" aria-labelledby="header-sections-label">
+        <p id="header-sections-label" class="header-sections-label">Explore this page</p>
+        <ul class="header-section-links">
+          <li><a href="#rates">Lessons &amp; Pricing</a></li>
+          <li><a href="#locations">Miami Locations</a></li>
+          <li><a href="#meet-your-coach">Meet Your Coach</a></li>
+          <li><a href="#on-court">Photos &amp; Video</a></li>
+          <li><a href="#why-baseline">Why Baseline</a></li>
+        </ul>
+      </div>
       <a class="btn btn--primary header-cta" href="booking.html">Book Now</a>
     </nav>
   </div>
 </header>
-<nav class="section-nav" aria-label="On this page">
-  <div class="container section-nav__inner">
-    <details class="page-jump">
-      <summary>On this page <span aria-hidden="true">⌄</span></summary>
-      <div class="page-jump__panel">
-        <a href="#rates">Lessons &amp; Pricing</a>
-        <a href="#locations">Miami Locations</a>
-        <a href="#meet-your-coach">Meet Your Coach</a>
-        <a href="#on-court">Photos &amp; Video</a>
-        <a href="#why-baseline">Why Baseline</a>
-      </div>
-    </details>
-    <a class="section-nav__book" href="booking.html">Book Now</a>
-  </div>
-</nav>
 <main id="main">
 <section class="hero" aria-labelledby="hero-heading">
   <div class="hero__media"><div class="hero__placeholder" role="img" aria-label="Tennis court graphic placeholder"></div></div><div class="hero__overlay"></div>
@@ -228,7 +225,7 @@
       document.body.classList.toggle('menu-open', opening);
     });
     nav.addEventListener('click', function (event) { if (event.target.closest('a')) closeMenu(); });
-    document.addEventListener('keydown', function (event) { if (event.key === 'Escape') closeMenu(); });
+    document.addEventListener('keydown', function (event) { if (event.key === 'Escape' && nav.classList.contains('is-open')) { closeMenu(); toggle.focus(); } });
     window.addEventListener('resize', function () { if (window.innerWidth >= 1050) closeMenu(); });
   }
 
@@ -257,6 +254,6 @@
 })();
 
 </script>
-<script src="assets/js/page-jump.js"></script>
+<script src="assets/js/page-jump.js?v=20261004-2"></script>
 </body>
 </html>

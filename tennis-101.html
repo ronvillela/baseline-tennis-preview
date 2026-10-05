@@ -40,6 +40,8 @@
 @media(min-width:700px){.session-hero{padding:2.5rem 0}.session-offer .btn{width:auto;min-width:240px}}
 </style>
 
+<link rel="stylesheet" href="assets/css/actions.css?v=20261004-1">
+<link rel="stylesheet" href="assets/css/header.css?v=20261004-4">
 </head>
 <body>
 
@@ -65,6 +67,16 @@
         <li><a href="policies.html">Policies</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
+      <div class="header-sections" aria-labelledby="header-sections-label">
+        <p id="header-sections-label" class="header-sections-label">Explore Baseline</p>
+        <ul class="header-section-links">
+          <li><a href="index.html#rates">Lessons &amp; Pricing</a></li>
+          <li><a href="index.html#locations">Miami Locations</a></li>
+          <li><a href="index.html#meet-your-coach">Meet Your Coach</a></li>
+          <li><a href="index.html#on-court">Photos &amp; Video</a></li>
+          <li><a href="index.html#why-baseline">Why Baseline</a></li>
+        </ul>
+      </div>
       <a class="btn btn--primary header-cta" href="booking.html">Book Now</a>
     </nav>
   </div>
@@ -121,7 +133,7 @@
       document.body.classList.toggle('menu-open', opening);
     });
     nav.addEventListener('click', function (event) { if (event.target.closest('a')) closeMenu(); });
-    document.addEventListener('keydown', function (event) { if (event.key === 'Escape') closeMenu(); });
+    document.addEventListener('keydown', function (event) { if (event.key === 'Escape' && nav.classList.contains('is-open')) { closeMenu(); toggle.focus(); } });
     window.addEventListener('resize', function () { if (window.innerWidth >= 1050) closeMenu(); });
   }
 

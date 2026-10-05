@@ -1,0 +1,55 @@
+/* Shared action styles. Loaded last on every page to keep buttons consistent.
+   Navigation/FAQ disclosures retain their distinct control styles. */
+:root { --action-height: 52px; --action-radius: 999px; }
+.btn {
+  min-height: var(--action-height);
+  border-radius: var(--action-radius);
+  padding: .85rem 1.4rem;
+  font-size: .82rem;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: .06em;
+  text-align: center;
+  white-space: normal;
+}
+/* Equal columns keep paired actions symmetric, even with different labels. */
+.button-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  width: 100%;
+  max-width: 44rem;
+  margin-inline: auto;
+  gap: .75rem;
+}
+.button-row .btn { width: 100%; min-width: 0; height: 100%; }
+.button-row > .btn:only-child { grid-column: 1 / -1; }
+.btn:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
+.btn--white:focus-visible, .btn--outline-white:focus-visible { outline-color: #fff; }
+@media (max-width: 699px) {
+  .button-row { grid-template-columns: minmax(0, 1fr); max-width: 320px; }
+}
+
+/* Float clear of phone safe areas; reserve footer space so links stay reachable. */
+@media (max-width: 1049px) {
+  .mobile-bar {
+    left: max(12px, env(safe-area-inset-left, 0px));
+    right: max(12px, env(safe-area-inset-right, 0px));
+    bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+    width: auto;
+    max-width: 440px;
+    margin-inline: auto;
+    height: 64px;
+    padding: 6px;
+    gap: 4px;
+    border: 1px solid rgba(7, 3, 238, .12);
+    border-radius: 999px;
+    background: #fff;
+    box-shadow: 0 8px 32px rgba(23, 23, 27, .18);
+  }
+  .mobile-bar a { min-width: 0; min-height: 48px; border-radius: 999px; }
+  .mobile-bar a:focus-visible { outline-offset: -3px; }
+  .mobile-bar .mobile-bar__book:focus-visible { outline-color: #fff; }
+  .site-footer { padding-bottom: calc(7rem + env(safe-area-inset-bottom, 0px)); }
+  .site-nav.is-open { height: calc(100dvh - var(--header) - 88px - env(safe-area-inset-bottom, 0px)); }
+}

@@ -1,0 +1,126 @@
+/* Shared floating header. Load after page and action styles on every page. */
+.site-header {
+  top: 12px;
+  width: calc(100% - 24px);
+  max-width: 1200px;
+  margin: 12px auto;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  box-shadow: 0 6px 24px rgba(23, 23, 27, .08);
+}
+.site-header__inner { width: 100%; padding-inline: 20px; }
+.site-logo__image { height: 40px; }
+.nav-toggle { display: flex; flex-shrink: 0; border-radius: 50%; background: var(--cream); }
+.site-nav { display: none; }
+.site-nav.is-open {
+  display: block;
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+  max-height: calc(100dvh - var(--header) - 124px - env(safe-area-inset-bottom, 0px));
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: var(--white);
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+}
+.site-nav .nav-list { display: block; }
+.site-nav .nav-list > li { border-bottom: 1px solid var(--line); }
+.site-nav .nav-list > li > a, .site-nav .nav-list > li > button { padding: .75rem 0; font-size: .95rem; }
+.site-nav .nav-submenu { position: static; width: auto; border: 0; box-shadow: none; padding: 0 0 .75rem 1rem; }
+.site-nav .has-submenu:hover .nav-submenu:not(.is-open),
+.site-nav .has-submenu:focus-within .nav-submenu:not(.is-open) { display: none; }
+.header-sections { margin-top: 1.25rem; }
+.header-sections-label { margin-bottom: .5rem; font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--gray); }
+.header-section-links { list-style: none; margin: 0; padding: 0; }
+.header-section-links a { display: flex; align-items: center; min-height: 48px; padding: .65rem .8rem; border-radius: 12px; color: var(--charcoal); text-decoration: none; font-weight: 600; }
+.header-section-links a:hover { background: var(--cream); color: var(--blue); }
+.site-nav .header-cta { display: none; }
+#main > section[id], #lesson-package { scroll-margin-top: calc(var(--header) + 32px); }
+@media (min-width: 1050px) {
+  .site-nav.is-open { left: auto; width: 620px; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .header-sections { margin-top: 0; }
+  .site-nav .header-cta { display: inline-flex; grid-column: 1 / -1; }
+}
+
+/* Center both menu groups and the expanded program links consistently. */
+.site-nav .nav-list > li > a,
+.site-nav .nav-list > li > button,
+.site-nav .nav-submenu a,
+.header-sections-label {
+  text-align: center;
+}
+.site-nav .nav-submenu { padding-inline: 0; }
+.header-section-links a { justify-content: center; text-align: center; }
+
+/* Gentle interaction feedback without shifting neighboring menu items. */
+.site-nav .nav-list > li > a,
+.site-nav .nav-list > li > button,
+.site-nav .nav-submenu a,
+.header-section-links a {
+  border-radius: 12px;
+  transition: background-color .18s ease, color .18s ease, transform .18s ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  .site-nav .nav-list > li > a:hover,
+  .site-nav .nav-list > li > button:hover,
+  .site-nav .nav-submenu a:hover,
+  .header-section-links a:hover {
+    background: var(--blue-light);
+    color: var(--blue);
+    transform: translateY(-2px);
+  }
+}
+.site-nav .nav-list > li > a:focus-visible,
+.site-nav .nav-list > li > button:focus-visible,
+.site-nav .nav-submenu a:focus-visible,
+.header-section-links a:focus-visible {
+  background: var(--blue-light);
+  color: var(--blue);
+}
+.site-nav .nav-list > li > a:active,
+.site-nav .nav-list > li > button:active,
+.site-nav .nav-submenu a:active,
+.header-section-links a:active {
+  background: var(--blue-light);
+  color: var(--blue);
+  transform: scale(.98);
+}
+@media (prefers-reduced-motion: reduce) {
+  .site-nav .nav-list > li > a,
+  .site-nav .nav-list > li > button,
+  .site-nav .nav-submenu a,
+  .header-section-links a {
+    transition: none;
+    transform: none !important; /* Also overrides hover and pressed states. */
+  }
+}
+
+/* Tennis-ball accent: decorative seams stay behind the menu/close icon. */
+.nav-toggle {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: #e7edb7;
+  border: 1px solid rgba(119, 133, 42, .18);
+}
+.nav-toggle::before,
+.nav-toggle::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  width: 26px;
+  height: 52px;
+  border: 2px solid rgba(255, 255, 240, .8);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: -1;
+}
+.nav-toggle::before { left: -17px; transform: rotate(-15deg); }
+.nav-toggle::after { right: -17px; transform: rotate(-15deg); }
+.nav-toggle span { position: relative; flex-shrink: 0; }
