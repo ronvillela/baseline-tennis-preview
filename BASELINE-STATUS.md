@@ -1,3 +1,13 @@
+## Resume here — October 4, 2026 end-of-day checkpoint
+
+- Latest published website commit: `822cecc` (Baseline logo sharing preview), following `26eac9c` (rounded navigation and action buttons). GitHub Pages deployment and live sharing image were verified.
+- The user is waiting for the coach to create the **Acuity and Stripe accounts**. No account connection or live booking/payment setup has been completed yet.
+- Next, once account access is available: configure and connect scheduling and payments, then test the complete guest journey: program → location → available date/time and player capacity → player information → payment → confirmation.
+- Validate availability and capacity rules, successful/failed payments, customer and coach notifications, session date/time/location, and approved cancellation/weather terms before treating booking as ready. Obtain any still-missing coach decisions; do not invent policies or availability.
+- **Only after booking and payment pass testing**, proceed with customer account profiles. Confirm the provider’s supported profile features before implementation.
+- Continue local-first changes and review; obtain approval before the next website publication. GitHub Pages remains temporary hosting; GoDaddy migration is later.
+- The coach PDF still needs refreshed screenshots before being presented as the latest report.
+
 ## Link preview update — October 4, 2026
 
 Added explicit Open Graph and Twitter sharing metadata to all 13 pages. Shared links now request the blue Baseline logo on cream (`assets/social/baseline-link-preview.png`, 1200 × 630), rather than letting apps select a lesson photo. Existing messages may retain cached thumbnails. Absolute sharing URLs use GitHub Pages and must be updated during the production-domain migration.
