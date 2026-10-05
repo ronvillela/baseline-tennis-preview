@@ -1,3 +1,7 @@
+## Link preview update — October 4, 2026
+
+Added explicit Open Graph and Twitter sharing metadata to all 13 pages. Shared links now request the blue Baseline logo on cream (`assets/social/baseline-link-preview.png`, 1200 × 630), rather than letting apps select a lesson photo. Existing messages may retain cached thumbnails. Absolute sharing URLs use GitHub Pages and must be updated during the production-domain migration.
+
 ## Current checkpoint — October 4, 2026 release
 
 The user explicitly approved uploading the current work to GitHub and documenting it. This checkpoint supersedes prior local-only notes for the modernization batch below.

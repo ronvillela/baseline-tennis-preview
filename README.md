@@ -22,6 +22,10 @@ python3 -m http.server 8771 --bind 127.0.0.1
 
 Open `http://127.0.0.1:8771/`. If that port is already in use, choose another. Browser responsive mode can approximate a phone; also review on a real iPhone before release. Refresh cached styles after changes.
 
+## Link sharing
+
+All pages declare the same 1200 × 630 PNG logo card through Open Graph and Twitter metadata. The card is `assets/social/baseline-link-preview.png`, rendered from the existing header SVG on the approved cream background. Update the absolute sharing URLs on all pages when moving to the production domain. Messaging services may cache older thumbnails.
+
 ## File guide
 
 - `index.html`: homepage, session rates, programs, locations, coach, court gallery and Why Tennis.

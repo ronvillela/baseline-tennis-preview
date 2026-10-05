@@ -1,3 +1,7 @@
+## Actualización: imagen al compartir el enlace — 4 de octubre de 2026
+
+Se configuraron las 13 páginas para mostrar el logo azul de Baseline sobre fondo crema al compartir el enlace, en lugar de una foto de cancha. Algunas aplicaciones pueden conservar temporalmente la imagen anterior en su caché. Las fotos dentro del sitio no cambian.
+
 ## Actualización aprobada para GitHub — 4 de octubre de 2026
 
 Esta nota reemplaza las menciones “solo local” de los cambios visuales anteriores incluidos en esta versión.
