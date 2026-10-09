@@ -1,6 +1,6 @@
-## Local code-quality checkpoint — October 9, 2026
+## Approved code-quality release — October 9, 2026
 
-Reviewed fetched GitHub main `822cecc`. Local cleanup consolidates repeated CSS/navigation, removes unused legacy code, improves FAQ accessibility connections and extends validation checks. Tests and scoped mobile/tablet/desktop browser checks pass; see `docs/CODE-REVIEW.md`. **These cleanup changes have not been uploaded to GitHub.** Await release approval. Acuity/Stripe setup is still the next business milestone, followed by booking/payment testing and then customer profiles.
+Reviewed fetched GitHub main `822cecc`. Local cleanup consolidates repeated CSS/navigation, removes unused legacy code, improves FAQ accessibility connections and extends validation checks. Tests and scoped mobile/tablet/desktop browser checks pass; see `docs/CODE-REVIEW.md`. The user approved uploading this cleanup to GitHub on October 9. Release includes cleanup commit `15423a8` and the saved booking-integration checkpoint. Acuity/Stripe setup is still the next business milestone, followed by booking/payment testing and then customer profiles.
 
 ## Resume here — October 4, 2026 end-of-day checkpoint
 

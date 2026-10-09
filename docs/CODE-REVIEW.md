@@ -2,7 +2,7 @@
 
 ## Scope and release state
 
-Fetched GitHub main at `822cecc` before reviewing. Local HEAD also contained the previously saved documentation-only checkpoint `c732279`; no website changes were ahead of GitHub. This cleanup is **local, not published**, pending the user’s release approval. Older review entries below are historical.
+Fetched GitHub main at `822cecc` before reviewing. Local HEAD also contained the previously saved documentation-only checkpoint `c732279`; no website changes were ahead of GitHub. The user approved publishing this cleanup on October 9, 2026 (cleanup commit `15423a8`). Older review entries below are historical.
 
 ## Findings and cleanup
 
