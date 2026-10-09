@@ -31,7 +31,8 @@ All pages declare the same 1200 × 630 PNG logo card through Open Graph and Twit
 - `index.html`: homepage, session rates, programs, locations, coach, court gallery and Why Tennis.
 - Service pages: `private-lessons.html`, `semi-private-lessons.html`, `sparring-sessions.html`, `group-clinics.html`, `tennis-101.html`, `tennis-201.html`.
 - `about.html`: full coach profile. `contact.html`: general contact details. `policies.html`: policy/FAQ preview.
-- `booking.html` and `confirmation.html`: booking and confirmation placeholders; neither creates reservations or verifies payment.
+- `booking.html`: four-step sample scheduling prototype; `assets/css/scheduler.css` and `assets/js/scheduler.js` own its UI and sample data. It makes no network requests, stores no player details, and cannot reserve or charge. Replace the demo with Acuity’s supported flow before launch.
+- `confirmation.html`: confirmation placeholder; it does not verify payment.
 - `assets/js/booking-config.js`: public booking URLs, keyed by service.
 - `assets/js/booking.js`: booking routing and selected-program messaging.
 - `assets/js/navigation.js`: shared header menu, Programs disclosure and FAQ behavior; loaded once per page after markup.

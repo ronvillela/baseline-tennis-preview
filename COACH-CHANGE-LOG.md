@@ -1,3 +1,12 @@
+## Solicitudes 4, 16 y 17 — Prototipo local de reservas, 9 de octubre de 2026
+
+**Preparado para revisión, no publicado.** Nuevo diseño: sesión → zona/fecha/hora de ejemplo → datos de ejemplo → resumen. Horario de Miami. Clínicas con plazas de ejemplo y cálculo por jugador. El pago está desactivado; no se envían datos ni se realizan reservas.
+
+**Pendiente:** conectar el flujo real de Acuity, confirmar canchas/horarios, conectar Stripe y aprobar políticas. El prototipo no consulta disponibilidad real. Las cuatro sesiones ya están creadas como privadas en Acuity; las fechas de clínicas aún no están configuradas.
+
+![Vista móvil del selector de horario](docs/coach-images/scheduler-mobile-preview.jpg)
+![Vista de escritorio del diseño de reservas](docs/coach-images/scheduler-desktop-preview.jpg)
+
 ## Actualización: imagen al compartir el enlace — 4 de octubre de 2026
 
 Se configuraron las 13 páginas para mostrar el logo azul de Baseline sobre fondo crema al compartir el enlace, en lugar de una foto de cancha. Algunas aplicaciones pueden conservar temporalmente la imagen anterior en su caché. Las fotos dentro del sitio no cambian.

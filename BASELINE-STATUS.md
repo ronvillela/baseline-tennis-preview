@@ -1,3 +1,19 @@
+## Local scheduler prototype — October 9, 2026
+
+Built a four-step, mobile-first booking demonstration in booking.html with scoped scheduler.css and scheduler.js: session → area/sample date/time → sample player details → review. Existing service query parameters preselect supported sessions. All dates use America/New_York; clinic sample capacity limits quantities and recalculates price. Changing an area or date clears stale time selections. Payment is disabled. No requests, persistence, charges or reservations occur; sample form values are supplied by default.
+
+This is a visual/interaction prototype, **not an Acuity integration**. The next integration step is to replace the demo with Acuity’s supported scheduling flow once availability, courts, Stripe and policies are ready. Do not attempt to pass fake dates/seats to a live booking URL or claim this page holds inventory. Public bookingLinks remain empty. No website files were published. Fixed desktop/mobile Chrome preview wrappers now open booking.html.
+
+Validation: static checks and booking-routing tests passed. Browser clinic flow verified two players cost $85, switching to a one-spot session resets quantity, area changes clear time selection, and payment remains disabled. Chrome logged unrelated Acrobat-extension errors; no site-origin error was observed in this test. Screenshots saved in docs/coach-images/scheduler-*-preview.jpg. Coach PDF not regenerated.
+
+## Acuity setup — October 9, 2026
+
+User signed in to Acuity and authorized using current website pricing. Saved and verified private appointment types: Private Lesson (`99198328`) $95 / 60 minutes; Semi-Private Lesson (`99267380`) $85 total for two / 60 minutes; Sparring / Hitting Session (`99267389`) $120 / 60 minutes. Converted the initial Consultation type to Private Lesson. Created private Group Clinics (`99267402`) $42.50 per player / 60 minutes / capacity 4; no class dates offered.
+
+All types are hidden from the main public scheduling page. Acuity private types are still bookable by direct link; no links have been connected to the website. No bookings, charges or notifications were created. Payments remain unconnected. Existing calendar availability has not been changed or verified as coach-approved. Descriptions label setup as a preview with schedule/court details pending.
+
+Tennis 101/201 pricing remains pending. The website’s $850 ten-lesson package has not been configured in Acuity; redemption/expiration terms still need confirmation. Next: isolated mock scheduling setup, actual courts and travel buffers, intake questions, approved policies, Stripe connection, then end-to-end testing. Account is Starter trial ending October 15. No plan purchase was made. This note is local only.
+
 ## Approved code-quality release — October 9, 2026
 
 Reviewed fetched GitHub main `822cecc`. Local cleanup consolidates repeated CSS/navigation, removes unused legacy code, improves FAQ accessibility connections and extends validation checks. Tests and scoped mobile/tablet/desktop browser checks pass; see `docs/CODE-REVIEW.md`. The user approved uploading this cleanup to GitHub on October 9. Release includes cleanup commit `15423a8` and the saved booking-integration checkpoint. Acuity/Stripe setup is still the next business milestone, followed by booking/payment testing and then customer profiles.

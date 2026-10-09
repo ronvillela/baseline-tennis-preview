@@ -54,46 +54,9 @@
     height:calc(100dvh - var(--header) - var(--mobile) - env(safe-area-inset-bottom,0px))
   }
 }
-.booking-trust {
-  padding:1.25rem;
-  margin:0 0 2rem;
-  border:1px solid var(--line);
-  border-radius:var(--radius-lg);
-  background:var(--cream);
-  scroll-margin-top:calc(var(--header) + 1rem)
-}
-.booking-trust h2 {
-  font-size:1.5rem
-}
-.booking-trust-grid {
-  display:grid;
-  gap:1rem;
-  margin-bottom:1rem
-}
-.booking-trust-grid strong,.booking-trust-grid span {
-  display:block
-}
-.booking-trust-grid strong {
-  font-size:.9rem;
-  color:var(--blue)
-}
-.booking-trust-grid span {
-  font-size:.8rem;
-  color:var(--gray);
-  line-height:1.5;
-  margin-top:.2rem
-}
-.booking-trust>a {
-  font-size:.85rem;
-  font-weight:600
-}
-@media(min-width:700px) {
-  .booking-trust-grid {
-    grid-template-columns:1fr 1fr
-  }
-}
   </style>
 
+<link rel="stylesheet" href="assets/css/scheduler.css?v=20261009-1">
 <link rel="stylesheet" href="assets/css/actions.css?v=20261004-1">
 <link rel="stylesheet" href="assets/css/header.css?v=20261004-4">
 </head>
@@ -131,20 +94,64 @@
           <li><a href="index.html#why-baseline">Why Baseline</a></li>
         </ul>
       </div>
-      <a class="btn btn--primary header-cta" href="booking.html">Book Now</a>
+      <a class="btn btn--primary header-cta" href="#booking-pending">Book Now</a>
     </nav>
   </div>
 </header>
-<main id="main"><section class="page-hero"><div class="container"><span class="eyebrow">Simple, Mobile-Friendly Booking</span><h1>Book Tennis Lessons in Miami</h1><p class="lead">Choose your session below. Online scheduling and payment are coming soon. Booking buttons remain in place while the online system is being prepared.</p></div></section>
-<section class="section"><div class="container"><div class="notice notice--info" id="booking-pending" style="scroll-margin-top:calc(var(--header) + 1rem)" role="status"><strong>Online booking coming soon.</strong> <span id="booking-selection">Choose a session to preview your booking selection.</span> No reservation or payment is made in this preview.</div><aside class="booking-trust" id="booking-trust" aria-labelledby="booking-trust-heading"><span class="eyebrow">Book With Confidence</span><h2 id="booking-trust-heading">Clear Policies. Peace of Mind.</h2><div class="booking-trust-grid"><div><strong>Secure Payment via Stripe</strong><span>Coming soon · payments are not connected yet.</span></div><div><strong>Instant Booking Confirmation</strong><span>Coming soon · automatic confirmations are not active yet.</span></div><div><strong>Easy Rescheduling</strong><span>Contact the coach at least 24 hours ahead to reschedule at no additional charge.</span></div><div><strong>Weather Protection</strong><span>Outdoor lessons affected by rain or unsafe weather will be rescheduled.</span></div></div><a href="policies.html">FAQ &amp; Policies</a></aside><div class="booking-option-grid">
-<article><span class="eyebrow">60 Minutes</span><h2>Private Lesson</h2><p class="price">$95</p><p>Individual coaching based on your goals.</p><a class="btn btn--primary btn--block" href="booking.html?program=private#booking-pending" data-booking="private">Book Now</a></article>
-<article><span class="eyebrow">60 Minutes</span><h2>Sparring Session</h2><p class="price">$120</p><p>Live hitting and match preparation.</p><a class="btn btn--primary btn--block" href="booking.html?program=sparring#booking-pending" data-booking="sparring">Book Now</a></article>
-<article><span class="eyebrow">2 Players</span><h2>Semi-Private</h2><p class="price">$85</p><p>$42.50 per player for 60 minutes.</p><a class="btn btn--primary btn--block" href="booking.html?program=semi-private#booking-pending" data-booking="semi-private">Book Now</a></article>
-<article><span class="eyebrow">Maximum 4 Players</span><h2>Group Clinic</h2><p class="price">$42.50</p><p>Per player · 60 Minutes<br>Small groups, more individual attention.</p><a class="btn btn--primary btn--block" href="booking.html?program=clinics#booking-pending" data-booking="clinics">Book Now</a></article>
-<article><span class="eyebrow">4–6 Weeks</span><h2>Tennis 101</h2><p>Beginner fundamentals and recreational match readiness.</p><a class="btn btn--secondary btn--block" href="booking.html?program=tennis-101#booking-pending" data-booking="tennis-101">Join Program</a></article>
-<article><span class="eyebrow">6 Weeks</span><h2>Tennis 201</h2><p>Intermediate development, tactics, and match confidence.</p><a class="btn btn--secondary btn--block" href="booking.html?program=tennis-201#booking-pending" data-booking="tennis-201">Join Program</a></article>
-</div></div></section>
-<section class="section section--cream"><div class="container"><div class="section-title"><span class="eyebrow">Coming Soon</span><h2 id="booking-flow" style="scroll-margin-top:calc(var(--header) + 1rem)">Book. Pay. Done.</h2><p class="lead">Our planned online booking experience:</p></div><ol class="check-list"><li>Choose your program and location</li><li>Select an available date and time</li><li>Enter player details</li><li>Review your session and cancellation policy</li><li>Pay securely to complete your booking</li><li>Receive confirmation with your date, time, location and an Add to Calendar option</li></ol><p class="small">Online availability, payments and automatic confirmations are not active yet.</p><p><a href="policies.html">Review cancellation, rain and refund policies</a></p></div></section>
+<main id="main" class="scheduler-page">
+  <section class="scheduler-intro container">
+    <span class="eyebrow">Your next hour on court</span>
+    <h1>Make time for<br>your game.</h1>
+    <p>Personal coaching. Miami courts. A session that fits you.</p>
+  </section>
+  <section class="container scheduler-shell" id="booking-pending" aria-labelledby="scheduler-title">
+    <div class="scheduler-preview"><strong>Booking preview</strong><span>Sample availability only. No reservation or payment will be made.</span></div>
+    <h2 id="scheduler-title" class="sr-only">Plan your tennis session</h2>
+    <noscript><p>Enable JavaScript to explore this demonstration. Online booking is not active yet.</p></noscript>
+    <p id="program-notice" class="scheduler-note" hidden></p>
+    <ol class="scheduler-progress" aria-label="Booking progress">
+      <li aria-current="step"><span>1</span> Session</li><li><span>2</span> Schedule</li><li><span>3</span> Details</li><li><span>4</span> Review</li>
+    </ol>
+    <form id="scheduler-form" novalidate>
+      <section class="scheduler-step" data-step="0" aria-labelledby="step-session">
+        <h2 id="step-session" tabindex="-1">Choose your session.</h2><p class="scheduler-subtitle">All sessions are 60 minutes with Vittorio.</p>
+        <fieldset class="session-choices"><legend class="sr-only">Session type</legend>
+          <label class="session-choice"><input type="radio" name="session" value="private" required><span><strong>Private Lesson</strong><small>1 player · Personal attention</small><b>$95 <small>/ session</small></b></span></label>
+          <label class="session-choice"><input type="radio" name="session" value="semi-private"><span><strong>Semi-Private</strong><small>2 players · Train together</small><b>$85 <small>total · $42.50 each</small></b></span></label>
+          <label class="session-choice"><input type="radio" name="session" value="sparring"><span><strong>Sparring / Hitting</strong><small>1 player · Live-ball practice</small><b>$120 <small>/ session</small></b></span></label>
+          <label class="session-choice"><input type="radio" name="session" value="clinics"><span><strong>Group Clinics</strong><small>Maximum 4 players · Small groups</small><b>$42.50 <small>/ player</small></b></span></label>
+        </fieldset>
+        <p class="scheduler-note">Tennis 101, Tennis 201 and lesson packages will be added once their booking details are finalized.</p>
+      </section>
+      <section class="scheduler-step" data-step="1" aria-labelledby="step-schedule" hidden>
+        <h2 id="step-schedule" tabindex="-1">Find your time on court.</h2><p class="scheduler-subtitle">All times are Miami / Eastern time.</p>
+        <label class="scheduler-label" for="session-location">Preferred Miami area</label>
+        <select id="session-location" required><option value="">Choose an area</option><option>Brickell</option><option>Coconut Grove</option><option>Coral Gables</option><option>Key Biscayne</option><option>South Miami</option></select>
+        <p class="scheduler-note">Demo areas only. Exact courts and any court fees must be confirmed before booking opens.</p>
+        <div id="sample-schedule" hidden>
+          <fieldset><legend>Choose a sample date</legend><div id="sample-dates" class="date-choices"></div></fieldset>
+          <fieldset id="time-fieldset" hidden><legend>Choose a sample time <small>Miami time</small></legend><div id="sample-times" class="time-choices"></div></fieldset>
+          <div id="clinic-players" hidden><label class="scheduler-label" for="player-count">How many players are you booking?</label><select id="player-count"></select><p class="scheduler-note">Sample remaining places for this session; maximum clinic size is four.</p></div>
+          <p id="session-capacity" class="scheduler-note" aria-live="polite"></p>
+        </div>
+      </section>
+      <section class="scheduler-step" data-step="2" aria-labelledby="step-details" hidden>
+        <h2 id="step-details" tabindex="-1">A little about your game.</h2><p class="scheduler-subtitle">Guest booking. No account needed.</p>
+        <p class="scheduler-note">Use sample details for this preview. Nothing is sent or saved.</p>
+        <div class="player-fields"><div><label for="player-name">Player name</label><input id="player-name" type="text" value="Sample Player" maxlength="100" autocomplete="off" required></div><div><label for="player-email">Email</label><input id="player-email" type="email" value="player@example.com" maxlength="180" autocomplete="off" required></div><div><label for="player-level">Playing level</label><select id="player-level"><option>Beginner</option><option>Intermediate</option><option>Advanced</option></select></div><div><label for="player-age">Who is this session for?</label><select id="player-age"><option value="adult">Adult</option><option value="junior">Junior</option></select></div></div>
+        <p id="junior-note" class="scheduler-note" hidden>For real junior bookings, parent/guardian contact and the coach-approved waiver will be required.</p>
+      </section>
+      <section class="scheduler-step" data-step="3" aria-labelledby="step-review" hidden>
+        <h2 id="step-review" tabindex="-1">Your session, at a glance.</h2><p class="scheduler-subtitle">Review this sample before the payment step.</p>
+        <dl id="session-review" class="session-review"></dl>
+        <div class="scheduler-next"><strong>Next: secure booking with Acuity + Stripe</strong><p>Real availability, final court details, fees and policies will appear before payment. This preview is not connected to Acuity availability and cannot reserve a place.</p></div>
+        <button type="button" class="btn btn--primary scheduler-pay" disabled>Payment not active — preview only</button>
+      </section>
+      <p id="scheduler-error" role="alert" hidden></p>
+      <div class="scheduler-controls"><button type="button" id="scheduler-back" class="btn btn--secondary" hidden>Back</button><button type="submit" id="scheduler-next" class="btn btn--primary">Choose location &amp; time</button></div>
+    </form>
+    <div class="scheduler-help"><span>A question before you play?</span><a href="sms:+13059229122">Text Vittorio <span aria-hidden="true">↗</span></a></div>
+  </section>
 </main>
 
 <footer class="site-footer">
@@ -156,18 +163,19 @@
 <li><a href="group-clinics.html">Group Clinics</a></li>
 <li><a href="tennis-101.html">Tennis 101</a></li>
 <li><a href="tennis-201.html">Tennis 201</a></li></ul></nav>
-    <nav class="footer-nav" aria-label="Company"><h3>Company</h3><ul><li><a href="about.html">About Vittorio</a></li><li><a href="group-clinics.html">Clinics</a></li><li><a href="booking.html">Book Now</a></li><li><a href="policies.html">Policies &amp; FAQ</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+    <nav class="footer-nav" aria-label="Company"><h3>Company</h3><ul><li><a href="about.html">About Vittorio</a></li><li><a href="group-clinics.html">Clinics</a></li><li><a href="#booking-pending">Book Now</a></li><li><a href="policies.html">Policies &amp; FAQ</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
     <div class="footer-contact"><h3>Contact</h3><p><a href="tel:+13059229122">(305) 922-9122</a><br><a href="mailto:info@baselinetennis.com">info@baselinetennis.com</a><br>By appointment</p></div>
   </div>
   <div class="container footer-bottom"><p>&copy; 2026 Baseline Tennis. All rights reserved.</p><p class="preview-note">Temporary preview site — search indexing remains disabled until production launch.</p></div>
 </footer>
 <nav class="mobile-bar" aria-label="Quick actions">
-  <a class="mobile-bar__book" href="booking.html">Book Now</a>
+  <a class="mobile-bar__book" href="#booking-pending">Book Now</a>
   <a href="tel:+13059229122">Call</a>
   <a href="sms:+13059229122">Text</a>
 </nav>
 <script src="assets/js/booking-config.js"></script>
 <script src="assets/js/booking.js"></script>
 <script src="assets/js/navigation.js?v=20261009-1"></script>
+<script src="assets/js/scheduler.js?v=20261009-1"></script>
 </body>
 </html>
