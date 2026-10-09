@@ -1,4 +1,4 @@
-/* Shared action styles. Loaded last on every page to keep buttons consistent.
+/* Shared action styles. Loaded after page styles and before header.css to keep buttons consistent.
    Navigation/FAQ disclosures retain their distinct control styles. */
 :root { --action-height: 52px; --action-radius: 999px; }
 .btn {

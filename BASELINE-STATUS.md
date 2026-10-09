@@ -1,3 +1,7 @@
+## Local code-quality checkpoint — October 9, 2026
+
+Reviewed fetched GitHub main `822cecc`. Local cleanup consolidates repeated CSS/navigation, removes unused legacy code, improves FAQ accessibility connections and extends validation checks. Tests and scoped mobile/tablet/desktop browser checks pass; see `docs/CODE-REVIEW.md`. **These cleanup changes have not been uploaded to GitHub.** Await release approval. Acuity/Stripe setup is still the next business milestone, followed by booking/payment testing and then customer profiles.
+
 ## Resume here — October 4, 2026 end-of-day checkpoint
 
 - Latest published website commit: `822cecc` (Baseline logo sharing preview), following `26eac9c` (rounded navigation and action buttons). GitHub Pages deployment and live sharing image were verified.

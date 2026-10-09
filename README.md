@@ -34,6 +34,8 @@ All pages declare the same 1200 × 630 PNG logo card through Open Graph and Twit
 - `booking.html` and `confirmation.html`: booking and confirmation placeholders; neither creates reservations or verifies payment.
 - `assets/js/booking-config.js`: public booking URLs, keyed by service.
 - `assets/js/booking.js`: booking routing and selected-program messaging.
+- `assets/js/navigation.js`: shared header menu, Programs disclosure and FAQ behavior; loaded once per page after markup.
+- `assets/css/base.css`: shared design tokens, component foundations and responsive layouts. Page-specific inline styles follow it; shared refinements then load in their existing order.
 - `assets/js/page-jump.js`: homepage section-shortcut keyboard focus inside the hamburger menu.
 - `assets/css/header.css`: shared floating header, centered hamburger navigation, tennis-ball accent, hover feedback and reduced-motion support.
 - `assets/css/actions.css`: shared rounded action buttons and floating mobile booking bar.
@@ -48,9 +50,9 @@ All pages declare the same 1200 × 630 PNG logo card through Open Graph and Twit
 - Review narrow phones (320–440 px), tablets (700–1049 px) and desktops (1050 px and wider). Check text wrapping, card alignment, menu behavior and the fixed mobile booking bar.
 - Use semantic headings, descriptive image alternatives, keyboard-operable controls and visible focus. Keep relative links so GitHub’s project subdirectory works.
 - Use comments to explain behavior and constraints. Keep edits scoped and reversible in Git; avoid broad formatting or architecture changes during visual refinements.
-- Most pages currently contain inline styles and repeated navigation scripts. This is a maintainability limitation, not a build requirement. Changes to common navigation need checking across all pages. A shared-file refactor should be a separate reviewed change.
-- `assets/css/main.css` and `assets/js/main.js` are legacy files, not loaded by the current HTML. Do not reconnect them without review; their old behavior may conflict with current navigation.
-- Update the stylesheet query version in `index.html` when changing homepage styling for a release.
+- Edit shared navigation in `navigation.js` and shared foundations in `base.css`. Keep page-specific styles scoped. Stylesheet order is intentional: base → page additions → gallery/home refinements (where applicable) → actions → header. Navigation loads after markup; booking configuration loads before booking routing.
+- Unused legacy `main.css` and `main.js` were removed during the October 9 cleanup; they remain recoverable in Git history. Do not restore obsolete contact-form booking behavior.
+- Update affected shared asset query versions on every consuming page when releasing changes; homepage-only assets need a version change in `index.html`.
 - Keep credentials, Stripe secret keys and personal customer information out of this public repository. Use only tested public HTTPS provider URLs in booking configuration.
 
 ## Checks before publishing
@@ -63,7 +65,7 @@ node --test tests/booking.test.cjs
 git diff --check
 ```
 
-The static check covers all 13 HTML pages: local files and anchors, duplicate IDs, image alt attributes, accessibility references, language/viewport metadata, inline/external JavaScript syntax, structured JSON and sitemap XML. Booking tests cover every service, empty links, invalid URLs and unknown program keys.
+The static check covers all 13 HTML pages: local files and anchors, duplicate IDs/attributes, required shared asset order, sharing metadata, image alt attributes, accessibility references, language/viewport metadata, inline/external JavaScript syntax, structured JSON and sitemap XML. Booking tests cover every service, empty links, invalid URLs and unknown program keys.
 
 These checks do not guarantee complete HTML/CSS standards compliance, accessibility or browser compatibility. Manually check mobile/desktop layouts, navigation, Explore links, phone/text actions and video playback. See [review notes](docs/CODE-REVIEW.md).
 

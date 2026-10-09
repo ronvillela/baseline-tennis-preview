@@ -20,6 +20,10 @@ class Page(HTMLParser):
         self.ids = Counter(a['id'] for _, a in self.elements if 'id' in a)
 
     def handle_starttag(self, tag, attrs):
+        # Preserve duplicate-attribute evidence before converting to a mapping.
+        names = [name for name, _ in attrs]
+        if len(names) != len(set(names)):
+            errors.append(f'{self.path.name}: duplicate attribute on <{tag}>')
         attrs = dict(attrs)
         self.elements.append((tag, attrs))
         if tag == 'script':
@@ -52,6 +56,25 @@ for path, page in pages.items():
     check(sum(tag == 'h1' for tag, _ in page.elements) == 1, f'{label}: expected one h1')
     check(any(tag == 'html' and a.get('lang') for tag, a in page.elements), f'{label}: missing language')
     check(any(tag == 'meta' and a.get('name') == 'viewport' for tag, a in page.elements), f'{label}: missing viewport')
+    # Shared behavior must initialize once; stylesheet order preserves the cascade.
+    scripts = [urlsplit(a['src']).path for tag, a in page.elements if tag == 'script' and a.get('src')]
+    styles = [urlsplit(a['href']).path for tag, a in page.elements
+              if tag == 'link' and a.get('rel') == 'stylesheet' and a.get('href')]
+    for shared in ('booking-config.js', 'booking.js', 'navigation.js'):
+        check(scripts.count('assets/js/' + shared) == 1, f'{label}: load {shared} exactly once')
+    required = ['assets/js/booking-config.js', 'assets/js/booking.js']
+    if all(item in scripts for item in required):
+        check(scripts.index(required[0]) < scripts.index(required[1]), f'{label}: booking config must load first')
+    required = ['assets/css/base.css', 'assets/css/actions.css', 'assets/css/header.css']
+    for shared in required:
+        check(styles.count(shared) == 1, f'{label}: load {shared} exactly once')
+    if all(item in styles for item in required):
+        check([styles.index(item) for item in required] == sorted(styles.index(item) for item in required),
+              f'{label}: incorrect base/actions/header cascade order')
+    for key in ('og:title', 'og:description', 'og:image', 'twitter:image'):
+        matches = [a.get('content') for tag, a in page.elements
+                   if tag == 'meta' and (a.get('property') == key or a.get('name') == key)]
+        check(len(matches) == 1 and bool(matches[0]), f'{label}: expected one nonempty {key}')
     for tag, attrs in page.elements:
         if tag == 'img':
             check('alt' in attrs, f'{label}: image missing alt text')
@@ -93,5 +116,5 @@ except ET.ParseError as error:
 if errors:
     print('\n'.join(errors))
     sys.exit(1)
-print(f'PASS: {len(pages)} pages; local assets/anchors, unique IDs, image alt attributes, accessibility references, language/viewport, JavaScript syntax, structured JSON and sitemap XML.')
+print(f'PASS: {len(pages)} pages; local assets/anchors, unique IDs/attributes, shared asset order, sharing metadata, image alt attributes, accessibility references, language/viewport, JavaScript syntax, structured JSON and sitemap XML.')
 print('Scope: static checks only; not a full HTML/CSS standards, accessibility or browser compatibility audit.')

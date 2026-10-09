@@ -1,3 +1,36 @@
+# Code review — October 9, 2026
+
+## Scope and release state
+
+Fetched GitHub main at `822cecc` before reviewing. Local HEAD also contained the previously saved documentation-only checkpoint `c732279`; no website changes were ahead of GitHub. This cleanup is **local, not published**, pending the user’s release approval. Older review entries below are historical.
+
+## Findings and cleanup
+
+- **Maintainability:** 13 pages repeated the same 16,227-character base stylesheet and 2,231-character navigation script. Extracted these into `assets/css/base.css` and `assets/js/navigation.js`, preserving load order and existing responsive rules. Formatted the extracted CSS and page-specific CSS for readability. Added comments for file ownership, cascade order, responsive sections, menu state, keyboard behavior and FAQ behavior.
+- **Dead code:** removed unused `main.css`, `main.js`, and the unused `BaselineTennis` configuration alias. The legacy script contained an obsolete contact-form booking destination. All removed material is recoverable in Git history.
+- **Accessibility:** FAQ buttons now identify their answer panels with `aria-controls`; panels identify their questions with `aria-labelledby`. Existing expand/collapse behavior remains intact.
+- **Regression prevention:** the static checker now detects duplicate attributes, missing/repeated shared scripts/styles, incorrect booking/config and stylesheet order, and absent/duplicate social sharing metadata.
+- **Documentation:** corrected stylesheet load-order annotations and README ownership/conventions. Existing business content and booking placeholders were preserved.
+
+The combined HTML payload decreased from 393,803 to 159,367 bytes (59.5%) by moving repeated code into reusable files. This measures HTML size, not a measured page-speed improvement; shared assets still need their initial download.
+
+## Verification
+
+- All 13 pages pass `python3 scripts/check-site.py`; all booking routing cases pass `node --test tests/booking.test.cjs`; `git diff --check` passes.
+- Compared each page’s original inline CSS with its extracted base plus page-specific rules: rule sequence/content match after excluding whitespace/comments. No relative `url()` references required rebasing.
+- Browser checks across all 13 pages at 440px: shared CSS loads, navigation loads once, menu opens, no horizontal overflow. No console errors captured during this pass.
+- All 13 pages also checked for horizontal overflow at 320px and 768px; none found.
+- Homepage at 1280px: two-column dropdown and hidden mobile action bar verified. Mobile Programs disclosure, Escape closing/returning focus, section link closure/heading focus, and FAQ single-answer expansion verified.
+- Simple repository pattern scan found no Stripe secret-key, GitHub-token or private-key markers. This is not a comprehensive secrets/security audit.
+
+## Remaining limits and launch dependencies
+
+This is a scoped code-quality and regression review, not formal HTML/CSS validation, accessibility certification or exhaustive Safari/iPhone testing. Page-specific CSS and repeated static header/footer markup remain; shared CSS still contains older foundation rules intentionally overridden by later styles. A template/build-system migration or deeper selector pruning should be a separate reviewed change rather than risk approved styling in this pass.
+
+Real booking, capacity, payment verification, notifications, policies and customer profiles remain pending Acuity/Stripe setup and end-to-end testing. The preview still blocks indexing. The coach PDF has not been regenerated.
+
+---
+
 # Code review — October 2, 2026
 
 Reviewed the repository against published homepage revision `290491f`. The local and remote histories matched before this review.
