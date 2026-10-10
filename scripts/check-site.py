@@ -71,6 +71,13 @@ for path, page in pages.items():
     if all(item in styles for item in required):
         check([styles.index(item) for item in required] == sorted(styles.index(item) for item in required),
               f'{label}: incorrect base/actions/header cascade order')
+    # Keep the live provider page independent of sample-only controls.
+    if label in ('booking.html', 'booking-demo.html'):
+        check(styles.count('assets/css/scheduler-shell.css') == 1,
+              f'{label}: load the shared scheduler shell exactly once')
+    if label == 'booking.html':
+        check('assets/css/scheduler.css' not in styles and 'assets/js/scheduler.js' not in scripts,
+              f'{label}: demo-only assets must not load in the connected scheduler')
     for key in ('og:title', 'og:description', 'og:image', 'twitter:image'):
         matches = [a.get('content') for tag, a in page.elements
                    if tag == 'meta' and (a.get('property') == key or a.get('name') == key)]

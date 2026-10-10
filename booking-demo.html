@@ -31,7 +31,7 @@
   <link rel="stylesheet" href="assets/css/base.css?v=20261009-1">
 
 <link rel="stylesheet" href="assets/css/scheduler-shell.css?v=20261009-2">
-<link rel="stylesheet" href="assets/css/acuity-embed.css?v=20261009-1">
+<link rel="stylesheet" href="assets/css/scheduler.css?v=20261009-2">
 <link rel="stylesheet" href="assets/css/actions.css?v=20261009-2">
 <link rel="stylesheet" href="assets/css/header.css?v=20261004-4">
 </head>
@@ -75,30 +75,64 @@
 </header>
 <main id="main" class="scheduler-page">
   <section class="scheduler-intro container">
-    <p class="eyebrow">Your next hour on court</p>
+    <span class="eyebrow">Your next hour on court</span>
     <h1>Make time for<br>your game.</h1>
-    <p>Choose your session, then book through Acuity.</p>
+    <p>Personal coaching. Miami courts. A session that fits you.</p>
   </section>
-  <section class="container scheduler-shell" id="booking-pending" aria-labelledby="booking-title">
-    <h2 id="booking-title">Choose your session.</h2>
-    <p class="scheduler-subtitle">Your selection opens the connected scheduler below.</p>
-    <p id="acuity-program-notice" class="scheduler-note" hidden></p>
-    <div class="acuity-programs" aria-label="Session selection">
-      <button type="button" data-acuity-program="private" aria-pressed="false"><strong>Private Lesson</strong><span>1 player · 60 minutes</span><b>$95</b></button>
-      <button type="button" data-acuity-program="semi-private" aria-pressed="false"><strong>Semi-Private</strong><span>2 players · 60 minutes</span><b>$85 total</b></button>
-      <button type="button" data-acuity-program="sparring" aria-pressed="false"><strong>Sparring / Hitting</strong><span>1 player · 60 minutes</span><b>$120</b></button>
-      <button type="button" data-acuity-program="clinics" aria-pressed="false"><strong>Group Clinics</strong><span>Maximum 4 players · 60 minutes</span><b>$42.50 / player</b></button>
-    </div>
-    <p class="scheduler-note">Location is collected as a preference, not a reserved court.</p>
-    <section id="acuity-panel" hidden aria-labelledby="acuity-title">
-      <h2 id="acuity-title" tabindex="-1">Choose a date and time.</h2>
-      <p id="acuity-status" class="scheduler-note" role="status"></p>
-      <!-- Official Acuity iframe handles inventory and form submission. No API keys
-           or mock player data are passed through our static website. -->
-      <iframe id="acuity-frame" src="https://app.acuityscheduling.com/schedule.php?owner=40585921&amp;appointmentType=99198328&amp;ref=embedded_csp" data-offset-top="125" title="Baseline Tennis Acuity booking" width="100%" height="850" allow="payment"></iframe>
-      <p class="acuity-fallback"><a id="acuity-direct" target="_blank" rel="noopener noreferrer">Open this scheduler in a separate tab ↗</a></p>
-    </section>
-    <noscript><p>JavaScript is needed for the embedded selector. <a href="https://app.acuityscheduling.com/schedule.php?owner=40585921&amp;appointmentType=99198328">Open the private lesson scheduler</a>.</p></noscript>
+  <section class="container scheduler-shell" id="booking-pending" aria-labelledby="scheduler-title">
+    <div class="scheduler-preview"><strong>Booking preview</strong><span>Sample availability only. No reservation or payment will be made.</span></div>
+    <h2 id="scheduler-title" class="sr-only">Plan your tennis session</h2>
+    <noscript><p>Enable JavaScript to explore this demonstration. Online booking is not active yet.</p></noscript>
+    <p id="program-notice" class="scheduler-note" hidden></p>
+    <ol class="scheduler-progress" aria-label="Booking progress">
+      <li aria-current="step"><span>1</span> Session</li><li><span>2</span> Schedule</li><li><span>3</span> Details</li><li><span>4</span> Review</li>
+    </ol>
+    <form id="scheduler-form" novalidate>
+      <section class="scheduler-step" data-step="0" aria-labelledby="step-session">
+        <h2 id="step-session" tabindex="-1">Choose your session.</h2><p class="scheduler-subtitle">All sessions are 60 minutes with Vittorio.</p>
+        <fieldset class="session-choices"><legend class="sr-only">Session type</legend>
+          <label class="session-choice"><input type="radio" name="session" value="private" required><span><strong>Private Lesson</strong><small>1 player · Personal attention</small><b>$95 <small>/ session</small></b></span></label>
+          <label class="session-choice"><input type="radio" name="session" value="semi-private"><span><strong>Semi-Private</strong><small>2 players · Train together</small><b>$85 <small>total · $42.50 each</small></b></span></label>
+          <label class="session-choice"><input type="radio" name="session" value="sparring"><span><strong>Sparring / Hitting</strong><small>1 player · Live-ball practice</small><b>$120 <small>/ session</small></b></span></label>
+          <label class="session-choice"><input type="radio" name="session" value="clinics"><span><strong>Group Clinics</strong><small>Maximum 4 players · Small groups</small><b>$42.50 <small>/ player</small></b></span></label>
+        </fieldset>
+        <p class="scheduler-note">Tennis 101, Tennis 201 and lesson packages will be added once their booking details are finalized.</p>
+      </section>
+      <section class="scheduler-step" data-step="1" aria-labelledby="step-schedule" hidden>
+        <h2 id="step-schedule" tabindex="-1">Find your time on court.</h2>
+        <label class="scheduler-label" for="session-location">Preferred Miami area</label>
+        <select id="session-location" required><option value="">Choose an area</option><option>Brickell</option><option>Coconut Grove</option><option>Coral Gables</option><option>Key Biscayne</option><option>South Miami</option></select>
+        <p class="scheduler-note">Demo areas only. Exact courts and any court fees must be confirmed before booking opens.</p>
+        <div id="sample-schedule" hidden>
+          <fieldset class="sample-calendar"><legend>Choose a sample date</legend>
+            <div class="calendar-heading"><button type="button" id="calendar-previous" aria-label="Previous month">&#8249;</button><strong id="calendar-month" aria-live="polite"></strong><button type="button" id="calendar-next" aria-label="Next month">&#8250;</button></div>
+            <div class="calendar-weekdays" aria-hidden="true"><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span></div>
+            <div id="sample-dates" class="date-choices" role="group" aria-labelledby="calendar-month"></div>
+            <p class="scheduler-note">Select a day to see sample times. Preview dates begin tomorrow and cover three calendar months.</p>
+          </fieldset>
+          <fieldset id="time-fieldset" hidden><legend>Choose a sample time</legend><p id="selected-date" class="scheduler-note" aria-live="polite"></p><div id="sample-times" class="time-choices"></div></fieldset>
+          <aside id="clinic-roster" class="clinic-roster" aria-labelledby="roster-heading" hidden><h3 id="roster-heading">Who’s playing</h3><p class="scheduler-note">Fictional players · preview only</p><p id="roster-count"></p><ul id="roster-names"></ul></aside>
+          <div id="clinic-players" hidden><label class="scheduler-label" for="player-count">How many players are you booking?</label><select id="player-count"></select><p class="scheduler-note">Sample remaining places for this session; maximum clinic size is four.</p></div>
+          <p id="session-capacity" class="scheduler-note" aria-live="polite"></p>
+        </div>
+      </section>
+      <section class="scheduler-step" data-step="2" aria-labelledby="step-details" hidden>
+        <h2 id="step-details" tabindex="-1">A little about your game.</h2><p class="scheduler-subtitle">Guest booking. No account needed.</p>
+        <p class="scheduler-note">Use sample details for this preview. Nothing is sent or saved.</p>
+        <div class="booking-contact"><label class="scheduler-label" for="player-email">Booking contact email</label><input id="player-email" type="email" placeholder="player@example.com" maxlength="180" autocomplete="off" required><p class="scheduler-note">One contact for everyone in this booking. For juniors, use a parent or guardian’s email.</p></div>
+        <div id="player-forms"></div>
+        <p id="junior-note" class="scheduler-note" hidden>For real junior bookings, parent/guardian contact and the coach-approved waiver will be required.</p>
+      </section>
+      <section class="scheduler-step" data-step="3" aria-labelledby="step-review" hidden>
+        <h2 id="step-review" tabindex="-1">Your session, at a glance.</h2><p class="scheduler-subtitle">Review this sample before the payment step.</p>
+        <div id="session-review"></div>
+        <div class="scheduler-next"><strong>Next: secure booking with Acuity + Stripe</strong><p>Real availability, final court details, fees and policies will appear before payment. This preview is not connected to Acuity availability and cannot reserve a place.</p></div>
+        <button type="button" class="btn btn--primary scheduler-pay" disabled>Payment not active — preview only</button>
+      </section>
+      <p id="scheduler-error" role="alert" hidden></p>
+      <div class="scheduler-controls"><button type="button" id="scheduler-back" class="btn btn--secondary" hidden>Back</button><button type="submit" id="scheduler-next" class="btn btn--primary">Choose location &amp; time</button></div>
+    </form>
+    <div class="scheduler-help"><span>A question before you play?</span><a href="sms:+13059229122">Text Vittorio <span aria-hidden="true">↗</span></a></div>
   </section>
 </main>
 
@@ -124,7 +158,6 @@
 <script src="assets/js/booking-config.js?v=20261009-2"></script>
 <script src="assets/js/booking.js?v=20261009-2"></script>
 <script src="assets/js/navigation.js?v=20261009-1"></script>
-<script src="assets/js/acuity-embed.js?v=20261009-1"></script>
-<script src="https://embed.acuityscheduling.com/js/embed.js"></script>
+<script src="assets/js/scheduler.js?v=20261009-2"></script>
 </body>
 </html>

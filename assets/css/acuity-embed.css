@@ -1,0 +1,17 @@
+/* Baseline surrounds the provider-owned scheduler; iframe contents are styled in Acuity. */
+#booking-title,#acuity-title { text-align: center; margin-top: 1.5rem; font-size: clamp(1.6rem,4vw,2.2rem); }
+#acuity-title { scroll-margin-top: 125px; }
+.acuity-programs { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .8rem; }
+.acuity-programs button { display: flex; flex-direction: column; align-items: center; gap: .5rem; border: 2px solid var(--cream-dark); border-radius: 20px; background: white; padding: 1.2rem .7rem; font: inherit; cursor: pointer; }
+.acuity-programs span { font-size: .8rem; color: var(--gray); }
+.acuity-programs b { color: var(--blue); font-size: 1.3rem; }
+.acuity-programs button[aria-pressed="true"] { border-color: var(--blue); background: #f4f3ff; }
+.acuity-programs button:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
+#acuity-frame { display: block; width: 100%; border: 0; background: white; min-height: 700px; }
+.acuity-fallback { text-align: center; font-size: .85rem; padding-block: 1rem; }
+.acuity-fallback a { text-decoration: underline; }
+@media(max-width:699px) {
+  .acuity-programs { grid-template-columns: 1fr; }
+  #acuity-panel { margin-inline: -.6rem; }
+  #acuity-status { padding-inline: .6rem; }
+}

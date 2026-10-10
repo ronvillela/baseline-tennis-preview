@@ -1,6 +1,30 @@
+## Local Acuity connection — October 9, 2026
+
+- `booking.html` now embeds the official Acuity scheduler for Private, Semi-Private, Sparring and Clinics. Existing service links preselect the corresponding appointment type.
+- Local only; no GitHub push. Submitting inside the embed creates a real unpaid test reservation, not a mock result. Do not publish as customer-ready.
+- Prior custom design preserved as `booking-demo.html`; changes are reversible by restoring that page and its scheduler script.
+- Checked embedded semi-private date/time → intake navigation and desktop clinic quantity/capacity display. No new reservation submitted during this connection check. Official iframe sizing now expands with content; mobile shell checked at 440 px and desktop at 1280 px.
+- Next adjustments: Acuity currently uses a time list; compare month-calendar options. Location is a preference in intake, not a court-specific availability filter. Player roster uses a shared text field, not separate validated player cards. Attendee names/profiles are not exposed.
+- Email activation/delivery, Stripe, final availability, court assignment and policies remain pending. Test notices and the October 13 test clinic must be reviewed before launch. Tennis 101/201 remain unconnected.
+- Validation: site checks, booking routing tests and whitespace checks pass. This is not a completed end-to-end payment/email test.
+
+## Acuity no-payment test — October 9, 2026 evening
+
+Ran real client-side bookings in Acuity, not the local mock scheduler. Stripe remains disconnected, no payment collected, and website/GitHub booking links remain unchanged.
+
+- Created required “Baseline — scheduler test details” intake form for all four private service types. It collects a free-text roster (each player's name, level and Adult 18+ / Junior 3–17 category) and preferred area, explicitly labelled TEST ONLY/no court reserved. This is a native testing fallback, not the custom dynamic per-player UI. Exact participant count is not enforced by the text field.
+- Enabled Classes: Book multiple spots. Added one non-recurring private Group Clinics test session for October 13, 2026 at noon Eastern, capacity four, $42.50 per spot. Changed its description to clearly state TEST CLINIC/no lesson/no payment. This offered test slot remains available for coach review; remove/replace before launch. Original weekly calendar hours were not changed.
+- Semi-private: actual booking created at Oct 12 10am, saved both fictional players and preferred Brickell area, then client-rescheduled to 11am and cancelled. Provider record 1785972577.
+- Clinic: two spots booked together for Oct 13 noon, native confirmation shows separate reservations under the same contact. Records 1785973030 and 1785973031. Availability fell from four to two; requesting three disabled Book. Both reservations cancelled; availability returned to four.
+- All three test reservations are cancelled. Test client records retained for audit, no deletion. No money collected; cancelled records retain their listed unpaid prices. Contact was the user-authorized test inbox (not recorded in public repo docs).
+- Admin audit for a clinic record showed Confirmation Email Delivered to the business notification address. User reported no client confirmation received. Client Emails screen shows Booking/Cancellation/Reschedule Confirmations Off and “Trial limit reached” for daily notification tests. Template edit opens a paid-plan gate. No subscription purchased and no email settings were changed. Client email delivery, reminder delivery and final policy content remain unverified; do not call this an end-to-end pass.
+- First semi-private submit with blank optional phone stalled with a provider-side null-length error; admin showed no test record. Reloaded and used a fictional reserved test phone number, then booking succeeded. Root cause not proven; blank-phone behavior needs recheck/report to Acuity.
+- Add-to-calendar buttons appeared on confirmations; import into a calendar has not been verified. Native tests were desktop; embedded GitHub/mobile path is still pending. Private and sparring individual bookings were not separately submitted.
+- Still pending: client email unblock/retest, accurate courts/location-based availability, program-specific eligibility, final policies/waivers, polished structured player forms, consent-based real attendee display, Stripe payment and refund test, embedded mobile testing and publication.
+
 ## Local scheduler prototype — October 9, 2026
 
-Built a four-step, mobile-first booking demonstration in booking.html with scoped scheduler.css and scheduler.js: session → area/sample date/time → sample player details → review. Existing service query parameters preselect supported sessions. All dates use America/New_York; clinic sample capacity limits quantities and recalculates price. Changing an area or date clears stale time selections. Payment is disabled. No requests, persistence, charges or reservations occur; sample form values are supplied by default.
+Built a four-step, mobile-first booking demonstration in booking.html with scoped scheduler.css and scheduler.js: session → area/sample date/time → sample player details → review. Existing service query parameters preselect supported sessions. All dates use America/New_York; clinic sample capacity limits quantities and recalculates price. Changing an area or date clears stale time selections. Payment is disabled. No requests, persistence, charges or reservations occur; sample name/email hints use placeholders; the fields begin empty and require input for review.
 
 This is a visual/interaction prototype, **not an Acuity integration**. The next integration step is to replace the demo with Acuity’s supported scheduling flow once availability, courts, Stripe and policies are ready. Do not attempt to pass fake dates/seats to a live booking URL or claim this page holds inventory. Public bookingLinks remain empty. No website files were published. Fixed desktop/mobile Chrome preview wrappers now open booking.html.
 
@@ -326,3 +350,86 @@ All 12 HTML pages now show a fixed mobile BOOK NOW button occupying half the act
 - All seven supplied IMG_66xx/65xx JPEGs added as oriented/resized WebP derivatives; originals untouched.
 - Shared court-gallery.css for Home/About gallery. Horizontal scroll-snap, keyboard-focusable gallery, descriptive alt, lazy images.
 - IMG_6632.MOV is ~2.418s AVC clip; native playback verified to end, readyState 4. Manual controls, playsinline, preload none, poster. Video displayed uncropped; no autoplay.
+
+### Local calendar update — October 9, 2026
+- Replaced six sample date buttons with a seven-column month calendar, previous/next month controls and disabled past/today dates. Preview spans the current and next two months.
+- Selecting a date reveals its labelled sample times in Miami/Eastern time; changing month, location or day clears the prior time selection. No live inventory or payments.
+- Verified month navigation and selection resets in Chrome; no horizontal overflow at 440px mobile and 1280px desktop. Static site and booking routing checks pass. Local only, not published.
+
+### Local multi-player scheduler — October 9, 2026
+- Semi-private requires two player names. Clinics ask for booking quantity within remaining sample capacity, then collect each player's name, level and adult/junior category. One booking contact email; inactive forms excluded from validation/review. Back/Edit preserves inputs.
+- Sample attendee roster reflects the chosen slot's capacity and uses fictional names, including a private attendee example. No real roster connection, identity disclosure, opt-in storage, photos or account functionality. Individual consent and Acuity integration remain pending.
+- Review split into Session details, Players and Total with alternating cream rows and Edit controls. Visible time-zone labels removed; date logic remains America/New_York.
+- Static checks and booking routing tests pass. Browser checked two-player clinic total ($85), missing second-player validation, Edit retention and two semi-private forms at desktop width. Local only.
+
+- Junior age labels approved for the local preview: Junior (ages 3–17), Adult (18+). Labels appear in player forms and review; coach may revise later. This category does not override individual program age eligibility.
+
+
+## Acuity appearance — October 9, 2026
+
+Saved through Acuity Styles (provider settings, not a GitHub publication): palette #FFFFFF / #F7F4EF / #0703EE / #5D5D65 / #17171B; font Lato (DM Sans not offered); Option 1 theme with blue primary actions and charcoal scheduler text. Verified in embedded mobile and desktop previews: cream appointment surfaces, white surrounding area, blue Book button with white text. No new appointments submitted.
+
+Rollback: previous palette was #FFFFFF / #F5F5F5 / #D9D9D9 / #797979 / #0E0E0E, font Source Sans Pro, Option 1. Restore these through Scheduling Page > Styles; reset Option 1 background to white and scheduler text to palette swatch 4.
+
+Remaining: provider buttons/cards remain square with built-in settings. Mobile clinic quantity label wraps poorly; review provider layout options or advanced CSS before launch. These settings affect the actual Acuity scheduler wherever embedded. GitHub files were not pushed.
+
+
+## Paid-plan email check — October 9, 2026
+
+Verified in Acuity: Starter monthly subscription is active. Booking, cancellation and reschedule confirmations are all On for all appointments/classes. The confirmation template editor is now accessible without the trial gate and contains appointment details, change/cancel and calendar links. No settings changed or emails sent during this check. Actual delivery to the test client inbox still requires a fresh post-upgrade test. Final court location and policies remain pending. This supersedes the earlier trial-only email limitation.
+
+
+## Monthly calendar, player fields and email PASS — October 9, 2026
+
+Acuity template changed from Classes to Monthly. Individual lesson links now show month dates and available times; clinics still use Acuity's class list with quantity/capacity. Baseline colors retained.
+
+Old form 3400470 preserved but unassigned. New forms: 3400485 Player 1 & location (all four services, required name/level/age/area), 3400486 Player 2 — Semi-Private (required name/level/age, semi-private only), 3400487 Players 2–4 — Group Clinics (optional name/level/age sets, clinic only). Verified Player 1 appears before additional clinic players. No quantity-driven hiding/validation is implemented; unused clinic fields remain visible.
+
+Booking, cancellation and reschedule emails verified On. Fresh semi-private test 1785983313 created through the local embedded month calendar for October 12, 10–11 AM Eastern, with two fictional adult players. Intake saved correctly. Acuity logged confirmation delivered to client test inbox and coach address; Ron confirmed receipt. Test then canceled WITHOUT a cancellation email and CANCELED status verified. No payment collected. A separate user-created October 10 11 AM booking was observed and left unchanged this turn.
+
+No GitHub push. Remaining: final availability/courts/policies, Stripe, clinic conditional fields, mobile spacing and consistent button shapes. Actual inbox confirmation supersedes earlier pending email notes.
+
+
+## Test cleanup — October 9, 2026
+
+Canceled the remaining user-created test booking 1785981323 without a cancellation email. Acuity Home now reports “No upcoming appointments.” Previous test cancellations remain in history. The empty October 13 clinic offering remains available for testing, with no booked attendees. Coach changes to availability flow through the connected Acuity embed on reload; GitHub's previously published prototype is not yet this local integration. Website marketing prices/cards remain separately maintained.
+
+
+## Client email subjects — October 9, 2026
+
+Approved subjects saved in Acuity and verified by reopening each template:
+- Booking: You’re booked! | Baseline Tennis
+- Reschedule: Your lesson has been rescheduled | Baseline Tennis
+- Cancellation: Your booking has been canceled | Baseline Tennis
+
+All three remain On for all appointments/classes. No test emails sent or bookings created during this update. Test inbox remains ronvillela@me.com; live client confirmations use the customer’s entered address; coach notifications use info@baselinetennismiami.com. No GitHub push.
+
+
+## Intake wording cleanup — October 9, 2026
+
+Acuity Player 1 and semi-private Player 2 labels shortened to Full name, Level, Age group. Required fields preserved. Removed test-only notes from Player 1 instructions/preferred-area label and all four service descriptions. Guardian instruction retained. Clinic additional-player labels retain player numbers because that shared form contains players 2–4 without individual headings.
+
+Local booking page: removed coach-testing banner, sample-preview link and obsolete email-testing note; cleaned booking status/noscript wording. No GitHub publication or new bookings. Acuity changes apply immediately to its embeds. Stripe, final availability/courts and policies remain pending; removal of customer-facing test notes does not mean launch readiness. Static site checks passed.
+
+
+### Player headings — October 9, 2026
+
+Acuity form headings now read Player 1 and Player 2, matching each other. Shared Player 1 form retains preferred area. Verified both headings in mobile embedded semi-private intake. No booking submitted or GitHub push.
+
+
+## Maintainability cleanup — October 9, 2026 (local, not published)
+
+- Consolidated the mobile action block repeated on 14 pages into actions.css. Removed obsolete dimensions already superseded by the floating-bar styles; retained the existing column proportions and type sizes.
+- Separated scheduler-shell.css from demo-only scheduler.css; Acuity now loads only its shared shell and embed presentation.
+- Removed unused booking-selection messaging and the unused email configuration property. Preserved HTTPS validation and fallback routing for all six services; adjusted routing tests accordingly.
+- Reused the demo currency formatter and cached connected-scheduler DOM references. No appointment, price, capacity, payment, or provider setting changed.
+- Added static checks preventing demo-only assets from being loaded on the connected booking page.
+
+Verification: all 14 pages pass static checks, booking routing tests pass, and git diff --check passes. Browser checks: mobile booking page has no horizontal overflow, floating bar remains 64px high, menu opens/closes, and the Acuity semi-private selector loads; desktop hides the mobile action bar.
+
+Repeated static header/footer HTML remains intentional for a build-free GitHub Pages site; removing it safely requires a separate template/build decision. This is not a complete standards/accessibility certification or an exhaustive browser audit. Acuity internals are provider-owned. Existing scheduler integration and documentation edits remain uncommitted; no GitHub upload performed.
+
+
+## Approved GitHub release — October 9, 2026
+
+User approved uploading the connected Acuity preview and code cleanup. Final static checks and booking routing tests passed. Real Acuity reservations and email notifications are enabled; Stripe/payment collection remains unconnected. Coach review of availability, prices, locations and policies is pending. This is a testing release on GitHub Pages, not the GoDaddy production launch.

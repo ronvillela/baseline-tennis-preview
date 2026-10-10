@@ -6,7 +6,7 @@ A mobile-first website for Vittorio Zecca’s Miami tennis coaching business, us
 
 ## Current status
 
-GitHub Pages is temporary preview hosting. The website is not yet a live booking or payment system. Scheduling and payment links remain empty until the coach selects a provider and the complete flow is tested. Email is for general questions, not booking.
+GitHub Pages is temporary preview hosting. The local working copy now embeds Acuity for real, unpaid test reservations; this connection has not been published. Sample hours and courts are not approved availability. Client email delivery and Stripe remain pending. Keep the test notice until the coach approves the setup and end-to-end testing passes. Email is for general questions, not booking.
 
 The intended journey is: choose program → choose location → choose date/time → enter player details → pay → receive confirmation. Moving to the coach’s GoDaddy setup is a later, separately approved step.
 
@@ -31,14 +31,17 @@ All pages declare the same 1200 × 630 PNG logo card through Open Graph and Twit
 - `index.html`: homepage, session rates, programs, locations, coach, court gallery and Why Tennis.
 - Service pages: `private-lessons.html`, `semi-private-lessons.html`, `sparring-sessions.html`, `group-clinics.html`, `tennis-101.html`, `tennis-201.html`.
 - `about.html`: full coach profile. `contact.html`: general contact details. `policies.html`: policy/FAQ preview.
-- `booking.html`: four-step sample scheduling prototype; `assets/css/scheduler.css` and `assets/js/scheduler.js` own its UI and sample data. It makes no network requests, stores no player details, and cannot reserve or charge. Replace the demo with Acuity’s supported flow before launch.
+- `booking.html`: connected Acuity coach-test page. `assets/js/acuity-embed.js` maps the four approved services to public appointment IDs; `assets/css/acuity-embed.css` styles the surrounding Baseline layout. Acuity owns availability, intake, reservations and confirmation. Its official embed script handles frame resizing. No API secrets belong in this static repository.
+- `booking-demo.html`: preserved four-step, sample-only prototype using `assets/css/scheduler-shell.css`, `assets/css/scheduler.css` and `assets/js/scheduler.js`. It cannot reserve or charge and does not pass player details to Acuity.
+- Booking links remain routed through the local `booking.html?program=…` page. Leave the external URL configuration empty while reviewing this embedded approach.
 - `confirmation.html`: confirmation placeholder; it does not verify payment.
 - `assets/js/booking-config.js`: public booking URLs, keyed by service.
-- `assets/js/booking.js`: booking routing and selected-program messaging.
+- `assets/js/booking.js`: booking routing.
 - `assets/js/navigation.js`: shared header menu, Programs disclosure and FAQ behavior; loaded once per page after markup.
 - `assets/css/base.css`: shared design tokens, component foundations and responsive layouts. Page-specific inline styles follow it; shared refinements then load in their existing order.
 - `assets/js/page-jump.js`: homepage section-shortcut keyboard focus inside the hamburger menu.
 - `assets/css/header.css`: shared floating header, centered hamburger navigation, tennis-ball accent, hover feedback and reduced-motion support.
+- `assets/css/scheduler-shell.css`: shared booking-page layout; the live Acuity page does not load demo-only calendar/form styles.
 - `assets/css/actions.css`: shared rounded action buttons and floating mobile booking bar.
 - `assets/css/home-sections.css`: homepage layout refinements; `court-gallery.css`: shared photo/video presentation.
 - `assets/photos`, `assets/video`, `assets/logos`: site media and approved branding.
@@ -66,7 +69,7 @@ node --test tests/booking.test.cjs
 git diff --check
 ```
 
-The static check covers all 13 HTML pages: local files and anchors, duplicate IDs/attributes, required shared asset order, sharing metadata, image alt attributes, accessibility references, language/viewport metadata, inline/external JavaScript syntax, structured JSON and sitemap XML. Booking tests cover every service, empty links, invalid URLs and unknown program keys.
+The static check covers all 14 HTML pages: local files and anchors, duplicate IDs/attributes, required shared asset order, sharing metadata, image alt attributes, accessibility references, language/viewport metadata, inline/external JavaScript syntax, structured JSON and sitemap XML. Booking tests cover every service, empty links, invalid URLs and unknown program keys.
 
 These checks do not guarantee complete HTML/CSS standards compliance, accessibility or browser compatibility. Manually check mobile/desktop layouts, navigation, Explore links, phone/text actions and video playback. See [review notes](docs/CODE-REVIEW.md).
 

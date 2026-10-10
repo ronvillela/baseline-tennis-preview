@@ -233,29 +233,6 @@
     padding:.8rem 0
   }
 }
-/* Mobile booking action remains visible on every page. */
-.mobile-bar {
-  grid-template-columns:2fr 1fr 1fr;
-  height:calc(var(--mobile) + env(safe-area-inset-bottom,0px));
-  padding-bottom:env(safe-area-inset-bottom,0px)
-}
-.mobile-bar a {
-  font-size:.75rem;
-  letter-spacing:.06em;
-  min-height:44px
-}
-.mobile-bar .mobile-bar__book {
-  font-size:.85rem;
-  font-weight:700
-}
-@media(max-width:1049px) {
-  .site-footer {
-    padding-bottom:calc(6.5rem + env(safe-area-inset-bottom,0px))
-  }
-  .site-nav.is-open {
-    height:calc(100dvh - var(--header) - var(--mobile) - env(safe-area-inset-bottom,0px))
-  }
-}
 .package-options {
   grid-template-columns:1fr
 }
@@ -405,7 +382,7 @@
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SportsActivityLocation", "name": "Baseline Tennis", "description": "Private tennis lessons, sparring sessions, semi-private lessons, small group clinics, and Tennis 101 and Tennis 201 programs throughout Miami.", "url": "https://baselinetennis.com", "telephone": "+1-305-922-9122", "email": "info@baselinetennis.com", "founder": {"@type": "Person", "name": "Vittorio Zecca"}, "priceRange": "$42.50-$120", "areaServed": [{"@type": "Place", "name": "Brickell"}, {"@type": "Place", "name": "Coconut Grove"}, {"@type": "Place", "name": "Coral Gables"}, {"@type": "Place", "name": "Key Biscayne"}, {"@type": "Place", "name": "Downtown Miami"}, {"@type": "Place", "name": "Edgewater"}, {"@type": "Place", "name": "Midtown Miami"}, {"@type": "Place", "name": "Wynwood"}, {"@type": "Place", "name": "South Miami"}, {"@type": "Place", "name": "Pinecrest"}]}</script>
 <link rel="stylesheet" href="assets/css/court-gallery.css">
 <link rel="stylesheet" href="assets/css/home-sections.css?v=20261004-4">
-<link rel="stylesheet" href="assets/css/actions.css?v=20261004-1">
+<link rel="stylesheet" href="assets/css/actions.css?v=20261009-2">
 <link rel="stylesheet" href="assets/css/header.css?v=20261004-4">
 </head>
 <body>
@@ -517,8 +494,8 @@
   <a href="tel:+13059229122">Call</a>
   <a href="sms:+13059229122">Text</a>
 </nav>
-<script src="assets/js/booking-config.js"></script>
-<script src="assets/js/booking.js"></script>
+<script src="assets/js/booking-config.js?v=20261009-2"></script>
+<script src="assets/js/booking.js?v=20261009-2"></script>
 <script src="assets/js/navigation.js?v=20261009-1"></script>
 <script src="assets/js/page-jump.js?v=20261004-2"></script>
 </body>

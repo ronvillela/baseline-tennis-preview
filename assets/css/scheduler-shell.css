@@ -1,0 +1,13 @@
+/* Shared page layout for the Acuity embed and preserved booking demo. */
+.scheduler-page { background: var(--cream); padding: 1.5rem 0 4rem; }
+.scheduler-intro { text-align: center; padding: 1rem 0 2rem; }
+.scheduler-intro h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
+.scheduler-intro p { color: var(--gray); max-width: 30rem; margin-inline: auto; }
+.scheduler-shell { max-width: 900px; background: white; border: 1px solid var(--line); border-radius: 28px; padding: 1.5rem; scroll-margin-top: 110px; }
+.scheduler-subtitle { text-align: center; color: var(--gray); font-size: .92rem; margin-bottom: 1.5rem; }
+.scheduler-note { font-size: .8rem; line-height: 1.6; color: var(--gray); margin-top: .7rem; }
+.scheduler-page [hidden] { display: none !important; }
+@media (max-width: 699px) {
+  .scheduler-shell { width: calc(100% - 24px); padding: 1.1rem; border-radius: 24px; }
+  .scheduler-intro { padding: .5rem 0 1rem; }
+}

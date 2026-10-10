@@ -30,6 +30,11 @@
   .button-row { grid-template-columns: minmax(0, 1fr); max-width: 320px; }
 }
 
+/* Shared across every page; keep the primary action twice as wide. */
+.mobile-bar { grid-template-columns: 2fr 1fr 1fr; }
+.mobile-bar a { font-size: .75rem; letter-spacing: .06em; min-height: 44px; }
+.mobile-bar .mobile-bar__book { font-size: .85rem; font-weight: 700; }
+
 /* Float clear of phone safe areas; reserve footer space so links stay reachable. */
 @media (max-width: 1049px) {
   .mobile-bar {

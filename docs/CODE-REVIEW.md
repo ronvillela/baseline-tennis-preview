@@ -66,3 +66,16 @@ Replaced outdated README and upload instructions that described an old ZIP and a
 - Fixed section-link focus timing: native fragment navigation previously overrode heading focus; focus now moves after navigation. Verified focus lands on locations-heading.
 - No browser console errors were captured during the initial menu interaction checks. This is a scoped regression review, not exhaustive browser/device certification.
 - Changes remain local and unpublished pending the user’s release approval.
+
+
+## Maintainability cleanup — October 9, 2026 (local, not published)
+
+- Consolidated the mobile action block repeated on 14 pages into actions.css. Removed obsolete dimensions already superseded by the floating-bar styles; retained the existing column proportions and type sizes.
+- Separated scheduler-shell.css from demo-only scheduler.css; Acuity now loads only its shared shell and embed presentation.
+- Removed unused booking-selection messaging and the unused email configuration property. Preserved HTTPS validation and fallback routing for all six services; adjusted routing tests accordingly.
+- Reused the demo currency formatter and cached connected-scheduler DOM references. No appointment, price, capacity, payment, or provider setting changed.
+- Added static checks preventing demo-only assets from being loaded on the connected booking page.
+
+Verification: all 14 pages pass static checks, booking routing tests pass, and git diff --check passes. Browser checks: mobile booking page has no horizontal overflow, floating bar remains 64px high, menu opens/closes, and the Acuity semi-private selector loads; desktop hides the mobile action bar.
+
+Repeated static header/footer HTML remains intentional for a build-free GitHub Pages site; removing it safely requires a separate template/build decision. This is not a complete standards/accessibility certification or an exhaustive browser audit. Acuity internals are provider-owned. Existing scheduler integration and documentation edits remain uncommitted; no GitHub upload performed.

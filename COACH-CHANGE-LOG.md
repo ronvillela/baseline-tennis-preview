@@ -874,3 +874,100 @@ Se centraron el cierre y los botones. Seis beneficios en dos columnas en escrito
 - Homepage header preview: rounded floating header, hamburger menu on phone/desktop, existing five section shortcuts grouped under Explore this page; separate section-nav row removed. Destination heading focus and Escape focus return supported. Desktop menu opening and location shortcut verified; iframe preview click automation was unavailable. Local only.
 - Extended the floating header and hamburger to all 13 pages using shared header.css. Inner-page Explore Baseline shortcuts return to homepage sections; active-page navigation labels are preserved. Mobile booking page visually checked; all-page static checks pass. Not published.
 - Centered all menu links and labels; added gentle hover/press feedback with reduced-motion support. October 4 regression checks passed; corrected keyboard focus timing after section navigation. Local only.
+
+### #4 / #17 — Calendario mensual (vista previa local)
+Ahora el cliente puede elegir un día en el calendario y después seleccionar una hora. Las flechas cambian el mes. Todas las horas son de Miami.
+
+**Pendiente:** conectar disponibilidad real de Acuity y pagos. Por ahora las fechas y horas son ejemplos; no se crean reservas.
+
+![Calendario mensual y horarios de ejemplo](docs/coach-images/scheduler-calendar-mobile.jpg)
+
+### #4 / #17 — Datos por jugador y resumen más claro (local)
+Semi-private incluye dos jugadores. En clínicas se elige cuántos lugares reservar y se pide nombre, nivel y adulto/junior para cada jugador. Un solo email de contacto para la reserva.
+
+El resumen tiene secciones claras, filas color crema y botones para editar. “Who’s playing” muestra nombres ficticios para demostrar la idea.
+
+**Pendiente:** disponibilidad y participantes reales de Acuity, consentimiento individual para compartir nombres, perfiles/fotos y pagos. No se publican datos reales ni se crean reservas.
+
+![Resumen con jugadores y filas crema](docs/coach-images/scheduler-group-review.jpg)
+
+**Edades (vista previa):** Junior (3–17 años), Adult (18+). Aprobado por Ron por ahora; se puede ajustar si el coach cambia la definición. No reemplaza los requisitos de edad de cada programa.
+
+### #16–18 — Prueba real en Acuity sin Stripe (9 de octubre)
+Se creó una reserva semi-private, se cambió la hora y se canceló. En una clínica de cuatro lugares se reservaron dos; quedaron dos disponibles y no se permitió reservar tres. Al cancelar las dos reservas volvieron los cuatro lugares. No se cobró dinero. Todas las reservas de prueba están canceladas.
+
+Se guardaron jugadores ficticios y área preferida usando un formulario nativo de prueba. Todavía no es el formulario personalizado del sitio. Hay una clínica privada marcada TEST para el 13 de octubre al mediodía, disponible para revisión; no es una clase real.
+
+**Pendiente importante:** el email al cliente no llegó. Acuity muestra las confirmaciones apagadas y un límite diario de pruebas del plan gratuito. La edición del email requiere un plan pago. No se compró ningún plan. Falta verificar emails, integración del sitio/mobile, políticas y Stripe. No se publicó a GitHub.
+
+![Reservas de clínica de prueba canceladas](docs/coach-images/acuity-tests-cancelled.jpg)
+
+
+## Conexión local con Acuity — 9 de octubre de 2026
+
+**Hecho:** La página de reservas abre Acuity dentro del sitio. Se puede elegir Private, Semi-Private, Sparring o Clinics. Conservamos el diseño de prueba anterior para comparar. Todavía no se ha subido esta conexión a GitHub.
+
+**Importante:** Es una prueba conectada: confirmar crea una reserva real de prueba. No se cobra. Los horarios y la cancha todavía no están aprobados.
+
+**Pendiente:** Activar y comprobar emails, conectar Stripe, confirmar horarios/canchas y políticas. Revisaremos el calendario y el formulario de jugadores. Acuity muestra horarios en lista y recoge todos los jugadores en un campo de texto; aún no usa nuestras tarjetas individuales.
+
+**Comprobado:** Selección de horario y apertura del formulario en móvil; cantidad y cupos de clínica en escritorio. No se creó otra reserva en esta revisión.
+
+![Acuity integrado en móvil](docs/coach-images/acuity-connected-mobile.jpg)
+
+
+## Diseño de Acuity — 9 de octubre de 2026
+
+Aplicamos azul Baseline, crema, texto oscuro y fuente Lato en Acuity. Revisado en móvil y escritorio. Se guardaron los colores anteriores para poder revertir. No se subieron archivos a GitHub.
+
+Pendiente: los botones siguen cuadrados; el texto de cantidad en clínicas necesita ajuste en móvil. No se hicieron reservas nuevas en esta revisión.
+
+![Diseño de reservas en escritorio](docs/coach-images/acuity-styled-desktop.jpg)
+![Diseño de reservas en móvil](docs/coach-images/acuity-styled-mobile.jpg)
+
+
+## Calendario, jugadores y email — 9 de octubre de 2026
+
+**Hecho:** Las clases individuales usan calendario mensual y horarios. Semi-Private tiene campos separados y obligatorios para los dos jugadores: nombre, nivel y edad. Clinics tiene campos individuales opcionales para jugadores 2–4.
+
+**Email probado:** Acuity registró la entrega y Ron confirmó que recibió el email. La reserva de prueba se canceló después, sin otro email. No se cobró.
+
+**Pendiente:** Clinics mantiene lista de clases; los campos adicionales no se ocultan automáticamente según cantidad. Faltan Stripe, canchas, horarios definitivos y políticas. Sin publicación nueva en GitHub.
+
+![Calendario mensual](docs/coach-images/baseline-month-calendar.jpg)
+![Campos individuales](docs/coach-images/baseline-player-fields.jpg)
+
+
+## Asuntos de email — 9 de octubre de 2026
+
+**Hecho:** Guardamos y verificamos los tres asuntos aprobados en Acuity:
+- Booking: You’re booked! | Baseline Tennis
+- Reschedule: Your lesson has been rescheduled | Baseline Tennis
+- Cancellation: Your booking has been canceled | Baseline Tennis
+
+Aplican a los próximos emails de clientes. No enviamos emails de prueba en este cambio.
+
+![Asunto booking](docs/coach-images/baseline-booking-subject.jpg)
+
+![Asunto reschedule](docs/coach-images/baseline-reschedule-subject.jpg)
+
+![Asunto cancellation](docs/coach-images/baseline-cancellation-subject.jpg)
+
+
+## Formulario más limpio — 9 de octubre de 2026
+
+Se mantienen los títulos Player 1 y Player 2. Debajo ahora aparece Full name, Level y Age group, sin repetir el número. Quitamos notas de prueba de la reserva y descripciones de servicios. Se conserva la instrucción para padres/tutores. Stripe, horarios y canchas definitivas siguen pendientes. Cambios web locales; ajustes de Acuity guardados.
+
+![Campos simplificados](docs/coach-images/baseline-clean-player-fields.jpg)
+
+
+### Player headings — October 9, 2026
+
+Títulos uniformes: Player 1 y Player 2. Verificado en móvil. Se mantiene el campo de zona preferida.
+
+![Títulos uniformes](docs/coach-images/baseline-matching-player-headings.jpg)
+
+
+## Limpieza de código — 9 de octubre de 2026
+
+Unificamos estilos repetidos en 14 páginas, eliminamos lógica sin uso y separamos los estilos de la demostración del calendario conectado. Diseño y reservas conservados. Pruebas de código y enlaces aprobadas; revisión móvil y escritorio realizada. Cambios locales, sin subir a GitHub.
